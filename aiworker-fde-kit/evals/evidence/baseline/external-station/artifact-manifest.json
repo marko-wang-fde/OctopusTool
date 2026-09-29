@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "track": "baseline",
+  "case_id": "external-station",
+  "candidate_commit": "a95a1947cf66c7c55c3f5bbfad2f0961c48cc988",
+  "session_id": "baseline-0efef67eb4794eb67b182876",
+  "run_id": "run-ded7f8de7af4026c933e4757",
+  "input_sha256": "4b9d4c435b78eea5bdee736c8bd6093f740c3b94301e950a1afc8be78ab10557",
+  "files": [
+    {
+      "path": "agent-output.yaml",
+      "sha256": "a43f685c22479ebe181e00b4be62e9ba1b73eee59856d2639d3c1f103337f0a0"
+    }
+  ]
+}

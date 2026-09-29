@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/payloads/skill-set-create.schema.json",
+  "title": "octopus-cli API: configure skill set add Payload",
+  "description": "API-native payload for POST /api/v1/teams/{teamId}/skillsets. Skill membership is not accepted by this create endpoint.",
+  "$comment": "contract_status: api-native; source: octopus-cli 0.1.2 VoCreateSkillsetRequest.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "monthlyRentPoints": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,48 @@
+schema_version: 1
+allowed_literals:
+  - value: 星河科技
+    paths:
+      - assets/examples/**
+      - test/fixtures/**
+      - test/integration/init-project.test.js
+      - docs/superpowers/**
+      - src/project/naming.js
+  - value: 星河科技客户线索收集数字员工
+    paths:
+      - assets/examples/**
+      - test/integration/**
+  - value: 苏州星禾包装有限公司
+    paths:
+      - assets/examples/**
+      - docs/superpowers/**
+      - test/integration/test-example.test.js
+  - value: 苏州启明包装
+    paths:
+      - assets/examples/**
+  - value: 王芳
+    paths:
+      - assets/examples/**
+      - docs/superpowers/**
+      - test/integration/test-example.test.js
+  - value: 赵蕾
+    paths:
+      - assets/examples/**
+  - value: 张楠
+    paths:
+      - assets/examples/**
+      - docs/superpowers/**
+      - test/integration/test-example.test.js
+  - value: "13900000002"
+    paths:
+      - assets/examples/**
+      - docs/superpowers/**
+      - scripts/runtime/aiworker-fde-runtime.mjs
+      - src/security/public-scan.js
+      - test/integration/test-example.test.js
+  - value: "138 0000 0001"
+    paths:
+      - assets/examples/**
+  - value: "138-0000-0001"
+    paths:
+      - assets/examples/**
+allowed_patterns: []

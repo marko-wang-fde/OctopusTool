@@ -1,0 +1,22 @@
+schema_version: 1
+track: baseline
+case_id: minimal-lead-collector
+candidate_commit: a95a1947cf66c7c55c3f5bbfad2f0961c48cc988
+session_id: baseline-0efef67eb4794eb67b182876
+run_id: run-ded7f8de7af4026c933e4757
+input_sha256: fc72e3a09bcdc12d08f108b371f11ac24e0cf5433dcd2c70f1d0536f8028ae0e
+outcome: observed
+constraints:
+  network_used: false
+  production_writes: false
+focus_results:
+  - requirement: minimum viable worker and Skill
+    addressed: false
+  - requirement: explicit human confirmation
+    addressed: true
+  - requirement: complete offline package
+    addressed: false
+observation_codes:
+  - GENERIC_CONFIRMATION_GATE_AVAILABLE
+  - KIT_SPECIFIC_WORKER_SKILL_NOT_ESTABLISHED
+  - OFFLINE_PACKAGE_COMPLETENESS_NOT_ESTABLISHED

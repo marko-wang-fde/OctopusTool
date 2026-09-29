@@ -1,0 +1,1 @@
+{"name":"@syngy/api-client-user","version":"1.0.0","description":"Syngy User API Client - TypeScript SDK","type":"module","main":"./api.ts","types":"./api.ts","exports":{".":{"types":"./api.ts","import":"./api.ts"},"./wrapper":{"types":"./api-wrapper.ts","import":"./api-wrapper.ts"}}}

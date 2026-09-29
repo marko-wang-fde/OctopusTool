@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/payloads/skill-upload.schema.json",
+  "title": "octopus-cli API: configure skill upload add Payload",
+  "description": "API-native payload for POST /api/v1/teams/{teamId}/skills/upload. This uploads one ordinary Team Skill markdown document.",
+  "$comment": "contract_status: api-native; source: octopus-cli 0.1.2 VoTeamSkillUploadRequest. Multi-file package-upload is form-data and is not cataloged for generic JSON octopus-cli assembly.",
+  "type": "object",
+  "required": [
+    "slug",
+    "content"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "content": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

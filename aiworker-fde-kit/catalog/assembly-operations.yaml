@@ -1,0 +1,309 @@
+catalog_version: "1.0.4"
+source_revision: "octopus-cli-contract-2026-07-28-skill-upload-enable-assembly-cli-0.1.2"
+verified_at: "2026-07-28T16:40:00+08:00"
+cli_package_version: "0.1.2"
+cli_reported_version: "0.1.2"
+artifact_variables:
+  "<skill-slug>":
+    source: "fde-project.yaml#skills[].id"
+    transform: "strip-skill-prefix-and-kebab-case"
+    cardinality: "one-per-approved-skill"
+    expansion: "expand-once-per-approved-skill"
+context_probe:
+  operation_id: "auth.whoami"
+  description: "Read the current authenticated CLI Profile and Team context."
+  executor: "octopus-cli"
+  operation_kind: "read"
+  command_path:
+    - "auth"
+    - "whoami"
+  positional_args: []
+  options:
+    profile: "--profile"
+    output: "--json"
+  option_shape:
+    profile:
+      arity: "value"
+      required: false
+      allowed_forms:
+        - "separate"
+    output:
+      arity: "boolean"
+      required: true
+      allowed_forms:
+        - "standalone"
+  output_contract:
+    format: "json"
+    profile_path:
+      - "profile"
+    team_path:
+      - "team"
+      - "id"
+  explicit_context_argv: null
+supported:
+  - operation_id: "skill.upload"
+    description: "Upload one ordinary Team Skill markdown document from an API-native JSON payload."
+    executor: "octopus-cli"
+    support: "supported"
+    command_path:
+      - "configure"
+      - "skill"
+      - "upload"
+      - "add"
+    positional_args: []
+    options:
+      payload: "--body-file"
+      output: "--json"
+    option_shape:
+      payload:
+        arity: "value"
+        required: true
+        allowed_forms:
+          - "separate"
+      output:
+        arity: "boolean"
+        required: true
+        allowed_forms:
+          - "standalone"
+    output_contract:
+      format: "json"
+      bindings:
+        skill_id:
+          paths:
+            - ["data", "skill", "id"]
+            - ["skill", "id"]
+    manual_fallback:
+      executor: "admin-manual"
+      manual_artifacts:
+        - "skills/<skill-slug>/SKILL.md"
+      manual_instructions:
+        - "Have an authorized administrator upload the approved ordinary Team Skill markdown through the platform interface."
+        - "Record the returned Skill identifier and content digest without credentials."
+      recovery_condition: "The tested CLI command is restored, or an authorized administrator completes and verifies this same operation manually."
+      verification_condition: "The uploaded Team Skill content matches the approved Skill markdown and the returned Skill identifier is recorded in assembly evidence."
+    payload_schema_uri: "schemas/payloads/skill-upload.schema.json"
+    risk_level: "high"
+    contract_version: "1.0.0"
+    cli_evidence_rule: "Require API-native JSON payload contract, command presence in --help-json, matching leaf --help, body-forwarding dryrun evidence, and returned skill.id binding evidence."
+    execution_policy: "live-assembly"
+  - operation_id: "skill.enable-assembly"
+    description: "Enable a previously uploaded Team Skill as an assemblable Skill and return its public Skillset binding."
+    executor: "octopus-cli"
+    support: "supported"
+    command_path:
+      - "configure"
+      - "skill"
+      - "enable-assembly"
+      - "add"
+    positional_args:
+      - "<id>"
+    options:
+      output: "--json"
+    option_shape:
+      output:
+        arity: "boolean"
+        required: true
+        allowed_forms:
+          - "standalone"
+    output_contract:
+      format: "json"
+      skill_id_paths:
+        - ["data", "skillId"]
+        - ["skillId"]
+      skillset_id_paths:
+        - ["data", "skillsetId"]
+        - ["skillsetId"]
+      bindings:
+        skill_id:
+          paths:
+            - ["data", "skillId"]
+            - ["skillId"]
+        skillset_id:
+          paths:
+            - ["data", "skillsetId"]
+            - ["skillsetId"]
+    manual_fallback:
+      executor: "admin-manual"
+      manual_artifacts:
+        - "skills/<skill-slug>/SKILL.md"
+      manual_instructions:
+        - "Have an authorized administrator enable the uploaded Team Skill for assembly."
+        - "Record the returned assemblable Skill identifier and Skillset identifier without credentials."
+      recovery_condition: "The tested CLI command is restored, or an authorized administrator completes and verifies this same operation manually."
+      verification_condition: "The uploaded Skill is visible as an assemblable Team Skill and its Skillset identifier is recorded in assembly evidence."
+    payload_schema_uri: null
+    risk_level: "high"
+    contract_version: "1.0.0"
+    cli_evidence_rule: "Require a real uploaded skill.id as positional argument, command presence in --help-json, matching leaf --help, and returned skillsetId binding evidence."
+    execution_policy: "live-assembly"
+  - operation_id: "team-private-digiworker.create"
+    description: "Create a private digital worker and its Team employee from an API-native payload."
+    executor: "octopus-cli"
+    support: "supported"
+    command_path:
+      - "configure"
+      - "team"
+      - "private-digiworkers"
+      - "add"
+    positional_args: []
+    options:
+      payload: "--body-file"
+      output: "--json"
+    option_shape:
+      payload:
+        arity: "value"
+        required: true
+        allowed_forms:
+          - "separate"
+      output:
+        arity: "boolean"
+        required: true
+        allowed_forms:
+          - "standalone"
+    manual_fallback:
+      executor: "admin-manual"
+      manual_artifacts:
+        - "assembly/operations.yaml"
+      manual_instructions:
+        - "Have an authorized administrator create the approved private digital worker through the platform interface."
+        - "Record the returned worker identifier and configuration verification evidence without credentials."
+      recovery_condition: "The tested CLI command is restored, or an authorized administrator completes and verifies this same operation manually."
+      verification_condition: "The private digital worker and generated Team employee match the approved worker and Team design and are recorded in assembly evidence."
+    payload_schema_uri: "schemas/payloads/team-private-digiworker-create.schema.json"
+    risk_level: "high"
+    contract_version: "1.0.0"
+    cli_evidence_rule: "Require versioned API-native payload contract, real platform teamSkillIds when skills are attached, command presence in --help-json, matching leaf --help, and matching payload/output option shape."
+    execution_policy: "live-assembly"
+  - operation_id: "employee.skillsets.set"
+    description: "Bind public Team Skillsets to an existing Team digital employee by real digiEmployeeId."
+    executor: "octopus-cli"
+    support: "supported"
+    command_path:
+      - "configure"
+      - "employee"
+      - "skillsets"
+      - "set"
+    positional_args:
+      - "<digi-employee-id>"
+    options:
+      payload: "--body-file"
+      output: "--json"
+    option_shape:
+      payload:
+        arity: "value"
+        required: true
+        allowed_forms:
+          - "separate"
+      output:
+        arity: "boolean"
+        required: true
+        allowed_forms:
+          - "standalone"
+    manual_fallback:
+      executor: "admin-manual"
+      manual_artifacts:
+        - "assembly/operations.yaml"
+      manual_instructions:
+        - "Have an authorized administrator bind the approved assemblable Skillsets to the target digital employee through the platform interface."
+        - "Record the employee identifier, Skillset identifiers, and binding verification evidence without credentials."
+      recovery_condition: "The tested CLI command is restored, or an authorized administrator completes and verifies this same operation manually."
+      verification_condition: "The target Team digital employee lists the approved public Skillsets and the binding is recorded in assembly evidence."
+    payload_schema_uri: "schemas/payloads/employee-skillsets-set.schema.json"
+    risk_level: "high"
+    contract_version: "1.0.0"
+    cli_evidence_rule: "Require real platform digiEmployeeId positional argument, API-native payload with real Skillset IDs, command presence in --help-json, matching leaf --help, and body-forwarding dryrun evidence."
+    execution_policy: "live-assembly"
+  - operation_id: "employee-hire.create"
+    description: "Hire an existing platform digital worker into a Team by real digiWorkerId. Do not use after team-private-digiworker.create, which already creates a Team employee."
+    executor: "octopus-cli"
+    support: "supported"
+    command_path:
+      - "configure"
+      - "employee"
+      - "hire"
+    positional_args: []
+    options:
+      payload: "--body-file"
+      output: "--json"
+    option_shape:
+      payload:
+        arity: "value"
+        required: true
+        allowed_forms:
+          - "separate"
+      output:
+        arity: "boolean"
+        required: true
+        allowed_forms:
+          - "standalone"
+    manual_fallback:
+      executor: "admin-manual"
+      manual_artifacts:
+        - "assembly/operations.yaml"
+      manual_instructions:
+        - "Have an authorized Team administrator hire the approved private digital worker through the platform interface."
+        - "Record the employee identifier and Team membership verification evidence without credentials."
+      recovery_condition: "The tested CLI command is restored, or an authorized administrator completes and verifies this same operation manually."
+      verification_condition: "The employee membership for the real platform digiWorkerId exists in the approved Team and is recorded in assembly evidence."
+    payload_schema_uri: "schemas/payloads/employee-hire-create.schema.json"
+    risk_level: "high"
+    contract_version: "1.0.0"
+    cli_evidence_rule: "Require versioned API-native payload contract with a real platform digiWorkerId, command presence in --help-json, matching leaf --help, and matching payload/output option shape."
+    execution_policy: "live-assembly"
+manual_required:
+  - operation_id: "skill-set.create"
+    description: "Create a Team skill set manually. octopus-cli 0.1.2 exposes configure skill set add and advertises body options, but execution-layer probes show body/query options are dropped for this path."
+    executor: "admin-manual"
+    support: "manual-required"
+    risk_level: "high"
+    manual_artifacts:
+      - "skills/<skill-slug>/"
+    manual_instructions:
+      - "Have an authorized administrator create the approved Skill set through the platform interface."
+      - "Bind uploaded ordinary Skills manually when the platform requires returned Skill identifiers."
+      - "Record the returned Skill-set identifier, Skill binding identifiers, and verification evidence without credentials."
+    recovery_condition: "A future tested octopus-cli contract proves configure skill set add forwards body options correctly, or an authorized administrator completes the manual route."
+    verification_condition: "The Skill set metadata and Skill bindings match the approved assembly plan and are recorded in assembly evidence."
+  - operation_id: "skill-package.upload"
+    description: "Upload an ordinary employee Skill package."
+    executor: "admin-manual"
+    support: "manual-required"
+    risk_level: "high"
+    manual_artifacts:
+      - "skills/<skill-slug>/"
+    manual_instructions:
+      - "Verify the Skill package is self-contained, sanitized, and matches the approved solution baseline."
+      - "Use the platform's administrator-approved ordinary Skill upload interface."
+      - "Record the returned Skill identifier and package digest in the assembly evidence."
+    recovery_condition: "A tested public ordinary-Skill upload capability is added to a future Kit contract, or an authorized administrator completes the manual route."
+    verification_condition: "The platform displays the uploaded package version and digest, and the identifier resolves from the approved Team without enabling production use."
+  - operation_id: "arcubase-app.create"
+    description: "Create a dedicated Arcubase application."
+    executor: "admin-manual"
+    support: "manual-required"
+    risk_level: "critical"
+    manual_artifacts:
+      - "arcubase/decision.yaml"
+      - "arcubase/schema.yaml"
+      - "arcubase/access-matrix.md"
+    manual_instructions:
+      - "Confirm the approved data-foundation mode, ownership, naming, and isolation boundary."
+      - "Have an authorized Arcubase administrator create the application in the intended Team."
+      - "Record the generated application identifier and administrator verification evidence."
+    recovery_condition: "A tested public Arcubase app-create capability is added to a future Kit contract, or an authorized administrator completes the manual route."
+    verification_condition: "The application exists in the intended Team with the approved owner and isolation boundary, and its identifier is recorded without credentials."
+  - operation_id: "arcubase-table.create"
+    description: "Create Arcubase tables and fields from the approved schema."
+    executor: "admin-manual"
+    support: "manual-required"
+    risk_level: "critical"
+    manual_artifacts:
+      - "arcubase/schema.yaml"
+      - "arcubase/access-matrix.md"
+      - "acceptance/test-cases.yaml"
+    manual_instructions:
+      - "Validate field types, constraints, links, states, derived-field ownership, and migration impact."
+      - "Have an authorized Arcubase administrator create the tables and apply hard permissions."
+      - "Record table and field identifiers, then run the documented permission and schema checks."
+    recovery_condition: "A tested public Arcubase table-create capability is added to a future Kit contract, or an authorized administrator completes the manual route."
+    verification_condition: "All approved tables, fields, links, constraints, and hard permissions exist and pass authorized and unauthorized acceptance checks."

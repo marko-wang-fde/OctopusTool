@@ -1,0 +1,11 @@
+schema_version: 1
+contract_version: 1.0.0
+catalog_version: 1.0.4
+payload_root: assembly/payloads
+operations: []
+assembly_execution:
+  status: not-applicable
+  script_file: null
+  evidence_file: null
+  cli_package_version: null
+  cli_reported_version: null

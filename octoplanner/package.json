@@ -1,0 +1,45 @@
+{
+  "name": "@syngy/octoplanner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "octoplanner": "src/cli.ts"
+  },
+  "scripts": {
+    "octoplanner": "bun src/cli.ts",
+    "clean": "rm -rf dist package",
+    "build": "tsc -p tsconfig.build.json",
+    "build:report-web": "vite build --config src/report/web/vite.config.ts",
+    "check:report-web": "vite build --config src/report/web/vite.config.ts",
+    "typecheck:report-web": "tsc -p src/report/web/tsconfig.json --noEmit",
+    "test": "bun --bun ./node_modules/vitest/vitest.mjs run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run typecheck:report-web && npm test",
+    "package:prepare": "npm run clean && npm run check && npm run build && npm run build:report-web && bun scripts/prepare-package.ts",
+    "prepack": "npm run package:prepare",
+    "pack:dry": "npm pack ./package --dry-run"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwind-merge": "^3.6.0",
+    "vis-timeline": "^8.5.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.5.4",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
+  }
+}

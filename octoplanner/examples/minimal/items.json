@@ -1,0 +1,10 @@
+[
+  {
+    "id": "ITEM-VALVE-25",
+    "name": "DN25 valve body",
+    "materialId": "MAT-CF8",
+    "materialGrade": "CF8",
+    "processFamily": "machining",
+    "setupGroup": "VALVE-25"
+  }
+]

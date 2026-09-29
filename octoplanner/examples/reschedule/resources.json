@@ -1,0 +1,14 @@
+[
+  {
+    "id": "MC-01",
+    "name": "Machining center 01",
+    "groupId": "TURNING",
+    "capacity": 1
+  },
+  {
+    "id": "MC-02",
+    "name": "Machining center 02",
+    "groupId": "THREADING",
+    "capacity": 1
+  }
+]

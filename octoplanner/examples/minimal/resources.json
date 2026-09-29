@@ -1,0 +1,8 @@
+[
+  {
+    "id": "MC-01",
+    "name": "Machining center 01",
+    "groupId": "MACHINING",
+    "capacity": 1
+  }
+]

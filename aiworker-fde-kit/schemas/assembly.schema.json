@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/assembly.schema.json",
+  "title": "AIWorker FDE Assembly Plan",
+  "description": "Ordered, data-only assembly plan with an explicitly generated live octopus-cli assembly script.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "contract_version",
+    "catalog_version",
+    "payload_root",
+    "operations",
+    "assembly_execution"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "contract_version": {
+      "$ref": "#/$defs/version"
+    },
+    "catalog_version": {
+      "$ref": "#/$defs/version"
+    },
+    "payload_root": {
+      "const": "assembly/payloads"
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.syngy.ai/aiworker-fde-kit/v1/assembly-operation.schema.json"
+      },
+      "minItems": 0
+    },
+    "assembly_execution": {
+      "$ref": "#/$defs/assemblyExecution"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "nullableVersion": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/version"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "nullableRelativePath": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:[\\\\/])(?![A-Za-z][A-Za-z0-9+.-]*:)(?!\\.{1,2}(?:/|$))(?!.*\\/\\.{1,2}(?:\\/|$))(?!.*\\\\)(?!.*\\u0000).+$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "assemblyExecution": {
+      "type": "object",
+      "required": [
+        "status",
+        "script_file",
+        "evidence_file",
+        "cli_package_version",
+        "cli_reported_version"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-generated",
+            "not-applicable",
+            "ready",
+            "executed",
+            "blocked"
+          ]
+        },
+        "script_file": {
+          "$ref": "#/$defs/nullableRelativePath"
+        },
+        "evidence_file": {
+          "$ref": "#/$defs/nullableRelativePath"
+        },
+        "cli_package_version": {
+          "$ref": "#/$defs/nullableVersion"
+        },
+        "cli_reported_version": {
+          "$ref": "#/$defs/nullableVersion"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "not-generated",
+                  "not-applicable"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "script_file": {
+                "type": "null"
+              },
+              "evidence_file": {
+                "type": "null"
+              },
+              "cli_package_version": {
+                "type": "null"
+              },
+              "cli_reported_version": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "blocked"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "script_file": {
+                "type": "null"
+              },
+              "evidence_file": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "ready"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "script_file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_file": {
+                "type": "null"
+              },
+              "cli_package_version": {
+                "$ref": "#/$defs/version"
+              },
+              "cli_reported_version": {
+                "$ref": "#/$defs/version"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "executed"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "script_file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cli_package_version": {
+                "$ref": "#/$defs/version"
+              },
+              "cli_reported_version": {
+                "$ref": "#/$defs/version"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

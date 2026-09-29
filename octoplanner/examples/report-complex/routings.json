@@ -1,0 +1,43 @@
+{
+  "id": "report_complex_routings",
+  "routings": [
+    {
+      "itemId": "BODY-DN25",
+      "operations": [
+        { "id": "op10-rough-turn", "sequence": 10, "name": "粗车外圆", "durationMinutes": 80, "eligibleResourceIds": ["S-43", "S-44"], "setupGroup": "body", "continuity": "preferred" },
+        { "id": "op20-bore", "sequence": 20, "name": "镗孔", "durationMinutes": 70, "eligibleResourceIds": ["S-44", "S-59"], "setupGroup": "body" },
+        { "id": "op30-drill", "sequence": 30, "name": "钻孔", "durationMinutes": 45, "eligibleResourceIds": ["S-60"], "setupGroup": "body" }
+      ]
+    },
+    {
+      "itemId": "BODY-DN20",
+      "operations": [
+        { "id": "op10-rough-turn", "sequence": 10, "name": "粗车外圆", "durationMinutes": 65, "eligibleResourceIds": ["S-43", "S-44"], "setupGroup": "body", "continuity": "preferred" },
+        { "id": "op20-bore", "sequence": 20, "name": "镗孔", "durationMinutes": 55, "eligibleResourceIds": ["S-59"], "setupGroup": "body" },
+        { "id": "op30-drill", "sequence": 30, "name": "钻孔", "durationMinutes": 40, "eligibleResourceIds": ["S-60"], "setupGroup": "body" }
+      ]
+    },
+    {
+      "itemId": "JOINT-DG10",
+      "operations": [
+        { "id": "op10-turn", "sequence": 10, "name": "车削球头", "durationMinutes": 50, "eligibleResourceIds": ["S-43", "S-44"], "setupGroup": "joint" },
+        { "id": "op20-thread", "sequence": 20, "name": "攻螺纹", "durationMinutes": 35, "eligibleResourceIds": ["S-60"], "setupGroup": "joint" }
+      ]
+    },
+    {
+      "itemId": "STEM-DN12",
+      "operations": [
+        { "id": "op10-turn", "sequence": 10, "name": "端面车削", "durationMinutes": 45, "eligibleResourceIds": ["S-43"], "setupGroup": "stem" },
+        { "id": "op20-bore", "sequence": 20, "name": "内孔加工", "durationMinutes": 60, "eligibleResourceIds": ["S-59"], "setupGroup": "stem" },
+        { "id": "op30-thread", "sequence": 30, "name": "攻螺纹", "durationMinutes": 35, "eligibleResourceIds": ["S-60"], "setupGroup": "stem" }
+      ]
+    },
+    {
+      "itemId": "CAP-DN20",
+      "operations": [
+        { "id": "op10-turn", "sequence": 10, "name": "车削端面", "durationMinutes": 55, "eligibleResourceIds": ["S-44"], "setupGroup": "cap" },
+        { "id": "op20-drill", "sequence": 20, "name": "钻孔", "durationMinutes": 50, "eligibleResourceIds": ["S-60"], "setupGroup": "cap" }
+      ]
+    }
+  ]
+}

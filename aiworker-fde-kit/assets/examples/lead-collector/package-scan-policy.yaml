@@ -1,0 +1,8 @@
+schema_version: 1
+exceptions:
+  - path: acceptance/test-cases.yaml
+    category: personal-phone
+    reason: Synthetic acceptance phone confirmed for the offline fixture.
+  - path: fde-project.yaml
+    category: personal-phone
+    reason: Synthetic acceptance phone confirmed for the offline fixture.

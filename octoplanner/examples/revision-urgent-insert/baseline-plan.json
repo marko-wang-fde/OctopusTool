@@ -1,0 +1,102 @@
+{
+  "id": "PLAN-URGENT-BASELINE",
+  "name": "urgent-baseline",
+  "caseId": "urgent-case",
+  "state": "active",
+  "createdAt": "2026-06-05T00:00:00.000Z",
+  "scheduledOperations": [
+    {
+      "operationId": "REQ-601277676:OP-930002-段友-4",
+      "requirementId": "REQ-601277676",
+      "itemId": "ITEM-30101765",
+      "routingOperationId": "OP-930002-段友-4",
+      "resourceId": "RES-SS-03",
+      "startAt": "2026-06-06T00:00:00.000Z",
+      "endAt": "2026-06-11T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "段友!4" }
+    },
+    {
+      "operationId": "REQ-601277676:OP-930003-段友-5",
+      "requirementId": "REQ-601277676",
+      "itemId": "ITEM-30101765",
+      "routingOperationId": "OP-930003-段友-5",
+      "resourceId": "RES-SS-05",
+      "startAt": "2026-06-07T00:00:00.000Z",
+      "endAt": "2026-06-12T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "段友!5" }
+    },
+    {
+      "operationId": "REQ-601275458:OP-930002-段友-6",
+      "requirementId": "REQ-601275458",
+      "itemId": "ITEM-30201932",
+      "routingOperationId": "OP-930002-段友-6",
+      "resourceId": "RES-SS-05",
+      "startAt": "2026-06-12T00:00:00.000Z",
+      "endAt": "2026-06-20T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "段友!6" }
+    },
+    {
+      "operationId": "REQ-601274853:OP-930002-段友-8",
+      "requirementId": "REQ-601274853",
+      "itemId": "ITEM-30100050",
+      "routingOperationId": "OP-930002-段友-8",
+      "resourceId": "RES-SS-05",
+      "startAt": "2026-06-20T00:00:00.000Z",
+      "endAt": "2026-06-22T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "段友!8" }
+    },
+    {
+      "operationId": "REQ-601277344:OP-930001-段友-7",
+      "requirementId": "REQ-601277344",
+      "itemId": "ITEM-30100013",
+      "routingOperationId": "OP-930001-段友-7",
+      "resourceId": "RES-SS-05",
+      "startAt": "2026-06-22T00:00:00.000Z",
+      "endAt": "2026-06-28T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "段友!7" }
+    },
+    {
+      "operationId": "REQ-601275458:OP-930003-马伟-4",
+      "requirementId": "REQ-601275458",
+      "itemId": "ITEM-30201932",
+      "routingOperationId": "OP-930003-马伟-4",
+      "resourceId": "RES-SS-35",
+      "startAt": "2026-06-22T00:00:00.000Z",
+      "endAt": "2026-06-28T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "马伟!4" }
+    },
+    {
+      "operationId": "REQ-601274853:OP-930003-马伟-3",
+      "requirementId": "REQ-601274853",
+      "itemId": "ITEM-30100050",
+      "routingOperationId": "OP-930003-马伟-3",
+      "resourceId": "RES-SS-35",
+      "startAt": "2026-06-21T00:00:00.000Z",
+      "endAt": "2026-06-22T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "马伟!3" }
+    },
+    {
+      "operationId": "REQ-601274853:OP-930004-刘森林-3",
+      "requirementId": "REQ-601274853",
+      "itemId": "ITEM-30100050",
+      "routingOperationId": "OP-930004-刘森林-3",
+      "resourceId": "RES-SZ-01",
+      "startAt": "2026-06-23T00:00:00.000Z",
+      "endAt": "2026-06-25T00:00:00.000Z",
+      "locked": false,
+      "externalRef": { "system": "xlsx", "id": "刘森林!3" }
+    }
+  ],
+  "unplannedOperations": [],
+  "metrics": {},
+  "appliedRuleIds": [],
+  "warnings": [],
+  "notModeled": []
+}

@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - run: npm run verify:public
+      - run: ./scripts/test-example --example lead-collector
+      - run: npm run verify:e2e
+
+  octopus-cli-compatibility:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Install pinned public CLI
+        run: npm install --global @syngy/octopus-cli@0.1.1
+      - name: Record and inspect CLI contract
+        run: |
+          mkdir -p test-output/compat-preflight
+          version_status=0
+          help_status=0
+          inspect_status=0
+          AIWORKER_CLI_PATH=$(command -v octopus-cli || true)
+          if [ -n "$AIWORKER_CLI_PATH" ]; then
+            cli_resolution=resolved
+          else
+            cli_resolution=missing
+          fi
+          printf 'resolution: %s\n' "$cli_resolution" \
+            > test-output/compat-preflight/preflight.txt
+          printf '{"schema_version":1,"resolution":"%s"}\n' "$cli_resolution" \
+            > test-output/compat-preflight/preflight.json
+          octopus-cli --version || version_status=$?
+          octopus-cli --help-json > /dev/null || help_status=$?
+          case "$AIWORKER_CLI_PATH" in
+            /*) ;;
+            *) echo "octopus-cli did not resolve to an absolute path" >&2 ;;
+          esac
+          export AIWORKER_CLI_PATH
+          ./scripts/inspect-octopus-cli \
+            --cli-path "$AIWORKER_CLI_PATH" \
+            --output "$PWD/test-output/compat-cli" || inspect_status=$?
+          if (( version_status != 0 || help_status != 0 || inspect_status != 0 )); then
+            echo "compatibility probes failed: version=$version_status help=$help_status inspect=$inspect_status" >&2
+            exit 1
+          fi
+      - name: Upload raw compatibility evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: octopus-cli-compatibility-evidence
+          path: |
+            test-output/compat-cli
+            test-output/compat-preflight
+          if-no-files-found: error

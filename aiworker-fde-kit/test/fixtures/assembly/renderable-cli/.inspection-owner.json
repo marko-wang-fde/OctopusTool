@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "generated_by": "aiworker-fde-kit/inspect-octopus-cli",
+  "entries": [
+    {
+      "path": "cli-command-index.json",
+      "type": "file",
+      "mode": 420,
+      "sha256": "a66366c8848394c44933059ae995f4940104c80771c4beff71a85a5c444354d2"
+    },
+    {
+      "path": "diagnostics",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/raw",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/raw/body-probes",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/raw/body-probes/configure-employee-hire.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "9d5473542cd662ecd117284edeb3f01647ab68b4edf8cab06074b4b7a0f49358"
+    },
+    {
+      "path": "diagnostics/raw/body-probes/configure-employee-skillsets-set.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "810b05e09bdc23299c2da8149ccb1c306ea2c76a22f19951f66b95854c408207"
+    },
+    {
+      "path": "diagnostics/raw/body-probes/configure-skill-enable-assembly-add.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e4cd7bc8e4f9a7ad98aa06e4bd102ea3deb0aff0932bce036b6f598cbc1d6eeb"
+    },
+    {
+      "path": "diagnostics/raw/body-probes/configure-skill-upload-add.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "7ad6fbe9bdb00843f9f41239504bb3c206b108e72dc375374547c37a26a486bb"
+    },
+    {
+      "path": "diagnostics/raw/body-probes/configure-team-private-digiworkers-add.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "82a6c2c7b6f61d717d5f98e693c68a8c97269139881857e2b7f53f7f13daa820"
+    },
+    {
+      "path": "diagnostics/raw/cli-version.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "297b50f08386d3521f8fdaf2f78eb8d9d0acdf452d2e61596905fba37208c792"
+    },
+    {
+      "path": "diagnostics/raw/help-json.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "58ba7012f6b4c6e98a677bde7744719790e9acdd9f2e9ddc061640e0db60c26e"
+    },
+    {
+      "path": "diagnostics/raw/leaf-help",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/raw/leaf-help/auth-whoami.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "6730c4e2b052b903a30f9dd3637adb234b9a541d5e318e118211206c32ca6f2d"
+    },
+    {
+      "path": "diagnostics/raw/leaf-help/configure-employee-hire.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "669e03b3495bb730f31bf89a5814c132a007e9a7638d78aefca7e566290b92a6"
+    },
+    {
+      "path": "diagnostics/raw/leaf-help/configure-employee-skillsets-set.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "dc8b7ad7970fee14eed97d69741c4500281bccc86e021029ba1a6df8cac40cba"
+    },
+    {
+      "path": "diagnostics/raw/leaf-help/configure-skill-enable-assembly-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "5162a72366be7d05ee17cf579433177287cdb1312342722eb02de599895243c0"
+    },
+    {
+      "path": "diagnostics/raw/leaf-help/configure-skill-upload-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "ae0ba0425ba3d37fdef874eb9a42d0fc0522f058c554ba54bf0a9c01d2dbef74"
+    },
+    {
+      "path": "diagnostics/raw/leaf-help/configure-team-private-digiworkers-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "cbc30c4a1ceef7a927b10ae3f000c334e1890c18907b82c536d1d0c816c6de29"
+    },
+    {
+      "path": "diagnostics/raw/npm-package-version.json",
+      "type": "file",
+      "mode": 384,
+      "sha256": "12c385b23da9dc9794d74ee03cc5600af2e50ae50ff65c43f15e7626251636a2"
+    },
+    {
+      "path": "diagnostics/stderr",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/stderr/body-probes",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/stderr/body-probes/configure-employee-hire.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/body-probes/configure-employee-skillsets-set.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/body-probes/configure-skill-enable-assembly-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/body-probes/configure-skill-upload-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/body-probes/configure-team-private-digiworkers-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/cli-version.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/help-json.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help",
+      "type": "directory",
+      "mode": 448
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help/auth-whoami.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help/configure-employee-hire.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help/configure-employee-skillsets-set.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help/configure-skill-enable-assembly-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help/configure-skill-upload-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/leaf-help/configure-team-private-digiworkers-add.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/stderr/npm-package-version.txt",
+      "type": "file",
+      "mode": 384,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "octopus-cli-help.json",
+      "type": "file",
+      "mode": 420,
+      "sha256": "ec700d188b9c76148cc64a3961d511a15ced3e5165310ca79eb2d9753e2871bf"
+    },
+    {
+      "path": "octopus-cli-version.json",
+      "type": "file",
+      "mode": 420,
+      "sha256": "69de79c6ec6d877362c8a874dc120de14c0eda9aebca7caa6c207e64d0c5fd05"
+    }
+  ]
+}

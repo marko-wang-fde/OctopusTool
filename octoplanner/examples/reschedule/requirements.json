@@ -1,0 +1,18 @@
+[
+  {
+    "id": "REQ-RS-1",
+    "itemId": "ITEM-JOINT-10",
+    "quantity": 60,
+    "dueAt": "2026-04-08T17:00:00.000Z",
+    "priority": 20,
+    "customer": "Customer A"
+  },
+  {
+    "id": "REQ-RS-2",
+    "itemId": "ITEM-JOINT-20",
+    "quantity": 40,
+    "dueAt": "2026-04-09T17:00:00.000Z",
+    "priority": 10,
+    "customer": "Customer B"
+  }
+]

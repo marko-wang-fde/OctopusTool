@@ -1,0 +1,854 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/project.schema.json",
+  "title": "AIWorker FDE Project",
+  "description": "Strict structured source of truth for a seven-stage FDE delivery project.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "sources",
+    "requirements",
+    "scenarios",
+    "roles",
+    "business_objects",
+    "workers",
+    "skills",
+    "capabilities",
+    "data_foundation",
+    "access_policies",
+    "assembly",
+    "acceptance_cases",
+    "stage_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "project": {
+      "$ref": "#/$defs/projectIdentity"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      },
+      "uniqueItems": true
+    },
+    "requirements": {
+      "$ref": "#/$defs/requirements"
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scenario"
+      },
+      "uniqueItems": true
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/role"
+      },
+      "uniqueItems": true
+    },
+    "business_objects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/businessObject"
+      },
+      "uniqueItems": true
+    },
+    "workers": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.syngy.ai/aiworker-fde-kit/v1/worker.schema.json"
+      },
+      "uniqueItems": true
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/skill"
+      },
+      "uniqueItems": true
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^feat\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "data_foundation": {
+      "$ref": "https://schemas.syngy.ai/aiworker-fde-kit/v1/arcubase.schema.json"
+    },
+    "access_policies": {
+      "type": "array",
+      "items": {
+        "$ref": "https://schemas.syngy.ai/aiworker-fde-kit/v1/arcubase.schema.json#/$defs/accessPolicy"
+      },
+      "uniqueItems": true
+    },
+    "assembly": {
+      "$ref": "https://schemas.syngy.ai/aiworker-fde-kit/v1/assembly.schema.json"
+    },
+    "acceptance_cases": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/acceptanceCase"
+      },
+      "uniqueItems": true
+    },
+    "stage_status": {
+      "$ref": "#/$defs/stageStatus"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "data_foundation": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "const": "none"
+              }
+            },
+            "required": [
+              "mode"
+            ]
+          }
+        },
+        "required": [
+          "data_foundation"
+        ]
+      },
+      "then": {
+        "properties": {
+          "access_policies": {
+            "type": "array",
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dateTimeOrNull": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:[\\\\/])(?![A-Za-z][A-Za-z0-9+.-]*:)(?!\\.{1,2}(?:/|$))(?!.*\\/\\.{1,2}(?:\\/|$))(?!.*\\\\)(?!.*\\u0000).+$"
+    },
+    "projectIdentity": {
+      "type": "object",
+      "required": [
+        "name",
+        "slug",
+        "customer_name",
+        "primary_scenario",
+        "entry_mode",
+        "status",
+        "delivery_approved_at"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "customer_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "primary_scenario": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "entry_mode": {
+          "enum": [
+            "new",
+            "materials",
+            "resume"
+          ]
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "reviewable",
+            "delivery-ready",
+            "cli-assembled"
+          ]
+        },
+        "delivery_approved_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/copiedFileSource"
+        },
+        {
+          "$ref": "#/$defs/referenceFileSource"
+        },
+        {
+          "$ref": "#/$defs/nonFileSource"
+        }
+      ]
+    },
+    "copiedFileSource": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "kind",
+        "source_mode",
+        "status",
+        "portable",
+        "original_path",
+        "copy_path",
+        "sha256",
+        "media_type",
+        "read_status",
+        "copied_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^source\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "kind": {
+          "const": "file"
+        },
+        "source_mode": {
+          "const": "copy"
+        },
+        "status": {
+          "enum": [
+            "copied",
+            "readable"
+          ]
+        },
+        "portable": {
+          "const": true
+        },
+        "original_path": {
+          "type": "string",
+          "pattern": "^(?!.*\\u0000)(?:/.+|[A-Za-z]:[\\\\/].+|redacted://source/[0-9]+)$"
+        },
+        "copy_path": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/relativePath"
+            },
+            {
+              "type": "string",
+              "pattern": "^inputs/source-files/.+$"
+            }
+          ]
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[a-z0-9!#$&^_.+-]+/[a-z0-9!#$&^_.+-]+$"
+        },
+        "read_status": {
+          "enum": [
+            "pending",
+            "read",
+            "unreadable"
+          ]
+        },
+        "copied_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "referenceFileSource": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "kind",
+        "source_mode",
+        "status",
+        "portable",
+        "original_path",
+        "sha256",
+        "media_type",
+        "read_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^source\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "kind": {
+          "const": "file"
+        },
+        "source_mode": {
+          "const": "reference"
+        },
+        "status": {
+          "const": "reference-only"
+        },
+        "portable": {
+          "const": false
+        },
+        "original_path": {
+          "type": "string",
+          "pattern": "^(?!.*\\u0000)(?:/.+|[A-Za-z]:[\\\\/].+|redacted://source/[0-9]+)$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[a-z0-9!#$&^_.+-]+/[a-z0-9!#$&^_.+-]+$"
+        },
+        "read_status": {
+          "enum": [
+            "pending",
+            "read",
+            "unreadable"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "nonFileSource": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "kind",
+        "portable",
+        "status",
+        "evidence_text",
+        "recorded_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^source\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "kind": {
+          "enum": [
+            "interview",
+            "conversation",
+            "statement",
+            "system"
+          ]
+        },
+        "status": {
+          "const": "recorded"
+        },
+        "portable": {
+          "const": true
+        },
+        "evidence_text": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "requirementRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "statement",
+        "source_refs"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(?:fact|assumption|question)\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "statement": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^source\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "requirements": {
+      "type": "object",
+      "required": [
+        "facts",
+        "assumptions",
+        "open_questions"
+      ],
+      "properties": {
+        "facts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirementRecord"
+          },
+          "uniqueItems": true
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirementRecord"
+          },
+          "uniqueItems": true
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirementRecord"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "scenario": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "role_refs",
+        "business_object_refs",
+        "human_gates"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^scenario\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "role_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^role\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        },
+        "business_object_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^object\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        },
+        "human_gates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "role": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^role\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "businessObject": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^object\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "skill": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "owner_worker",
+        "reads",
+        "writes",
+        "toolkit_keys"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^skill\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "owner_worker": {
+          "type": "string",
+          "pattern": "^worker\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "reads": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?:table|object)\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        },
+        "writes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?:table|object)\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        },
+        "toolkit_keys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^feat\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "acceptanceCase": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "category",
+        "preconditions",
+        "steps",
+        "expected_results"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^acceptance\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "category": {
+          "enum": [
+            "normal",
+            "exception",
+            "permission",
+            "refusal",
+            "human-gate"
+          ]
+        },
+        "preconditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "minItems": 1
+        },
+        "expected_results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "acceptanceCaseDocument": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "cases"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "cases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/acceptanceCase"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "hashMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/relativePath"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "stageRecord": {
+      "type": "object",
+      "required": [
+        "status",
+        "depends_on",
+        "baseline_revision",
+        "input_hashes",
+        "output_hashes",
+        "approved_at"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-started",
+            "in-progress",
+            "needs-review",
+            "stale",
+            "complete"
+          ]
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "initialize",
+              "discover",
+              "team-design",
+              "foundation-design",
+              "author",
+              "assemble",
+              "validate"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "baseline_revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "input_hashes": {
+          "$ref": "#/$defs/hashMap"
+        },
+        "output_hashes": {
+          "$ref": "#/$defs/hashMap"
+        },
+        "approved_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        }
+      },
+      "additionalProperties": false
+    },
+    "stageStatus": {
+      "type": "object",
+      "required": [
+        "initialize",
+        "discover",
+        "team-design",
+        "foundation-design",
+        "author",
+        "assemble",
+        "validate"
+      ],
+      "properties": {
+        "initialize": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": []
+                }
+              }
+            }
+          ]
+        },
+        "discover": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": [
+                    "initialize"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "team-design": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": [
+                    "discover"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "foundation-design": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": [
+                    "team-design"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "author": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": [
+                    "foundation-design"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "assemble": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": [
+                    "author"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "validate": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/stageRecord"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "depends_on": {
+                  "const": [
+                    "assemble"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

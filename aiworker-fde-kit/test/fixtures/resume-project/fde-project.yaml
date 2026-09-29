@@ -1,0 +1,96 @@
+schema_version: 1
+project:
+  name: 已有数字员工项目
+  slug: existing-fde
+  customer_name: 星河科技
+  primary_scenario: 客户线索收集
+  entry_mode: resume
+  status: draft
+  delivery_approved_at: null
+sources: []
+requirements:
+  facts: []
+  assumptions: []
+  open_questions: []
+scenarios: []
+roles: []
+business_objects: []
+workers: []
+skills: []
+capabilities: []
+data_foundation:
+  schema_version: 1
+  mode: none
+  app: null
+  tables: []
+  access_policies: []
+access_policies: []
+assembly:
+  schema_version: 1
+  contract_version: 1.0.0
+  catalog_version: 1.0.3
+  payload_root: assembly/payloads
+  operations: []
+  assembly_execution:
+    status: not-applicable
+    script_file: null
+    evidence_file: null
+    cli_package_version: null
+    cli_reported_version: null
+acceptance_cases: []
+stage_status:
+  initialize:
+    status: complete
+    depends_on: []
+    baseline_revision: 1
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: 2026-01-02T03:04:05.000Z
+  discover:
+    status: not-started
+    depends_on:
+      - initialize
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  team-design:
+    status: not-started
+    depends_on:
+      - discover
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  foundation-design:
+    status: not-started
+    depends_on:
+      - team-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  author:
+    status: not-started
+    depends_on:
+      - foundation-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  assemble:
+    status: not-started
+    depends_on:
+      - author
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  validate:
+    status: not-started
+    depends_on:
+      - assemble
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null

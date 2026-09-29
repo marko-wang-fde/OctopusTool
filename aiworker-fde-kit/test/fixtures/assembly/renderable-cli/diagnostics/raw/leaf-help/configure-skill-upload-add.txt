@@ -1,0 +1,10 @@
+Usage: octopus-cli configure skill upload add [options]
+
+Run configure skill upload add
+
+Options:
+  --query-json <json>  Query parameters as JSON
+  --body-json <json>   Request body as JSON
+  --body-file <file>   Read request body from JSON file
+  --json               Print JSON output
+  -h, --help           display help for command

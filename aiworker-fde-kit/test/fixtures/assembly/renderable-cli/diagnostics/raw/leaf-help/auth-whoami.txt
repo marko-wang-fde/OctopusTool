@@ -1,0 +1,8 @@
+Usage: octopus-cli auth whoami [options]
+
+Display the current login identity
+
+Options:
+  --profile <name>  Use a named login profile
+  --json            Print JSON output
+  -h, --help        display help for command

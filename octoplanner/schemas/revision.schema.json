@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Revision Batch",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "revisions"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "revisions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/revision" }
+    }
+  },
+  "$defs": {
+    "revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "instruction": { "type": "string", "minLength": 1 },
+        "fromPlanId": { "type": "string", "minLength": 1 },
+        "policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mode": { "enum": ["full", "repair", "optimize"] },
+            "preserveResourceOrder": { "enum": ["strict", "best-effort", "none"] },
+            "preserveLockedOperations": { "type": "boolean" },
+            "moveScope": { "enum": ["impacted-only", "all-open", "all"] }
+          }
+        },
+        "rules": {
+          "type": "array",
+          "items": { "type": "object" },
+          "default": []
+        },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

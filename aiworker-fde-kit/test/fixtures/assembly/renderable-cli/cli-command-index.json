@@ -1,0 +1,5433 @@
+{
+  "schema_version": 1,
+  "generated_by": "aiworker-fde-kit/inspect-octopus-cli",
+  "evidence_scope": "command-path-presence-with-catalog-overlay",
+  "catalog_version": "1.0.4",
+  "source_revision": "octopus-cli-contract-2026-07-28-skill-upload-enable-assembly-cli-0.1.2",
+  "commands": [
+    {
+      "path": [
+        "auth",
+        "login"
+      ],
+      "path_text": "auth login"
+    },
+    {
+      "path": [
+        "auth",
+        "logout"
+      ],
+      "path_text": "auth logout"
+    },
+    {
+      "path": [
+        "auth",
+        "profiles",
+        "current"
+      ],
+      "path_text": "auth profiles current"
+    },
+    {
+      "path": [
+        "auth",
+        "profiles",
+        "delete"
+      ],
+      "path_text": "auth profiles delete"
+    },
+    {
+      "path": [
+        "auth",
+        "profiles",
+        "list"
+      ],
+      "path_text": "auth profiles list"
+    },
+    {
+      "path": [
+        "auth",
+        "profiles",
+        "use"
+      ],
+      "path_text": "auth profiles use"
+    },
+    {
+      "path": [
+        "auth",
+        "whoami"
+      ],
+      "path_text": "auth whoami"
+    },
+    {
+      "path": [
+        "configure",
+        "account",
+        "inbox",
+        "items",
+        "act"
+      ],
+      "path_text": "configure account inbox items act"
+    },
+    {
+      "path": [
+        "configure",
+        "account",
+        "inbox",
+        "items",
+        "list"
+      ],
+      "path_text": "configure account inbox items list"
+    },
+    {
+      "path": [
+        "configure",
+        "account",
+        "inbox",
+        "summary",
+        "list"
+      ],
+      "path_text": "configure account inbox summary list"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "my",
+        "list"
+      ],
+      "path_text": "configure app my list"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "my",
+        "open"
+      ],
+      "path_text": "configure app my open"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "api-keys",
+        "list"
+      ],
+      "path_text": "configure app station api-keys list"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "api-keys-rotate",
+        "add"
+      ],
+      "path_text": "configure app station api-keys-rotate add"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "channel-config",
+        "set"
+      ],
+      "path_text": "configure app station channel-config set"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "disable"
+      ],
+      "path_text": "configure app station disable"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "embed-access-tokens",
+        "add"
+      ],
+      "path_text": "configure app station embed-access-tokens add"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "enable"
+      ],
+      "path_text": "configure app station enable"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "remove"
+      ],
+      "path_text": "configure app station remove"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "set"
+      ],
+      "path_text": "configure app station set"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "show"
+      ],
+      "path_text": "configure app station show"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "station",
+        "web-sessions",
+        "add"
+      ],
+      "path_text": "configure app station web-sessions add"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "web-url",
+        "add"
+      ],
+      "path_text": "configure app web-url add"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "web-url",
+        "list"
+      ],
+      "path_text": "configure app web-url list"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "web-url",
+        "remove"
+      ],
+      "path_text": "configure app web-url remove"
+    },
+    {
+      "path": [
+        "configure",
+        "app",
+        "web-url",
+        "set"
+      ],
+      "path_text": "configure app web-url set"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "apps",
+        "list"
+      ],
+      "path_text": "configure arcubase apps list"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "apps",
+        "tables",
+        "list"
+      ],
+      "path_text": "configure arcubase apps tables list"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "apps",
+        "tables",
+        "rows",
+        "query"
+      ],
+      "path_text": "configure arcubase apps tables rows query"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "apps",
+        "tables",
+        "rows",
+        "show"
+      ],
+      "path_text": "configure arcubase apps tables rows show"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "departments",
+        "add"
+      ],
+      "path_text": "configure arcubase departments add"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "departments",
+        "paths"
+      ],
+      "path_text": "configure arcubase departments paths"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "departments",
+        "relocate",
+        "set"
+      ],
+      "path_text": "configure arcubase departments relocate set"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "departments",
+        "remove"
+      ],
+      "path_text": "configure arcubase departments remove"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "departments",
+        "rename",
+        "set"
+      ],
+      "path_text": "configure arcubase departments rename set"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "departments",
+        "tree",
+        "list"
+      ],
+      "path_text": "configure arcubase departments tree list"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "list"
+      ],
+      "path_text": "configure arcubase list"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "organization",
+        "roles",
+        "add"
+      ],
+      "path_text": "configure arcubase organization roles add"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "organization",
+        "roles",
+        "list"
+      ],
+      "path_text": "configure arcubase organization roles list"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "organization",
+        "roles",
+        "remove"
+      ],
+      "path_text": "configure arcubase organization roles remove"
+    },
+    {
+      "path": [
+        "configure",
+        "arcubase",
+        "organization",
+        "roles",
+        "rename",
+        "set"
+      ],
+      "path_text": "configure arcubase organization roles rename set"
+    },
+    {
+      "path": [
+        "configure",
+        "artifact",
+        "list"
+      ],
+      "path_text": "configure artifact list"
+    },
+    {
+      "path": [
+        "configure",
+        "artifact",
+        "show"
+      ],
+      "path_text": "configure artifact show"
+    },
+    {
+      "path": [
+        "configure",
+        "artifact",
+        "summary",
+        "list"
+      ],
+      "path_text": "configure artifact summary list"
+    },
+    {
+      "path": [
+        "configure",
+        "billing",
+        "subscribe",
+        "summary",
+        "list"
+      ],
+      "path_text": "configure billing subscribe summary list"
+    },
+    {
+      "path": [
+        "configure",
+        "billing",
+        "ticket-integration",
+        "list"
+      ],
+      "path_text": "configure billing ticket-integration list"
+    },
+    {
+      "path": [
+        "configure",
+        "billing",
+        "ticket-redemptions",
+        "add"
+      ],
+      "path_text": "configure billing ticket-redemptions add"
+    },
+    {
+      "path": [
+        "configure",
+        "billing",
+        "usage-points-rollups",
+        "list"
+      ],
+      "path_text": "configure billing usage-points-rollups list"
+    },
+    {
+      "path": [
+        "configure",
+        "billing",
+        "usage-rollups",
+        "list"
+      ],
+      "path_text": "configure billing usage-rollups list"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "chrome-connection",
+        "ws",
+        "list"
+      ],
+      "path_text": "configure browser chrome-connection ws list"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "client-info",
+        "refresh"
+      ],
+      "path_text": "configure browser client-info refresh"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "cloud",
+        "add"
+      ],
+      "path_text": "configure browser cloud add"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "list"
+      ],
+      "path_text": "configure browser list"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "live-login",
+        "add"
+      ],
+      "path_text": "configure browser live-login add"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "live-login",
+        "commit"
+      ],
+      "path_text": "configure browser live-login commit"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "profile-sites",
+        "list"
+      ],
+      "path_text": "configure browser profile-sites list"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "remove"
+      ],
+      "path_text": "configure browser remove"
+    },
+    {
+      "path": [
+        "configure",
+        "browser",
+        "set"
+      ],
+      "path_text": "configure browser set"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "add"
+      ],
+      "path_text": "configure calendar source add"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "builtin"
+      ],
+      "path_text": "configure calendar source builtin"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "catalog",
+        "list"
+      ],
+      "path_text": "configure calendar source catalog list"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "events",
+        "list"
+      ],
+      "path_text": "configure calendar source events list"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "list"
+      ],
+      "path_text": "configure calendar source list"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "remove"
+      ],
+      "path_text": "configure calendar source remove"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "set"
+      ],
+      "path_text": "configure calendar source set"
+    },
+    {
+      "path": [
+        "configure",
+        "calendar",
+        "source",
+        "sync"
+      ],
+      "path_text": "configure calendar source sync"
+    },
+    {
+      "path": [
+        "configure",
+        "device",
+        "list"
+      ],
+      "path_text": "configure device list"
+    },
+    {
+      "path": [
+        "configure",
+        "device",
+        "register",
+        "add"
+      ],
+      "path_text": "configure device register add"
+    },
+    {
+      "path": [
+        "configure",
+        "device",
+        "show"
+      ],
+      "path_text": "configure device show"
+    },
+    {
+      "path": [
+        "configure",
+        "device",
+        "visibility",
+        "set"
+      ],
+      "path_text": "configure device visibility set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "access-policy",
+        "set"
+      ],
+      "path_text": "configure employee access-policy set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "arcubase",
+        "ensure",
+        "add"
+      ],
+      "path_text": "configure employee arcubase ensure add"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "arcubase",
+        "list"
+      ],
+      "path_text": "configure employee arcubase list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "conversation-activity-heatmap",
+        "list"
+      ],
+      "path_text": "configure employee conversation-activity-heatmap list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "feishu-bot-binding-sessions",
+        "add"
+      ],
+      "path_text": "configure employee feishu-bot-binding-sessions add"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "fire"
+      ],
+      "path_text": "configure employee fire"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "group-sessions",
+        "add"
+      ],
+      "path_text": "configure employee group-sessions add"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "hire"
+      ],
+      "path_text": "configure employee hire"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "kb-access",
+        "list"
+      ],
+      "path_text": "configure employee kb-access list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "kb-access",
+        "set"
+      ],
+      "path_text": "configure employee kb-access set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "list"
+      ],
+      "path_text": "configure employee list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "pinned",
+        "list"
+      ],
+      "path_text": "configure employee pinned list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "pinned",
+        "remove"
+      ],
+      "path_text": "configure employee pinned remove"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "pinned",
+        "set"
+      ],
+      "path_text": "configure employee pinned set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "profile",
+        "set"
+      ],
+      "path_text": "configure employee profile set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "reporting-line",
+        "set"
+      ],
+      "path_text": "configure employee reporting-line set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "reporting-neighbors",
+        "list"
+      ],
+      "path_text": "configure employee reporting-neighbors list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "runtime-config",
+        "list"
+      ],
+      "path_text": "configure employee runtime-config list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "runtime-config",
+        "remove"
+      ],
+      "path_text": "configure employee runtime-config remove"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "runtime-config",
+        "set"
+      ],
+      "path_text": "configure employee runtime-config set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "show"
+      ],
+      "path_text": "configure employee show"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "skillsets",
+        "set"
+      ],
+      "path_text": "configure employee skillsets set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "stations",
+        "add"
+      ],
+      "path_text": "configure employee stations add"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "stations",
+        "list"
+      ],
+      "path_text": "configure employee stations list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "team-skills",
+        "list"
+      ],
+      "path_text": "configure employee team-skills list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "team-skills",
+        "set"
+      ],
+      "path_text": "configure employee team-skills set"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "weixin-clawbot-binding-sessions",
+        "add"
+      ],
+      "path_text": "configure employee weixin-clawbot-binding-sessions add"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "workspace-access",
+        "list"
+      ],
+      "path_text": "configure employee workspace-access list"
+    },
+    {
+      "path": [
+        "configure",
+        "employee",
+        "workspace-access",
+        "set"
+      ],
+      "path_text": "configure employee workspace-access set"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "conversations",
+        "list"
+      ],
+      "path_text": "configure external-user conversations list"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "human-member",
+        "set"
+      ],
+      "path_text": "configure external-user human-member set"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "list"
+      ],
+      "path_text": "configure external-user list"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "show"
+      ],
+      "path_text": "configure external-user show"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "tag",
+        "list"
+      ],
+      "path_text": "configure external-user tag list"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "verification-flow",
+        "add"
+      ],
+      "path_text": "configure external-user verification-flow add"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "verification-flow",
+        "list"
+      ],
+      "path_text": "configure external-user verification-flow list"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "verification-flow",
+        "remove"
+      ],
+      "path_text": "configure external-user verification-flow remove"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "verification-flow",
+        "set"
+      ],
+      "path_text": "configure external-user verification-flow set"
+    },
+    {
+      "path": [
+        "configure",
+        "external-user",
+        "verification-flow",
+        "show"
+      ],
+      "path_text": "configure external-user verification-flow show"
+    },
+    {
+      "path": [
+        "configure",
+        "file",
+        "entries",
+        "list"
+      ],
+      "path_text": "configure file entries list"
+    },
+    {
+      "path": [
+        "configure",
+        "file",
+        "mounts",
+        "list"
+      ],
+      "path_text": "configure file mounts list"
+    },
+    {
+      "path": [
+        "configure",
+        "file",
+        "move",
+        "add"
+      ],
+      "path_text": "configure file move add"
+    },
+    {
+      "path": [
+        "configure",
+        "file",
+        "preview-session",
+        "add"
+      ],
+      "path_text": "configure file preview-session add"
+    },
+    {
+      "path": [
+        "configure",
+        "file",
+        "remove"
+      ],
+      "path_text": "configure file remove"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "agentloops",
+        "stop"
+      ],
+      "path_text": "configure group-session agentloops stop"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "bootstrap",
+        "list"
+      ],
+      "path_text": "configure group-session bootstrap list"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "events",
+        "list"
+      ],
+      "path_text": "configure group-session events list"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "join"
+      ],
+      "path_text": "configure group-session join"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "joined",
+        "list"
+      ],
+      "path_text": "configure group-session joined list"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "members",
+        "list"
+      ],
+      "path_text": "configure group-session members list"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "members",
+        "mute",
+        "remove"
+      ],
+      "path_text": "configure group-session members mute remove"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "messages",
+        "add"
+      ],
+      "path_text": "configure group-session messages add"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "messages",
+        "list"
+      ],
+      "path_text": "configure group-session messages list"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "reply-targets",
+        "set"
+      ],
+      "path_text": "configure group-session reply-targets set"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "settings",
+        "list"
+      ],
+      "path_text": "configure group-session settings list"
+    },
+    {
+      "path": [
+        "configure",
+        "group-session",
+        "settings",
+        "set"
+      ],
+      "path_text": "configure group-session settings set"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "collaboration-platform",
+        "feishu",
+        "binding-sessions",
+        "add"
+      ],
+      "path_text": "configure integration collaboration-platform feishu binding-sessions add"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "collaboration-platform",
+        "feishu",
+        "binding-sessions",
+        "show"
+      ],
+      "path_text": "configure integration collaboration-platform feishu binding-sessions show"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "add"
+      ],
+      "path_text": "configure integration email-ingress add"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "disable"
+      ],
+      "path_text": "configure integration email-ingress disable"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "enable"
+      ],
+      "path_text": "configure integration email-ingress enable"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "list"
+      ],
+      "path_text": "configure integration email-ingress list"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "remove"
+      ],
+      "path_text": "configure integration email-ingress remove"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "set"
+      ],
+      "path_text": "configure integration email-ingress set"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "email-ingress",
+        "show"
+      ],
+      "path_text": "configure integration email-ingress show"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "feishu",
+        "remove"
+      ],
+      "path_text": "configure integration feishu remove"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "feishu",
+        "set"
+      ],
+      "path_text": "configure integration feishu set"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "feishu",
+        "verify"
+      ],
+      "path_text": "configure integration feishu verify"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "feishu-bot-binding-session",
+        "show"
+      ],
+      "path_text": "configure integration feishu-bot-binding-session show"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "list"
+      ],
+      "path_text": "configure integration list"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "add"
+      ],
+      "path_text": "configure integration webhook add"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "disable"
+      ],
+      "path_text": "configure integration webhook disable"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "enable"
+      ],
+      "path_text": "configure integration webhook enable"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "events",
+        "list"
+      ],
+      "path_text": "configure integration webhook events list"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "list"
+      ],
+      "path_text": "configure integration webhook list"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "remove"
+      ],
+      "path_text": "configure integration webhook remove"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "rotate-signature-secret"
+      ],
+      "path_text": "configure integration webhook rotate-signature-secret"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "rotate-url-token"
+      ],
+      "path_text": "configure integration webhook rotate-url-token"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "runs",
+        "list"
+      ],
+      "path_text": "configure integration webhook runs list"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "set"
+      ],
+      "path_text": "configure integration webhook set"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "webhook",
+        "show"
+      ],
+      "path_text": "configure integration webhook show"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "wecom",
+        "add"
+      ],
+      "path_text": "configure integration wecom add"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "wecom",
+        "contacts",
+        "list"
+      ],
+      "path_text": "configure integration wecom contacts list"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "wecom",
+        "remove"
+      ],
+      "path_text": "configure integration wecom remove"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "wecom",
+        "set"
+      ],
+      "path_text": "configure integration wecom set"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "wecom",
+        "sync-contacts",
+        "add"
+      ],
+      "path_text": "configure integration wecom sync-contacts add"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "wecom",
+        "verify"
+      ],
+      "path_text": "configure integration wecom verify"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "weixin-clawbot-binding-session",
+        "show"
+      ],
+      "path_text": "configure integration weixin-clawbot-binding-session show"
+    },
+    {
+      "path": [
+        "configure",
+        "integration",
+        "weixin-clawbot-binding-session",
+        "verify-code",
+        "add"
+      ],
+      "path_text": "configure integration weixin-clawbot-binding-session verify-code add"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "directories",
+        "add"
+      ],
+      "path_text": "configure kb directories add"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "directories",
+        "list"
+      ],
+      "path_text": "configure kb directories list"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "sync-bindings",
+        "add"
+      ],
+      "path_text": "configure kb sync-bindings add"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "sync-bindings",
+        "list"
+      ],
+      "path_text": "configure kb sync-bindings list"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "sync-bindings",
+        "remove"
+      ],
+      "path_text": "configure kb sync-bindings remove"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "sync-bindings",
+        "validate-target"
+      ],
+      "path_text": "configure kb sync-bindings validate-target"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "sync-bootstrap-access",
+        "add"
+      ],
+      "path_text": "configure kb sync-bootstrap-access add"
+    },
+    {
+      "path": [
+        "configure",
+        "kb",
+        "sync-jobs",
+        "list"
+      ],
+      "path_text": "configure kb sync-jobs list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "digiworkers",
+        "list"
+      ],
+      "path_text": "configure market digiworkers list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "job-tag",
+        "list"
+      ],
+      "path_text": "configure market job-tag list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "job-tag",
+        "selectable",
+        "list"
+      ],
+      "path_text": "configure market job-tag selectable list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "landing",
+        "list"
+      ],
+      "path_text": "configure market landing list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "orders",
+        "plan",
+        "add"
+      ],
+      "path_text": "configure market orders plan add"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "orders",
+        "worker",
+        "add"
+      ],
+      "path_text": "configure market orders worker add"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "plans",
+        "list"
+      ],
+      "path_text": "configure market plans list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "plans",
+        "show"
+      ],
+      "path_text": "configure market plans show"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "workers",
+        "list"
+      ],
+      "path_text": "configure market workers list"
+    },
+    {
+      "path": [
+        "configure",
+        "market",
+        "workers",
+        "show"
+      ],
+      "path_text": "configure market workers show"
+    },
+    {
+      "path": [
+        "configure",
+        "mcp-hub",
+        "list"
+      ],
+      "path_text": "configure mcp-hub list"
+    },
+    {
+      "path": [
+        "configure",
+        "mcp-hub",
+        "servers",
+        "bindings",
+        "list"
+      ],
+      "path_text": "configure mcp-hub servers bindings list"
+    },
+    {
+      "path": [
+        "configure",
+        "mcp-hub",
+        "servers",
+        "list"
+      ],
+      "path_text": "configure mcp-hub servers list"
+    },
+    {
+      "path": [
+        "configure",
+        "mcp-hub",
+        "servers",
+        "show"
+      ],
+      "path_text": "configure mcp-hub servers show"
+    },
+    {
+      "path": [
+        "configure",
+        "me",
+        "list"
+      ],
+      "path_text": "configure me list"
+    },
+    {
+      "path": [
+        "configure",
+        "me",
+        "set"
+      ],
+      "path_text": "configure me set"
+    },
+    {
+      "path": [
+        "configure",
+        "octopus-edge",
+        "brokers",
+        "add"
+      ],
+      "path_text": "configure octopus-edge brokers add"
+    },
+    {
+      "path": [
+        "configure",
+        "octopus-edge",
+        "brokers",
+        "list"
+      ],
+      "path_text": "configure octopus-edge brokers list"
+    },
+    {
+      "path": [
+        "configure",
+        "octopus-edge",
+        "brokers",
+        "revoke"
+      ],
+      "path_text": "configure octopus-edge brokers revoke"
+    },
+    {
+      "path": [
+        "configure",
+        "octopus-edge",
+        "services",
+        "add"
+      ],
+      "path_text": "configure octopus-edge services add"
+    },
+    {
+      "path": [
+        "configure",
+        "octopus-edge",
+        "services",
+        "list"
+      ],
+      "path_text": "configure octopus-edge services list"
+    },
+    {
+      "path": [
+        "configure",
+        "office-preview",
+        "session",
+        "add"
+      ],
+      "path_text": "configure office-preview session add"
+    },
+    {
+      "path": [
+        "configure",
+        "office-preview",
+        "session",
+        "show"
+      ],
+      "path_text": "configure office-preview session show"
+    },
+    {
+      "path": [
+        "configure",
+        "ontology",
+        "list"
+      ],
+      "path_text": "configure ontology list"
+    },
+    {
+      "path": [
+        "configure",
+        "ontology",
+        "runtime",
+        "add"
+      ],
+      "path_text": "configure ontology runtime add"
+    },
+    {
+      "path": [
+        "configure",
+        "ontology",
+        "runtime",
+        "show"
+      ],
+      "path_text": "configure ontology runtime show"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "bootstrap",
+        "team-create",
+        "assistant",
+        "list"
+      ],
+      "path_text": "configure public bootstrap team-create assistant list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "bootstrap",
+        "team-create",
+        "config",
+        "list"
+      ],
+      "path_text": "configure public bootstrap team-create config list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "company-profile-options",
+        "list"
+      ],
+      "path_text": "configure public company-profile-options list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "endpoint-type",
+        "config-schema",
+        "list"
+      ],
+      "path_text": "configure public endpoint-type config-schema list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "endpoint-type",
+        "list"
+      ],
+      "path_text": "configure public endpoint-type list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "healthz",
+        "list"
+      ],
+      "path_text": "configure public healthz list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "portal-brand",
+        "resolve",
+        "list"
+      ],
+      "path_text": "configure public portal-brand resolve list"
+    },
+    {
+      "path": [
+        "configure",
+        "public",
+        "site-config",
+        "public",
+        "list"
+      ],
+      "path_text": "configure public site-config public list"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "add"
+      ],
+      "path_text": "configure schedule trigger add"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "disable"
+      ],
+      "path_text": "configure schedule trigger disable"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "enable"
+      ],
+      "path_text": "configure schedule trigger enable"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "list"
+      ],
+      "path_text": "configure schedule trigger list"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "remove"
+      ],
+      "path_text": "configure schedule trigger remove"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "run"
+      ],
+      "path_text": "configure schedule trigger run"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "runs",
+        "list"
+      ],
+      "path_text": "configure schedule trigger runs list"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "set"
+      ],
+      "path_text": "configure schedule trigger set"
+    },
+    {
+      "path": [
+        "configure",
+        "schedule",
+        "trigger",
+        "show"
+      ],
+      "path_text": "configure schedule trigger show"
+    },
+    {
+      "path": [
+        "configure",
+        "shared",
+        "show"
+      ],
+      "path_text": "configure shared show"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "assemblable",
+        "list"
+      ],
+      "path_text": "configure skill assemblable list"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "count",
+        "list"
+      ],
+      "path_text": "configure skill count list"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "disable-assembly",
+        "add"
+      ],
+      "path_text": "configure skill disable-assembly add"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "enable-assembly",
+        "add"
+      ],
+      "path_text": "configure skill enable-assembly add"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "list"
+      ],
+      "path_text": "configure skill list"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "package-upload",
+        "add"
+      ],
+      "path_text": "configure skill package-upload add"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "scan",
+        "add"
+      ],
+      "path_text": "configure skill scan add"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "set",
+        "add"
+      ],
+      "path_text": "configure skill set add"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "set",
+        "list"
+      ],
+      "path_text": "configure skill set list"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "set",
+        "remove"
+      ],
+      "path_text": "configure skill set remove"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "set",
+        "set"
+      ],
+      "path_text": "configure skill set set"
+    },
+    {
+      "path": [
+        "configure",
+        "skill",
+        "upload",
+        "add"
+      ],
+      "path_text": "configure skill upload add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "activation",
+        "list"
+      ],
+      "path_text": "configure team activation list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "compute-images",
+        "list"
+      ],
+      "path_text": "configure team compute-images list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "inbox",
+        "items",
+        "act"
+      ],
+      "path_text": "configure team inbox items act"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "inbox",
+        "summary",
+        "list"
+      ],
+      "path_text": "configure team inbox summary list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "list"
+      ],
+      "path_text": "configure team list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "me",
+        "profile",
+        "list"
+      ],
+      "path_text": "configure team me profile list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "me",
+        "profile",
+        "set"
+      ],
+      "path_text": "configure team me profile set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "actions",
+        "add"
+      ],
+      "path_text": "configure team members actions add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "arcubase",
+        "departments",
+        "list"
+      ],
+      "path_text": "configure team members arcubase departments list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "arcubase",
+        "departments",
+        "set"
+      ],
+      "path_text": "configure team members arcubase departments set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "arcubase",
+        "list"
+      ],
+      "path_text": "configure team members arcubase list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "arcubase",
+        "organization",
+        "roles",
+        "list"
+      ],
+      "path_text": "configure team members arcubase organization roles list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "arcubase",
+        "organization",
+        "roles",
+        "set"
+      ],
+      "path_text": "configure team members arcubase organization roles set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "arcubase-activate"
+      ],
+      "path_text": "configure team members arcubase-activate"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "list"
+      ],
+      "path_text": "configure team members list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "profile",
+        "list"
+      ],
+      "path_text": "configure team members profile list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "profile",
+        "set"
+      ],
+      "path_text": "configure team members profile set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "role",
+        "set"
+      ],
+      "path_text": "configure team members role set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members",
+        "show"
+      ],
+      "path_text": "configure team members show"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "members-invite",
+        "add"
+      ],
+      "path_text": "configure team members-invite add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "oidc-clients",
+        "add"
+      ],
+      "path_text": "configure team oidc-clients add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "oidc-clients",
+        "list"
+      ],
+      "path_text": "configure team oidc-clients list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "oidc-clients",
+        "remove"
+      ],
+      "path_text": "configure team oidc-clients remove"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization",
+        "members-search",
+        "add"
+      ],
+      "path_text": "configure team organization members-search add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization-certification",
+        "submit"
+      ],
+      "path_text": "configure team organization-certification submit"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization-certification-documents",
+        "complete"
+      ],
+      "path_text": "configure team organization-certification-documents complete"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization-certification-documents-prepare-upload",
+        "add"
+      ],
+      "path_text": "configure team organization-certification-documents-prepare-upload add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization-profile",
+        "company-profile",
+        "set"
+      ],
+      "path_text": "configure team organization-profile company-profile set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization-profile",
+        "contact",
+        "set"
+      ],
+      "path_text": "configure team organization-profile contact set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "organization-profile",
+        "list"
+      ],
+      "path_text": "configure team organization-profile list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "private-digiworker",
+        "config",
+        "list"
+      ],
+      "path_text": "configure team private-digiworker config list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "private-digiworkers",
+        "add"
+      ],
+      "path_text": "configure team private-digiworkers add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "private-digiworkers",
+        "set"
+      ],
+      "path_text": "configure team private-digiworkers set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "private-digiworkers",
+        "show"
+      ],
+      "path_text": "configure team private-digiworkers show"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "catalog",
+        "list"
+      ],
+      "path_text": "configure team secrets catalog list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "edit"
+      ],
+      "path_text": "configure team secrets edit"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "list"
+      ],
+      "path_text": "configure team secrets list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "remove"
+      ],
+      "path_text": "configure team secrets remove"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "rotate"
+      ],
+      "path_text": "configure team secrets rotate"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "set"
+      ],
+      "path_text": "configure team secrets set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "secrets",
+        "show"
+      ],
+      "path_text": "configure team secrets show"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "set"
+      ],
+      "path_text": "configure team set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "setup"
+      ],
+      "path_text": "configure team setup"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "show"
+      ],
+      "path_text": "configure team show"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "subject-profiles",
+        "add"
+      ],
+      "path_text": "configure team subject-profiles add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "use"
+      ],
+      "path_text": "configure team use"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "bundle",
+        "list"
+      ],
+      "path_text": "configure team web-skills bundle list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "clone"
+      ],
+      "path_text": "configure team web-skills clone"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "detail",
+        "list"
+      ],
+      "path_text": "configure team web-skills detail list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "files",
+        "read",
+        "add"
+      ],
+      "path_text": "configure team web-skills files read add"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "list"
+      ],
+      "path_text": "configure team web-skills list"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "search"
+      ],
+      "path_text": "configure team web-skills search"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "set"
+      ],
+      "path_text": "configure team web-skills set"
+    },
+    {
+      "path": [
+        "configure",
+        "team",
+        "web-skills",
+        "upload",
+        "add"
+      ],
+      "path_text": "configure team web-skills upload add"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "list"
+      ],
+      "path_text": "configure vibe-coding projects list"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "remove"
+      ],
+      "path_text": "configure vibe-coding projects remove"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "secret-bindings",
+        "list"
+      ],
+      "path_text": "configure vibe-coding projects secret-bindings list"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "secret-bindings",
+        "set"
+      ],
+      "path_text": "configure vibe-coding projects secret-bindings set"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "show"
+      ],
+      "path_text": "configure vibe-coding projects show"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "workbench-domain",
+        "list"
+      ],
+      "path_text": "configure vibe-coding projects workbench-domain list"
+    },
+    {
+      "path": [
+        "configure",
+        "vibe-coding",
+        "projects",
+        "workbench-domain",
+        "set"
+      ],
+      "path_text": "configure vibe-coding projects workbench-domain set"
+    },
+    {
+      "path": [
+        "configure",
+        "web-session",
+        "close"
+      ],
+      "path_text": "configure web-session close"
+    },
+    {
+      "path": [
+        "configure",
+        "web-session",
+        "events",
+        "list"
+      ],
+      "path_text": "configure web-session events list"
+    },
+    {
+      "path": [
+        "configure",
+        "web-session",
+        "messages",
+        "add"
+      ],
+      "path_text": "configure web-session messages add"
+    },
+    {
+      "path": [
+        "configure",
+        "web-session",
+        "tool-results",
+        "add"
+      ],
+      "path_text": "configure web-session tool-results add"
+    },
+    {
+      "path": [
+        "configure",
+        "webskill",
+        "publish"
+      ],
+      "path_text": "configure webskill publish"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "add"
+      ],
+      "path_text": "configure workspace add"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "archive"
+      ],
+      "path_text": "configure workspace archive"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "list"
+      ],
+      "path_text": "configure workspace list"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "remove"
+      ],
+      "path_text": "configure workspace remove"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "restore"
+      ],
+      "path_text": "configure workspace restore"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "set"
+      ],
+      "path_text": "configure workspace set"
+    },
+    {
+      "path": [
+        "configure",
+        "workspace",
+        "show"
+      ],
+      "path_text": "configure workspace show"
+    },
+    {
+      "path": [
+        "conversation",
+        "history"
+      ],
+      "path_text": "conversation history"
+    },
+    {
+      "path": [
+        "conversation",
+        "list"
+      ],
+      "path_text": "conversation list"
+    },
+    {
+      "path": [
+        "conversation",
+        "send"
+      ],
+      "path_text": "conversation send"
+    },
+    {
+      "path": [
+        "conversation",
+        "watch"
+      ],
+      "path_text": "conversation watch"
+    },
+    {
+      "path": [
+        "skills",
+        "list"
+      ],
+      "path_text": "skills list"
+    },
+    {
+      "path": [
+        "skills",
+        "sync"
+      ],
+      "path_text": "skills sync"
+    },
+    {
+      "path": [
+        "task",
+        "activity",
+        "create"
+      ],
+      "path_text": "task activity create"
+    },
+    {
+      "path": [
+        "task",
+        "activity",
+        "reply"
+      ],
+      "path_text": "task activity reply"
+    },
+    {
+      "path": [
+        "task",
+        "activity",
+        "resolve"
+      ],
+      "path_text": "task activity resolve"
+    },
+    {
+      "path": [
+        "task",
+        "archive"
+      ],
+      "path_text": "task archive"
+    },
+    {
+      "path": [
+        "task",
+        "assign"
+      ],
+      "path_text": "task assign"
+    },
+    {
+      "path": [
+        "task",
+        "batch-create"
+      ],
+      "path_text": "task batch-create"
+    },
+    {
+      "path": [
+        "task",
+        "claim"
+      ],
+      "path_text": "task claim"
+    },
+    {
+      "path": [
+        "task",
+        "create"
+      ],
+      "path_text": "task create"
+    },
+    {
+      "path": [
+        "task",
+        "delete"
+      ],
+      "path_text": "task delete"
+    },
+    {
+      "path": [
+        "task",
+        "get"
+      ],
+      "path_text": "task get"
+    },
+    {
+      "path": [
+        "task",
+        "label",
+        "list"
+      ],
+      "path_text": "task label list"
+    },
+    {
+      "path": [
+        "task",
+        "project",
+        "list"
+      ],
+      "path_text": "task project list"
+    },
+    {
+      "path": [
+        "task",
+        "restore"
+      ],
+      "path_text": "task restore"
+    },
+    {
+      "path": [
+        "task",
+        "search"
+      ],
+      "path_text": "task search"
+    },
+    {
+      "path": [
+        "task",
+        "state"
+      ],
+      "path_text": "task state"
+    },
+    {
+      "path": [
+        "task",
+        "update"
+      ],
+      "path_text": "task update"
+    },
+    {
+      "path": [
+        "task",
+        "update-parent"
+      ],
+      "path_text": "task update-parent"
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "skill.upload",
+      "status": "supported",
+      "evidence": {
+        "command_path": [
+          "configure",
+          "skill",
+          "upload",
+          "add"
+        ],
+        "command_present": true,
+        "leaf_help_checked": true,
+        "leaf_help_compatible": true,
+        "dryrun_body_probe": "body-forwarded"
+      }
+    },
+    {
+      "operation_id": "skill.enable-assembly",
+      "status": "supported",
+      "evidence": {
+        "command_path": [
+          "configure",
+          "skill",
+          "enable-assembly",
+          "add"
+        ],
+        "command_present": true,
+        "leaf_help_checked": true,
+        "leaf_help_compatible": true,
+        "dryrun_body_probe": "body-forwarded"
+      }
+    },
+    {
+      "operation_id": "team-private-digiworker.create",
+      "status": "supported",
+      "evidence": {
+        "command_path": [
+          "configure",
+          "team",
+          "private-digiworkers",
+          "add"
+        ],
+        "command_present": true,
+        "leaf_help_checked": true,
+        "leaf_help_compatible": true,
+        "dryrun_body_probe": "body-forwarded"
+      }
+    },
+    {
+      "operation_id": "employee.skillsets.set",
+      "status": "supported",
+      "evidence": {
+        "command_path": [
+          "configure",
+          "employee",
+          "skillsets",
+          "set"
+        ],
+        "command_present": true,
+        "leaf_help_checked": true,
+        "leaf_help_compatible": true,
+        "dryrun_body_probe": "body-forwarded"
+      }
+    },
+    {
+      "operation_id": "employee-hire.create",
+      "status": "supported",
+      "evidence": {
+        "command_path": [
+          "configure",
+          "employee",
+          "hire"
+        ],
+        "command_present": true,
+        "leaf_help_checked": true,
+        "leaf_help_compatible": true,
+        "dryrun_body_probe": "body-forwarded"
+      }
+    },
+    {
+      "operation_id": "skill-set.create",
+      "status": "manual-required",
+      "evidence": {
+        "executor": "admin-manual",
+        "manual_artifacts": [
+          "skills/<skill-slug>/"
+        ]
+      }
+    },
+    {
+      "operation_id": "skill-package.upload",
+      "status": "manual-required",
+      "evidence": {
+        "executor": "admin-manual",
+        "manual_artifacts": [
+          "skills/<skill-slug>/"
+        ]
+      }
+    },
+    {
+      "operation_id": "arcubase-app.create",
+      "status": "manual-required",
+      "evidence": {
+        "executor": "admin-manual",
+        "manual_artifacts": [
+          "arcubase/decision.yaml",
+          "arcubase/schema.yaml",
+          "arcubase/access-matrix.md"
+        ]
+      }
+    },
+    {
+      "operation_id": "arcubase-table.create",
+      "status": "manual-required",
+      "evidence": {
+        "executor": "admin-manual",
+        "manual_artifacts": [
+          "arcubase/schema.yaml",
+          "arcubase/access-matrix.md",
+          "acceptance/test-cases.yaml"
+        ]
+      }
+    }
+  ],
+  "issues": [
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "auth login",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "auth",
+          "login"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "auth logout",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "auth",
+          "logout"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "auth profiles current",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "auth",
+          "profiles",
+          "current"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "auth profiles delete",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "auth",
+          "profiles",
+          "delete"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "auth profiles use",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "auth",
+          "profiles",
+          "use"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure account inbox items act",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "account",
+          "inbox",
+          "items",
+          "act"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app my open",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "my",
+          "open"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station api-keys-rotate add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "api-keys-rotate",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station channel-config set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "channel-config",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station disable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "disable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station embed-access-tokens add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "embed-access-tokens",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station enable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "enable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app station web-sessions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "station",
+          "web-sessions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app web-url add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "web-url",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app web-url remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "web-url",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure app web-url set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "app",
+          "web-url",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase departments add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "departments",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase departments paths",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "departments",
+          "paths"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase departments relocate set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "departments",
+          "relocate",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase departments remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "departments",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase departments rename set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "departments",
+          "rename",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase organization roles add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "organization",
+          "roles",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase organization roles remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "organization",
+          "roles",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure arcubase organization roles rename set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "arcubase",
+          "organization",
+          "roles",
+          "rename",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure billing ticket-redemptions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "billing",
+          "ticket-redemptions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure browser client-info refresh",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "browser",
+          "client-info",
+          "refresh"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure browser cloud add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "browser",
+          "cloud",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure browser live-login add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "browser",
+          "live-login",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure browser live-login commit",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "browser",
+          "live-login",
+          "commit"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure browser remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "browser",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure browser set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "browser",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure calendar source add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "calendar",
+          "source",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure calendar source builtin",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "calendar",
+          "source",
+          "builtin"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure calendar source remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "calendar",
+          "source",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure calendar source set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "calendar",
+          "source",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure calendar source sync",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "calendar",
+          "source",
+          "sync"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure device register add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "device",
+          "register",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure device visibility set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "device",
+          "visibility",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee access-policy set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "access-policy",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee arcubase ensure add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "arcubase",
+          "ensure",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee feishu-bot-binding-sessions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "feishu-bot-binding-sessions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee fire",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "fire"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee group-sessions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "group-sessions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee kb-access set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "kb-access",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee pinned remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "pinned",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee pinned set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "pinned",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee profile set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "profile",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee reporting-line set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "reporting-line",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee runtime-config remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "runtime-config",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee runtime-config set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "runtime-config",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee stations add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "stations",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee team-skills set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "team-skills",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee weixin-clawbot-binding-sessions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "weixin-clawbot-binding-sessions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure employee workspace-access set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "employee",
+          "workspace-access",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure external-user human-member set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "external-user",
+          "human-member",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure external-user verification-flow add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "external-user",
+          "verification-flow",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure external-user verification-flow remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "external-user",
+          "verification-flow",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure external-user verification-flow set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "external-user",
+          "verification-flow",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure file move add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "file",
+          "move",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure file preview-session add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "file",
+          "preview-session",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure file remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "file",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure group-session agentloops stop",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "group-session",
+          "agentloops",
+          "stop"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure group-session join",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "group-session",
+          "join"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure group-session members mute remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "group-session",
+          "members",
+          "mute",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure group-session messages add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "group-session",
+          "messages",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure group-session reply-targets set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "group-session",
+          "reply-targets",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure group-session settings set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "group-session",
+          "settings",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration collaboration-platform feishu binding-sessions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "collaboration-platform",
+          "feishu",
+          "binding-sessions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration email-ingress add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "email-ingress",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration email-ingress disable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "email-ingress",
+          "disable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration email-ingress enable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "email-ingress",
+          "enable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration email-ingress remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "email-ingress",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration email-ingress set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "email-ingress",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration feishu remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "feishu",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration feishu set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "feishu",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration feishu verify",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "feishu",
+          "verify"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook disable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "disable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook enable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "enable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook rotate-signature-secret",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "rotate-signature-secret"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook rotate-url-token",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "rotate-url-token"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration webhook set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "webhook",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration wecom add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "wecom",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration wecom remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "wecom",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration wecom set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "wecom",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration wecom sync-contacts add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "wecom",
+          "sync-contacts",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration wecom verify",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "wecom",
+          "verify"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure integration weixin-clawbot-binding-session verify-code add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "integration",
+          "weixin-clawbot-binding-session",
+          "verify-code",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure kb directories add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "kb",
+          "directories",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure kb sync-bindings add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "kb",
+          "sync-bindings",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure kb sync-bindings remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "kb",
+          "sync-bindings",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure kb sync-bindings validate-target",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "kb",
+          "sync-bindings",
+          "validate-target"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure kb sync-bootstrap-access add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "kb",
+          "sync-bootstrap-access",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure market orders plan add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "market",
+          "orders",
+          "plan",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure market orders worker add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "market",
+          "orders",
+          "worker",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure me set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "me",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure octopus-edge brokers add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "octopus-edge",
+          "brokers",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure octopus-edge brokers revoke",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "octopus-edge",
+          "brokers",
+          "revoke"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure octopus-edge services add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "octopus-edge",
+          "services",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure office-preview session add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "office-preview",
+          "session",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure ontology runtime add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "ontology",
+          "runtime",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure schedule trigger add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "schedule",
+          "trigger",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure schedule trigger disable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "schedule",
+          "trigger",
+          "disable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure schedule trigger enable",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "schedule",
+          "trigger",
+          "enable"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure schedule trigger remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "schedule",
+          "trigger",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure schedule trigger run",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "schedule",
+          "trigger",
+          "run"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure schedule trigger set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "schedule",
+          "trigger",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure skill disable-assembly add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "skill",
+          "disable-assembly",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure skill package-upload add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "skill",
+          "package-upload",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure skill scan add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "skill",
+          "scan",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure skill set add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "skill",
+          "set",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure skill set remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "skill",
+          "set",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure skill set set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "skill",
+          "set",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team inbox items act",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "inbox",
+          "items",
+          "act"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team me profile set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "me",
+          "profile",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members actions add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members",
+          "actions",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members arcubase departments set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members",
+          "arcubase",
+          "departments",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members arcubase organization roles set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members",
+          "arcubase",
+          "organization",
+          "roles",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members arcubase-activate",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members",
+          "arcubase-activate"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members profile set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members",
+          "profile",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members role set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members",
+          "role",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team members-invite add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "members-invite",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team oidc-clients add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "oidc-clients",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team oidc-clients remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "oidc-clients",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team organization members-search add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "organization",
+          "members-search",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team organization-certification submit",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "organization-certification",
+          "submit"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team organization-certification-documents complete",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "organization-certification-documents",
+          "complete"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team organization-certification-documents-prepare-upload add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "organization-certification-documents-prepare-upload",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team organization-profile company-profile set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "organization-profile",
+          "company-profile",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team organization-profile contact set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "organization-profile",
+          "contact",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team private-digiworkers set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "private-digiworkers",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team secrets edit",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "secrets",
+          "edit"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team secrets remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "secrets",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team secrets rotate",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "secrets",
+          "rotate"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team secrets set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "secrets",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team setup",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "setup"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team subject-profiles add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "subject-profiles",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team use",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "use"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team web-skills clone",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "web-skills",
+          "clone"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team web-skills files read add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "web-skills",
+          "files",
+          "read",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team web-skills set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "web-skills",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure team web-skills upload add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "team",
+          "web-skills",
+          "upload",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure vibe-coding projects remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "vibe-coding",
+          "projects",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure vibe-coding projects secret-bindings set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "vibe-coding",
+          "projects",
+          "secret-bindings",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure vibe-coding projects workbench-domain set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "vibe-coding",
+          "projects",
+          "workbench-domain",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure web-session close",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "web-session",
+          "close"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure web-session messages add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "web-session",
+          "messages",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure web-session tool-results add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "web-session",
+          "tool-results",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure webskill publish",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "webskill",
+          "publish"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure workspace add",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "workspace",
+          "add"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure workspace archive",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "workspace",
+          "archive"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure workspace remove",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "workspace",
+          "remove"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure workspace restore",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "workspace",
+          "restore"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "configure workspace set",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "configure",
+          "workspace",
+          "set"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "conversation history",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "conversation",
+          "history"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "conversation send",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "conversation",
+          "send"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "conversation watch",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "conversation",
+          "watch"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "skills sync",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "skills",
+          "sync"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task activity create",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "activity",
+          "create"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task activity reply",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "activity",
+          "reply"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task activity resolve",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "activity",
+          "resolve"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task archive",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "archive"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task assign",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "assign"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task batch-create",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "batch-create"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task claim",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "claim"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task create",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "create"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task delete",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "delete"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task restore",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "restore"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task state",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "state"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task update",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "update"
+        ]
+      }
+    },
+    {
+      "severity": "WARNING",
+      "code": "W_CLI_UNCATALOGED_WRITE",
+      "path": "task update-parent",
+      "message": "The CLI exposes a write-like command that is not registered in the Kit catalog; it will not be used.",
+      "details": {
+        "command_path": [
+          "task",
+          "update-parent"
+        ]
+      }
+    }
+  ]
+}

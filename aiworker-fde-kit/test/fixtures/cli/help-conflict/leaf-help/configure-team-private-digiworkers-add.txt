@@ -1,0 +1,7 @@
+Usage: octopus-cli configure team private-digiworkers add [options]
+
+Options:
+  --body <json>
+  --json
+  --dryrun
+  --help

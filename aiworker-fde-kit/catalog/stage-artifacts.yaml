@@ -1,0 +1,85 @@
+schema_version: 1
+stages:
+  - id: initialize
+    depends_on: []
+    required_inputs: []
+    required_outputs:
+      - inputs/input-inventory.md
+    approval_field: stage_status.initialize.approved_at
+  - id: discover
+    depends_on:
+      - initialize
+    required_inputs:
+      - inputs/input-inventory.md
+    required_outputs:
+      - discovery/facts-and-assumptions.md
+      - discovery/open-questions.md
+      - discovery/scenario-model.md
+    approval_field: stage_status.discover.approved_at
+  - id: team-design
+    depends_on:
+      - discover
+    required_inputs:
+      - discovery/facts-and-assumptions.md
+      - discovery/scenario-model.md
+    required_outputs:
+      - design/team-design.md
+      - design/collaboration-and-dataflow.md
+      - path: design/external-station.md
+        condition: station-required
+    approval_field: stage_status.team-design.approved_at
+  - id: foundation-design
+    depends_on:
+      - team-design
+    required_inputs:
+      - design/team-design.md
+      - design/collaboration-and-dataflow.md
+    required_outputs:
+      - design/platform-capability-selection.md
+      - design/data-foundation.md
+      - design/identity-and-access.md
+      - arcubase/decision.yaml
+      - path: arcubase/schema.yaml
+        condition: arcubase-required
+      - path: arcubase/access-matrix.md
+        condition: arcubase-access-required
+      - path: design/taskboard.md
+        condition: taskboard-required
+      - path: design/browser-webskill.md
+        condition: browser-webskill-required
+    approval_field: null
+  - id: author
+    depends_on:
+      - foundation-design
+    required_inputs:
+      - design/platform-capability-selection.md
+      - design/data-foundation.md
+      - design/identity-and-access.md
+      - arcubase/decision.yaml
+    required_outputs:
+      - employees/**/*.md
+      - skills/**/SKILL.md
+    approval_field: null
+  - id: assemble
+    depends_on:
+      - author
+    required_inputs:
+      - employees/**/*.md
+      - skills/**/SKILL.md
+    required_outputs:
+      - assembly/assembly-plan.md
+      - assembly/operations.yaml
+      - acceptance/acceptance-plan.md
+      - acceptance/test-cases.yaml
+      - path: assembly/octopus-cli-assemble.sh
+        condition: assembly-script-required
+    approval_field: null
+  - id: validate
+    depends_on:
+      - assemble
+    required_inputs:
+      - assembly/operations.yaml
+      - acceptance/test-cases.yaml
+    required_outputs:
+      - reports/package-validation.json
+    approval_field: null

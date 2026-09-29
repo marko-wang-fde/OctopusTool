@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Resource",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "groupId": { "type": "string", "minLength": 1 },
+    "capacity": { "type": "number", "exclusiveMinimum": 0 },
+    "unavailableWindows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string", "format": "date-time" },
+          "to": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

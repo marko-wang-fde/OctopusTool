@@ -1,0 +1,74 @@
+[
+  {
+    "name": "auth",
+    "description": "Authentication commands",
+    "path": ["auth"],
+    "commands": [
+      {
+        "name": "login",
+        "description": "Login through the browser",
+        "path": ["auth", "login"],
+        "commands": []
+      }
+    ]
+  },
+  {
+    "name": "task",
+    "description": "Manage taskboard tasks",
+    "path": ["task"],
+    "commands": [
+      {
+        "name": "create",
+        "description": "Create a taskboard task",
+        "path": ["task", "create"],
+        "commands": []
+      }
+    ]
+  },
+  {
+    "name": "conversation",
+    "description": "Manage conversations",
+    "path": ["conversation"],
+    "commands": [
+      {
+        "name": "send",
+        "description": "Start or continue a conversation",
+        "path": ["conversation", "send"],
+        "commands": []
+      }
+    ]
+  },
+  {
+    "name": "skills",
+    "description": "Install online team skills for local agents",
+    "path": ["skills"],
+    "commands": [
+      {
+        "name": "sync",
+        "description": "Sync online team skills",
+        "path": ["skills", "sync"],
+        "commands": []
+      }
+    ]
+  },
+  {
+    "name": "configure",
+    "description": "Configure team and administrative resources",
+    "path": ["configure"],
+    "commands": [
+      {
+        "name": "team",
+        "description": "Manage teams and members",
+        "path": ["configure", "team"],
+        "commands": [
+          {
+            "name": "use",
+            "description": "Bind the current profile to a team",
+            "path": ["configure", "team", "use"],
+            "commands": []
+          }
+        ]
+      }
+    ]
+  }
+]

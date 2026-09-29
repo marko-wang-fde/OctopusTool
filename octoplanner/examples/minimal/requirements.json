@@ -1,0 +1,10 @@
+[
+  {
+    "id": "REQ-MIN-1",
+    "itemId": "ITEM-VALVE-25",
+    "quantity": 100,
+    "dueAt": "2026-04-10T17:00:00.000Z",
+    "priority": 10,
+    "customer": "ACME"
+  }
+]

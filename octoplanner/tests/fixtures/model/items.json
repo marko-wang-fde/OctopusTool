@@ -1,0 +1,7 @@
+{
+  "id": "item_batch_1",
+  "items": [
+    { "id": "ITEM-1", "name": "Valve Body", "setupGroup": "valve" },
+    { "id": "ITEM-2", "name": "Connector" }
+  ]
+}

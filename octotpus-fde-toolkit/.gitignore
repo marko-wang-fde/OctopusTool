@@ -1,0 +1,5 @@
+**/logs/
+*.jsonl
+handoff-*.md
+validation-*.md
+.DS_Store

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ROUTE-VALVE-25",
+    "itemId": "ITEM-VALVE-25",
+    "operations": [
+      {
+        "id": "OP-ROUGH",
+        "sequence": 10,
+        "name": "Rough machining",
+        "durationMinutes": 120,
+        "eligibleResourceIds": ["MC-01"],
+        "setupGroup": "VALVE-25",
+        "continuity": "preferred"
+      },
+      {
+        "id": "OP-FINISH",
+        "sequence": 20,
+        "name": "Finish machining",
+        "durationMinutes": 90,
+        "eligibleResourceIds": ["MC-01"],
+        "setupGroup": "VALVE-25",
+        "continuity": "preferred"
+      }
+    ]
+  }
+]

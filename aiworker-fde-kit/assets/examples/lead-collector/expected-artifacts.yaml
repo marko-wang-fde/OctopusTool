@@ -1,0 +1,115 @@
+schema_version: 1
+files:
+  - path: acceptance/acceptance-plan.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 验收计划", "固定语言 `zh-CN`", "执行九个用例", "预置重复记录"]
+    forbidden_literals: ["真实客户数据"]
+  - path: acceptance/test-cases.yaml
+    kind: yaml
+    sha256: 09dbfcf3d85226dd489933818fb3bc0a9b5d90a7cab625651ae8705ee54a6b2f
+  - path: arcubase/access-matrix.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# Arcubase 访问矩阵", "数字员工服务账号", "`role.sales`", "`role.sales_manager`"]
+    forbidden_literals: ["删除 | 是"]
+  - path: arcubase/decision.yaml
+    kind: yaml
+    sha256: b56d2747df3398634b6f6f700cd22dd27850e6ba52b66c8d0bcd828ffd09f8bb
+  - path: arcubase/schema.yaml
+    kind: yaml
+    sha256: b56d2747df3398634b6f6f700cd22dd27850e6ba52b66c8d0bcd828ffd09f8bb
+  - path: assembly/assembly-plan.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 装配计划", "## 人工操作", "`manual-required`", "## octopus-cli live assembly"]
+    forbidden_literals: ["普通 Skill 自动上传", "Arcubase 自动建表"]
+  - path: assembly/octopus-cli-assemble.sh
+    kind: shell
+    sha256: 643fa27439ec838efc2e2e1bbb98ab1d7af76b6102da3f774cf7498086e543d6
+    mode: "0755"
+    assemble_call_count: 1
+    required_literals:
+      - set -euo pipefail
+      - run_octopus_assemble() {
+      - verify_generated_assemble_calls
+      - run_octopus_assemble 'configure' 'team' 'private-digiworkers' 'add'
+    forbidden_literals:
+      - octopus-cli configure skill set add
+      - octopus-cli configure team private-digiworkers add
+      - octopus-cli configure employee hire
+      - "--dryrun"
+  - path: assembly/operations.yaml
+    kind: yaml
+    sha256: 557563190ea57726733a02cbbbccd3d4abe49f41592542895f4c503dfe830ce4
+  - path: assembly/payloads/team-private-digiworker-create.json
+    kind: json
+    sha256: d249822220f66b0e3e56df627a47106d05bb12598e95cb012868af8b5732ee2d
+  - path: delivery-summary.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 离线交付摘要", "一个员工“小采”", "可用 octopus-cli 直接创建私有数字员工", "技能集创建和绑定"]
+    forbidden_literals: ["生产装配完成"]
+  - path: design/collaboration-and-dataflow.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 协作与数据流", "Current Speaker", "展示九字段摘要", "返回记录 ID"]
+    forbidden_literals: ["已对外发送消息"]
+  - path: design/data-foundation.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 数据地基", "`app.lead_collection`", "`table.sales_leads`", "Unicode NFKC"]
+    forbidden_literals: ["共享未审批"]
+  - path: design/identity-and-access.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 身份与访问", "`role.sales`", "`role.sales_manager`", "`role.intern`"]
+    forbidden_literals: ["实习生可查询"]
+  - path: design/platform-capability-selection.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 平台能力选择", "`feat.arcubase_user`", "`feat.organization_view`", "`manual-required`"]
+    forbidden_literals: ["支持普通 Skill 自动上传"]
+  - path: design/team-design.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 团队设计", "`worker.lead_collector`", "小采 · 线索收集专员", "不启用外部 Station"]
+    forbidden_literals: ["第二个数字员工"]
+  - path: discovery/facts-and-assumptions.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 事实与假设", "## 已确认事实", "销售确认前不得写入", "## 固定假设"]
+    forbidden_literals: ["已自动分配"]
+  - path: discovery/open-questions.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 待确认问题", "无未决问题", "Profile 和 Team"]
+    forbidden_literals: ["随机 UUID"]
+  - path: discovery/scenario-model.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 场景模型", "`scenario.lead_collection`", "`object.sales_lead`", "疑似重复"]
+    forbidden_literals: ["未经确认写入"]
+  - path: employees/lead-collector.md
+    kind: markdown
+    sha256: null
+    required_literals: ["id: worker.lead_collector", "name: 小采 · 线索收集专员", "toolkit_keys: [feat.arcubase_user, feat.organization_view]", "# 小采 · 线索收集专员"]
+    forbidden_literals: ["station_reachable: true"]
+  - path: fde-project.yaml
+    kind: yaml
+    sha256: 8d8eb0c1dbbbd2fbfc72e22f504a54553b4d5311241662acdf2a11c640d7dfe9
+  - path: inputs/input-inventory.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 输入清单", "星河科技客户线索收集数字员工", "`xinghe-lead-collector-fde`", "`2026-07-24T01:00:00Z`"]
+    forbidden_literals: ["真实手机号"]
+  - path: reports/validation-report.md
+    kind: markdown
+    sha256: null
+    required_literals: ["# 验证报告", "render-assemble-script", "Exit code: `0`", "无阻断、警告或信息项"]
+    forbidden_literals: ["生产装配成功"]
+  - path: skills/collect-sales-leads/SKILL.md
+    kind: markdown
+    sha256: null
+    required_literals: ["name: collect-sales-leads", "# Collect Sales Leads", "`field.company_name`", "销售查询必须限定 Current Speaker ID"]
+    forbidden_literals: ["允许删除"]

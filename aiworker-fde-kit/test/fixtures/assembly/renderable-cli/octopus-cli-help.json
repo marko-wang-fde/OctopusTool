@@ -1,0 +1,5835 @@
+{
+  "schema_version": 1,
+  "generated_by": "aiworker-fde-kit/inspect-octopus-cli",
+  "evidence_scope": "command-path-presence-only",
+  "help": [
+    {
+      "name": "auth",
+      "description": "Authentication commands",
+      "path": [
+        "auth"
+      ],
+      "commands": [
+        {
+          "name": "login",
+          "description": "Login through the browser",
+          "path": [
+            "auth",
+            "login"
+          ],
+          "commands": []
+        },
+        {
+          "name": "logout",
+          "description": "Clear local credentials",
+          "path": [
+            "auth",
+            "logout"
+          ],
+          "commands": []
+        },
+        {
+          "name": "whoami",
+          "description": "Display the current login identity",
+          "path": [
+            "auth",
+            "whoami"
+          ],
+          "commands": []
+        },
+        {
+          "name": "profiles",
+          "description": "Manage local login profiles",
+          "path": [
+            "auth",
+            "profiles"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "List local login profiles",
+              "path": [
+                "auth",
+                "profiles",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "current",
+              "description": "Display the current login profile",
+              "path": [
+                "auth",
+                "profiles",
+                "current"
+              ],
+              "commands": []
+            },
+            {
+              "name": "use",
+              "description": "Set the current login profile",
+              "path": [
+                "auth",
+                "profiles",
+                "use"
+              ],
+              "commands": []
+            },
+            {
+              "name": "delete",
+              "description": "Delete a local login profile",
+              "path": [
+                "auth",
+                "profiles",
+                "delete"
+              ],
+              "commands": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "task",
+      "description": "Manage taskboard tasks",
+      "path": [
+        "task"
+      ],
+      "commands": [
+        {
+          "name": "project",
+          "description": "Manage taskboard project",
+          "path": [
+            "task",
+            "project"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "List taskboard projects",
+              "path": [
+                "task",
+                "project",
+                "list"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "create",
+          "description": "Create a taskboard task",
+          "path": [
+            "task",
+            "create"
+          ],
+          "commands": []
+        },
+        {
+          "name": "batch-create",
+          "description": "Create taskboard tasks in a batch",
+          "path": [
+            "task",
+            "batch-create"
+          ],
+          "commands": []
+        },
+        {
+          "name": "search",
+          "description": "Search taskboard tasks",
+          "path": [
+            "task",
+            "search"
+          ],
+          "commands": []
+        },
+        {
+          "name": "get",
+          "description": "Get a taskboard task",
+          "path": [
+            "task",
+            "get"
+          ],
+          "commands": []
+        },
+        {
+          "name": "update",
+          "description": "Update a taskboard task",
+          "path": [
+            "task",
+            "update"
+          ],
+          "commands": []
+        },
+        {
+          "name": "update-parent",
+          "description": "Update a taskboard task parent",
+          "path": [
+            "task",
+            "update-parent"
+          ],
+          "commands": []
+        },
+        {
+          "name": "assign",
+          "description": "Assign a taskboard task",
+          "path": [
+            "task",
+            "assign"
+          ],
+          "commands": []
+        },
+        {
+          "name": "claim",
+          "description": "Claim a taskboard task",
+          "path": [
+            "task",
+            "claim"
+          ],
+          "commands": []
+        },
+        {
+          "name": "state",
+          "description": "Change a taskboard task state",
+          "path": [
+            "task",
+            "state"
+          ],
+          "commands": []
+        },
+        {
+          "name": "archive",
+          "description": "Archive a taskboard task",
+          "path": [
+            "task",
+            "archive"
+          ],
+          "commands": []
+        },
+        {
+          "name": "restore",
+          "description": "Restore a taskboard task",
+          "path": [
+            "task",
+            "restore"
+          ],
+          "commands": []
+        },
+        {
+          "name": "delete",
+          "description": "Delete a taskboard task",
+          "path": [
+            "task",
+            "delete"
+          ],
+          "commands": []
+        },
+        {
+          "name": "label",
+          "description": "Manage taskboard label",
+          "path": [
+            "task",
+            "label"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "List taskboard labels",
+              "path": [
+                "task",
+                "label",
+                "list"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "activity",
+          "description": "Manage taskboard activity",
+          "path": [
+            "task",
+            "activity"
+          ],
+          "commands": [
+            {
+              "name": "create",
+              "description": "Create a taskboard activity",
+              "path": [
+                "task",
+                "activity",
+                "create"
+              ],
+              "commands": []
+            },
+            {
+              "name": "reply",
+              "description": "Reply to a taskboard activity",
+              "path": [
+                "task",
+                "activity",
+                "reply"
+              ],
+              "commands": []
+            },
+            {
+              "name": "resolve",
+              "description": "Resolve a taskboard activity",
+              "path": [
+                "task",
+                "activity",
+                "resolve"
+              ],
+              "commands": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "conversation",
+      "description": "Manage conversations",
+      "path": [
+        "conversation"
+      ],
+      "commands": [
+        {
+          "name": "list",
+          "description": "List recent conversations",
+          "path": [
+            "conversation",
+            "list"
+          ],
+          "commands": []
+        },
+        {
+          "name": "history",
+          "description": "Show conversation history",
+          "path": [
+            "conversation",
+            "history"
+          ],
+          "commands": []
+        },
+        {
+          "name": "send",
+          "description": "Start or continue a conversation by sending a human message",
+          "path": [
+            "conversation",
+            "send"
+          ],
+          "commands": []
+        },
+        {
+          "name": "watch",
+          "description": "Watch live events for a conversation",
+          "path": [
+            "conversation",
+            "watch"
+          ],
+          "commands": []
+        }
+      ]
+    },
+    {
+      "name": "skills",
+      "description": "Install online team skills for local agents",
+      "path": [
+        "skills"
+      ],
+      "commands": [
+        {
+          "name": "list",
+          "description": "List online team skills",
+          "path": [
+            "skills",
+            "list"
+          ],
+          "commands": []
+        },
+        {
+          "name": "sync",
+          "description": "Sync online team skills into a local agent skill directory",
+          "path": [
+            "skills",
+            "sync"
+          ],
+          "commands": []
+        }
+      ]
+    },
+    {
+      "name": "configure",
+      "description": "Configure team and administrative resources",
+      "path": [
+        "configure"
+      ],
+      "commands": [
+        {
+          "name": "team",
+          "description": "Manage teams and members",
+          "path": [
+            "configure",
+            "team"
+          ],
+          "commands": [
+            {
+              "name": "use",
+              "description": "Bind the current profile to a team",
+              "path": [
+                "configure",
+                "team",
+                "use"
+              ],
+              "commands": []
+            },
+            {
+              "name": "list",
+              "description": "Run configure team list",
+              "path": [
+                "configure",
+                "team",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "setup",
+              "description": "Run configure team setup",
+              "path": [
+                "configure",
+                "team",
+                "setup"
+              ],
+              "commands": []
+            },
+            {
+              "name": "show",
+              "description": "Run configure team show",
+              "path": [
+                "configure",
+                "team",
+                "show"
+              ],
+              "commands": []
+            },
+            {
+              "name": "set",
+              "description": "Run configure team set",
+              "path": [
+                "configure",
+                "team",
+                "set"
+              ],
+              "commands": []
+            },
+            {
+              "name": "activation",
+              "description": "Run configure team activation",
+              "path": [
+                "configure",
+                "team",
+                "activation"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team activation list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "activation",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "compute-images",
+              "description": "Run configure team compute-images",
+              "path": [
+                "configure",
+                "team",
+                "compute-images"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team compute-images list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "compute-images",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "inbox",
+              "description": "Run configure team inbox",
+              "path": [
+                "configure",
+                "team",
+                "inbox"
+              ],
+              "commands": [
+                {
+                  "name": "items",
+                  "description": "Run configure team inbox items",
+                  "path": [
+                    "configure",
+                    "team",
+                    "inbox",
+                    "items"
+                  ],
+                  "commands": [
+                    {
+                      "name": "act",
+                      "description": "Run configure team inbox items act",
+                      "path": [
+                        "configure",
+                        "team",
+                        "inbox",
+                        "items",
+                        "act"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "summary",
+                  "description": "Run configure team inbox summary",
+                  "path": [
+                    "configure",
+                    "team",
+                    "inbox",
+                    "summary"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team inbox summary list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "inbox",
+                        "summary",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "me",
+              "description": "Manage current user profile",
+              "path": [
+                "configure",
+                "team",
+                "me"
+              ],
+              "commands": [
+                {
+                  "name": "profile",
+                  "description": "Run configure team me profile",
+                  "path": [
+                    "configure",
+                    "team",
+                    "me",
+                    "profile"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team me profile list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "me",
+                        "profile",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "set",
+                      "description": "Run configure team me profile set",
+                      "path": [
+                        "configure",
+                        "team",
+                        "me",
+                        "profile",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "members",
+              "description": "Run configure team members",
+              "path": [
+                "configure",
+                "team",
+                "members"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team members list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure team members show",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "actions",
+                  "description": "Run configure team members actions",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "actions"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure team members actions add",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "actions",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "arcubase",
+                  "description": "Manage Arcubase resources",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "arcubase"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team members arcubase list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "arcubase",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "departments",
+                      "description": "Run configure team members arcubase departments",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "arcubase",
+                        "departments"
+                      ],
+                      "commands": [
+                        {
+                          "name": "list",
+                          "description": "Run configure team members arcubase departments list",
+                          "path": [
+                            "configure",
+                            "team",
+                            "members",
+                            "arcubase",
+                            "departments",
+                            "list"
+                          ],
+                          "commands": []
+                        },
+                        {
+                          "name": "set",
+                          "description": "Run configure team members arcubase departments set",
+                          "path": [
+                            "configure",
+                            "team",
+                            "members",
+                            "arcubase",
+                            "departments",
+                            "set"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "organization",
+                      "description": "Run configure team members arcubase organization",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "arcubase",
+                        "organization"
+                      ],
+                      "commands": [
+                        {
+                          "name": "roles",
+                          "description": "Run configure team members arcubase organization roles",
+                          "path": [
+                            "configure",
+                            "team",
+                            "members",
+                            "arcubase",
+                            "organization",
+                            "roles"
+                          ],
+                          "commands": [
+                            {
+                              "name": "list",
+                              "description": "Run configure team members arcubase organization roles list",
+                              "path": [
+                                "configure",
+                                "team",
+                                "members",
+                                "arcubase",
+                                "organization",
+                                "roles",
+                                "list"
+                              ],
+                              "commands": []
+                            },
+                            {
+                              "name": "set",
+                              "description": "Run configure team members arcubase organization roles set",
+                              "path": [
+                                "configure",
+                                "team",
+                                "members",
+                                "arcubase",
+                                "organization",
+                                "roles",
+                                "set"
+                              ],
+                              "commands": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "arcubase-activate",
+                  "description": "Run configure team members arcubase-activate",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "arcubase-activate"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "profile",
+                  "description": "Run configure team members profile",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "profile"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team members profile list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "profile",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "set",
+                      "description": "Run configure team members profile set",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "profile",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "role",
+                  "description": "Run configure team members role",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members",
+                    "role"
+                  ],
+                  "commands": [
+                    {
+                      "name": "set",
+                      "description": "Run configure team members role set",
+                      "path": [
+                        "configure",
+                        "team",
+                        "members",
+                        "role",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "members-invite",
+              "description": "Run configure team members-invite",
+              "path": [
+                "configure",
+                "team",
+                "members-invite"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure team members-invite add",
+                  "path": [
+                    "configure",
+                    "team",
+                    "members-invite",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "organization",
+              "description": "Run configure team organization",
+              "path": [
+                "configure",
+                "team",
+                "organization"
+              ],
+              "commands": [
+                {
+                  "name": "members-search",
+                  "description": "Run configure team organization members-search",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization",
+                    "members-search"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure team organization members-search add",
+                      "path": [
+                        "configure",
+                        "team",
+                        "organization",
+                        "members-search",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "private-digiworker",
+              "description": "Run configure team private-digiworker",
+              "path": [
+                "configure",
+                "team",
+                "private-digiworker"
+              ],
+              "commands": [
+                {
+                  "name": "config",
+                  "description": "Inspect public configuration",
+                  "path": [
+                    "configure",
+                    "team",
+                    "private-digiworker",
+                    "config"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team private-digiworker config list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "private-digiworker",
+                        "config",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "private-digiworkers",
+              "description": "Run configure team private-digiworkers",
+              "path": [
+                "configure",
+                "team",
+                "private-digiworkers"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure team private-digiworkers add",
+                  "path": [
+                    "configure",
+                    "team",
+                    "private-digiworkers",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure team private-digiworkers show",
+                  "path": [
+                    "configure",
+                    "team",
+                    "private-digiworkers",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure team private-digiworkers set",
+                  "path": [
+                    "configure",
+                    "team",
+                    "private-digiworkers",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "secrets",
+              "description": "Run configure team secrets",
+              "path": [
+                "configure",
+                "team",
+                "secrets"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team secrets list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure team secrets set",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "catalog",
+                  "description": "Run configure team secrets catalog",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "catalog"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team secrets catalog list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "secrets",
+                        "catalog",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure team secrets show",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure team secrets remove",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "edit",
+                  "description": "Run configure team secrets edit",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "edit"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "rotate",
+                  "description": "Run configure team secrets rotate",
+                  "path": [
+                    "configure",
+                    "team",
+                    "secrets",
+                    "rotate"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "subject-profiles",
+              "description": "Run configure team subject-profiles",
+              "path": [
+                "configure",
+                "team",
+                "subject-profiles"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure team subject-profiles add",
+                  "path": [
+                    "configure",
+                    "team",
+                    "subject-profiles",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "web-skills",
+              "description": "Run configure team web-skills",
+              "path": [
+                "configure",
+                "team",
+                "web-skills"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team web-skills list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "search",
+                  "description": "Run configure team web-skills search",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "search"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "upload",
+                  "description": "Run configure team web-skills upload",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "upload"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure team web-skills upload add",
+                      "path": [
+                        "configure",
+                        "team",
+                        "web-skills",
+                        "upload",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure team web-skills set",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "bundle",
+                  "description": "Run configure team web-skills bundle",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "bundle"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team web-skills bundle list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "web-skills",
+                        "bundle",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "clone",
+                  "description": "Run configure team web-skills clone",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "clone"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "detail",
+                  "description": "Run configure team web-skills detail",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "detail"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure team web-skills detail list",
+                      "path": [
+                        "configure",
+                        "team",
+                        "web-skills",
+                        "detail",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "files",
+                  "description": "Run configure team web-skills files",
+                  "path": [
+                    "configure",
+                    "team",
+                    "web-skills",
+                    "files"
+                  ],
+                  "commands": [
+                    {
+                      "name": "read",
+                      "description": "Run configure team web-skills files read",
+                      "path": [
+                        "configure",
+                        "team",
+                        "web-skills",
+                        "files",
+                        "read"
+                      ],
+                      "commands": [
+                        {
+                          "name": "add",
+                          "description": "Run configure team web-skills files read add",
+                          "path": [
+                            "configure",
+                            "team",
+                            "web-skills",
+                            "files",
+                            "read",
+                            "add"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "oidc-clients",
+              "description": "Run configure team oidc-clients",
+              "path": [
+                "configure",
+                "team",
+                "oidc-clients"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team oidc-clients list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "oidc-clients",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure team oidc-clients add",
+                  "path": [
+                    "configure",
+                    "team",
+                    "oidc-clients",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure team oidc-clients remove",
+                  "path": [
+                    "configure",
+                    "team",
+                    "oidc-clients",
+                    "remove"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "organization-certification-documents",
+              "description": "Run configure team organization-certification-documents",
+              "path": [
+                "configure",
+                "team",
+                "organization-certification-documents"
+              ],
+              "commands": [
+                {
+                  "name": "complete",
+                  "description": "Run configure team organization-certification-documents complete",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization-certification-documents",
+                    "complete"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "organization-certification-documents-prepare-upload",
+              "description": "Run configure team organization-certification-documents-prepare-upload",
+              "path": [
+                "configure",
+                "team",
+                "organization-certification-documents-prepare-upload"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure team organization-certification-documents-prepare-upload add",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization-certification-documents-prepare-upload",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "organization-certification",
+              "description": "Run configure team organization-certification",
+              "path": [
+                "configure",
+                "team",
+                "organization-certification"
+              ],
+              "commands": [
+                {
+                  "name": "submit",
+                  "description": "Run configure team organization-certification submit",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization-certification",
+                    "submit"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "organization-profile",
+              "description": "Run configure team organization-profile",
+              "path": [
+                "configure",
+                "team",
+                "organization-profile"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure team organization-profile list",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization-profile",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "company-profile",
+                  "description": "Run configure team organization-profile company-profile",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization-profile",
+                    "company-profile"
+                  ],
+                  "commands": [
+                    {
+                      "name": "set",
+                      "description": "Run configure team organization-profile company-profile set",
+                      "path": [
+                        "configure",
+                        "team",
+                        "organization-profile",
+                        "company-profile",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "contact",
+                  "description": "Run configure team organization-profile contact",
+                  "path": [
+                    "configure",
+                    "team",
+                    "organization-profile",
+                    "contact"
+                  ],
+                  "commands": [
+                    {
+                      "name": "set",
+                      "description": "Run configure team organization-profile contact set",
+                      "path": [
+                        "configure",
+                        "team",
+                        "organization-profile",
+                        "contact",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "webskill",
+          "description": "Develop and publish web skills",
+          "path": [
+            "configure",
+            "webskill"
+          ],
+          "commands": [
+            {
+              "name": "publish",
+              "description": "Publish a web skill package directory to the current team",
+              "path": [
+                "configure",
+                "webskill",
+                "publish"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "account",
+          "description": "Manage account inbox",
+          "path": [
+            "configure",
+            "account"
+          ],
+          "commands": [
+            {
+              "name": "inbox",
+              "description": "Run configure account inbox",
+              "path": [
+                "configure",
+                "account",
+                "inbox"
+              ],
+              "commands": [
+                {
+                  "name": "items",
+                  "description": "Run configure account inbox items",
+                  "path": [
+                    "configure",
+                    "account",
+                    "inbox",
+                    "items"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure account inbox items list",
+                      "path": [
+                        "configure",
+                        "account",
+                        "inbox",
+                        "items",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "act",
+                      "description": "Run configure account inbox items act",
+                      "path": [
+                        "configure",
+                        "account",
+                        "inbox",
+                        "items",
+                        "act"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "summary",
+                  "description": "Run configure account inbox summary",
+                  "path": [
+                    "configure",
+                    "account",
+                    "inbox",
+                    "summary"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure account inbox summary list",
+                      "path": [
+                        "configure",
+                        "account",
+                        "inbox",
+                        "summary",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "public",
+          "description": "Inspect public configuration",
+          "path": [
+            "configure",
+            "public"
+          ],
+          "commands": [
+            {
+              "name": "bootstrap",
+              "description": "Run configure public bootstrap",
+              "path": [
+                "configure",
+                "public",
+                "bootstrap"
+              ],
+              "commands": [
+                {
+                  "name": "team-create",
+                  "description": "Run configure public bootstrap team-create",
+                  "path": [
+                    "configure",
+                    "public",
+                    "bootstrap",
+                    "team-create"
+                  ],
+                  "commands": [
+                    {
+                      "name": "assistant",
+                      "description": "Run configure public bootstrap team-create assistant",
+                      "path": [
+                        "configure",
+                        "public",
+                        "bootstrap",
+                        "team-create",
+                        "assistant"
+                      ],
+                      "commands": [
+                        {
+                          "name": "list",
+                          "description": "Run configure public bootstrap team-create assistant list",
+                          "path": [
+                            "configure",
+                            "public",
+                            "bootstrap",
+                            "team-create",
+                            "assistant",
+                            "list"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "config",
+                      "description": "Inspect public configuration",
+                      "path": [
+                        "configure",
+                        "public",
+                        "bootstrap",
+                        "team-create",
+                        "config"
+                      ],
+                      "commands": [
+                        {
+                          "name": "list",
+                          "description": "Run configure public bootstrap team-create config list",
+                          "path": [
+                            "configure",
+                            "public",
+                            "bootstrap",
+                            "team-create",
+                            "config",
+                            "list"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "company-profile-options",
+              "description": "Run configure public company-profile-options",
+              "path": [
+                "configure",
+                "public",
+                "company-profile-options"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure public company-profile-options list",
+                  "path": [
+                    "configure",
+                    "public",
+                    "company-profile-options",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "endpoint-type",
+              "description": "Run configure public endpoint-type",
+              "path": [
+                "configure",
+                "public",
+                "endpoint-type"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure public endpoint-type list",
+                  "path": [
+                    "configure",
+                    "public",
+                    "endpoint-type",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "config-schema",
+                  "description": "Run configure public endpoint-type config-schema",
+                  "path": [
+                    "configure",
+                    "public",
+                    "endpoint-type",
+                    "config-schema"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure public endpoint-type config-schema list",
+                      "path": [
+                        "configure",
+                        "public",
+                        "endpoint-type",
+                        "config-schema",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "healthz",
+              "description": "Run configure public healthz",
+              "path": [
+                "configure",
+                "public",
+                "healthz"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure public healthz list",
+                  "path": [
+                    "configure",
+                    "public",
+                    "healthz",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "portal-brand",
+              "description": "Run configure public portal-brand",
+              "path": [
+                "configure",
+                "public",
+                "portal-brand"
+              ],
+              "commands": [
+                {
+                  "name": "resolve",
+                  "description": "Run configure public portal-brand resolve",
+                  "path": [
+                    "configure",
+                    "public",
+                    "portal-brand",
+                    "resolve"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure public portal-brand resolve list",
+                      "path": [
+                        "configure",
+                        "public",
+                        "portal-brand",
+                        "resolve",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "site-config",
+              "description": "Run configure public site-config",
+              "path": [
+                "configure",
+                "public",
+                "site-config"
+              ],
+              "commands": [
+                {
+                  "name": "public",
+                  "description": "Inspect public configuration",
+                  "path": [
+                    "configure",
+                    "public",
+                    "site-config",
+                    "public"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure public site-config public list",
+                      "path": [
+                        "configure",
+                        "public",
+                        "site-config",
+                        "public",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "browser",
+          "description": "Manage browser instances",
+          "path": [
+            "configure",
+            "browser"
+          ],
+          "commands": [
+            {
+              "name": "chrome-connection",
+              "description": "Run configure browser chrome-connection",
+              "path": [
+                "configure",
+                "browser",
+                "chrome-connection"
+              ],
+              "commands": [
+                {
+                  "name": "ws",
+                  "description": "Run configure browser chrome-connection ws",
+                  "path": [
+                    "configure",
+                    "browser",
+                    "chrome-connection",
+                    "ws"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure browser chrome-connection ws list",
+                      "path": [
+                        "configure",
+                        "browser",
+                        "chrome-connection",
+                        "ws",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "list",
+              "description": "Run configure browser list",
+              "path": [
+                "configure",
+                "browser",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "cloud",
+              "description": "Run configure browser cloud",
+              "path": [
+                "configure",
+                "browser",
+                "cloud"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure browser cloud add",
+                  "path": [
+                    "configure",
+                    "browser",
+                    "cloud",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "remove",
+              "description": "Run configure browser remove",
+              "path": [
+                "configure",
+                "browser",
+                "remove"
+              ],
+              "commands": []
+            },
+            {
+              "name": "set",
+              "description": "Run configure browser set",
+              "path": [
+                "configure",
+                "browser",
+                "set"
+              ],
+              "commands": []
+            },
+            {
+              "name": "client-info",
+              "description": "Run configure browser client-info",
+              "path": [
+                "configure",
+                "browser",
+                "client-info"
+              ],
+              "commands": [
+                {
+                  "name": "refresh",
+                  "description": "Run configure browser client-info refresh",
+                  "path": [
+                    "configure",
+                    "browser",
+                    "client-info",
+                    "refresh"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "live-login",
+              "description": "Run configure browser live-login",
+              "path": [
+                "configure",
+                "browser",
+                "live-login"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure browser live-login add",
+                  "path": [
+                    "configure",
+                    "browser",
+                    "live-login",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "commit",
+                  "description": "Run configure browser live-login commit",
+                  "path": [
+                    "configure",
+                    "browser",
+                    "live-login",
+                    "commit"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "profile-sites",
+              "description": "Run configure browser profile-sites",
+              "path": [
+                "configure",
+                "browser",
+                "profile-sites"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure browser profile-sites list",
+                  "path": [
+                    "configure",
+                    "browser",
+                    "profile-sites",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "group-session",
+          "description": "Manage group sessions",
+          "path": [
+            "configure",
+            "group-session"
+          ],
+          "commands": [
+            {
+              "name": "agentloops",
+              "description": "Run configure group-session agentloops",
+              "path": [
+                "configure",
+                "group-session",
+                "agentloops"
+              ],
+              "commands": [
+                {
+                  "name": "stop",
+                  "description": "Run configure group-session agentloops stop",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "agentloops",
+                    "stop"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "bootstrap",
+              "description": "Run configure group-session bootstrap",
+              "path": [
+                "configure",
+                "group-session",
+                "bootstrap"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure group-session bootstrap list",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "bootstrap",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "events",
+              "description": "Run configure group-session events",
+              "path": [
+                "configure",
+                "group-session",
+                "events"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure group-session events list",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "events",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "join",
+              "description": "Run configure group-session join",
+              "path": [
+                "configure",
+                "group-session",
+                "join"
+              ],
+              "commands": []
+            },
+            {
+              "name": "members",
+              "description": "Run configure group-session members",
+              "path": [
+                "configure",
+                "group-session",
+                "members"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure group-session members list",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "members",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "mute",
+                  "description": "Run configure group-session members mute",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "members",
+                    "mute"
+                  ],
+                  "commands": [
+                    {
+                      "name": "remove",
+                      "description": "Run configure group-session members mute remove",
+                      "path": [
+                        "configure",
+                        "group-session",
+                        "members",
+                        "mute",
+                        "remove"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "messages",
+              "description": "Run configure group-session messages",
+              "path": [
+                "configure",
+                "group-session",
+                "messages"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure group-session messages list",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "messages",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure group-session messages add",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "messages",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "reply-targets",
+              "description": "Run configure group-session reply-targets",
+              "path": [
+                "configure",
+                "group-session",
+                "reply-targets"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure group-session reply-targets set",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "reply-targets",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "settings",
+              "description": "Run configure group-session settings",
+              "path": [
+                "configure",
+                "group-session",
+                "settings"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure group-session settings list",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "settings",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure group-session settings set",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "settings",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "joined",
+              "description": "Run configure group-session joined",
+              "path": [
+                "configure",
+                "group-session",
+                "joined"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure group-session joined list",
+                  "path": [
+                    "configure",
+                    "group-session",
+                    "joined",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "market",
+          "description": "Use team marketplace",
+          "path": [
+            "configure",
+            "market"
+          ],
+          "commands": [
+            {
+              "name": "digiworkers",
+              "description": "Run configure market digiworkers",
+              "path": [
+                "configure",
+                "market",
+                "digiworkers"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure market digiworkers list",
+                  "path": [
+                    "configure",
+                    "market",
+                    "digiworkers",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "job-tag",
+              "description": "Run configure market job-tag",
+              "path": [
+                "configure",
+                "market",
+                "job-tag"
+              ],
+              "commands": [
+                {
+                  "name": "selectable",
+                  "description": "Run configure market job-tag selectable",
+                  "path": [
+                    "configure",
+                    "market",
+                    "job-tag",
+                    "selectable"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure market job-tag selectable list",
+                      "path": [
+                        "configure",
+                        "market",
+                        "job-tag",
+                        "selectable",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "list",
+                  "description": "Run configure market job-tag list",
+                  "path": [
+                    "configure",
+                    "market",
+                    "job-tag",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "landing",
+              "description": "Run configure market landing",
+              "path": [
+                "configure",
+                "market",
+                "landing"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure market landing list",
+                  "path": [
+                    "configure",
+                    "market",
+                    "landing",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "orders",
+              "description": "Run configure market orders",
+              "path": [
+                "configure",
+                "market",
+                "orders"
+              ],
+              "commands": [
+                {
+                  "name": "plan",
+                  "description": "Run configure market orders plan",
+                  "path": [
+                    "configure",
+                    "market",
+                    "orders",
+                    "plan"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure market orders plan add",
+                      "path": [
+                        "configure",
+                        "market",
+                        "orders",
+                        "plan",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "worker",
+                  "description": "Run configure market orders worker",
+                  "path": [
+                    "configure",
+                    "market",
+                    "orders",
+                    "worker"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure market orders worker add",
+                      "path": [
+                        "configure",
+                        "market",
+                        "orders",
+                        "worker",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "plans",
+              "description": "Run configure market plans",
+              "path": [
+                "configure",
+                "market",
+                "plans"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure market plans list",
+                  "path": [
+                    "configure",
+                    "market",
+                    "plans",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure market plans show",
+                  "path": [
+                    "configure",
+                    "market",
+                    "plans",
+                    "show"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "workers",
+              "description": "Run configure market workers",
+              "path": [
+                "configure",
+                "market",
+                "workers"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure market workers list",
+                  "path": [
+                    "configure",
+                    "market",
+                    "workers",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure market workers show",
+                  "path": [
+                    "configure",
+                    "market",
+                    "workers",
+                    "show"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "me",
+          "description": "Manage current user profile",
+          "path": [
+            "configure",
+            "me"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure me list",
+              "path": [
+                "configure",
+                "me",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "set",
+              "description": "Run configure me set",
+              "path": [
+                "configure",
+                "me",
+                "set"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "office-preview",
+          "description": "Manage office preview sessions",
+          "path": [
+            "configure",
+            "office-preview"
+          ],
+          "commands": [
+            {
+              "name": "session",
+              "description": "Run configure office-preview session",
+              "path": [
+                "configure",
+                "office-preview",
+                "session"
+              ],
+              "commands": [
+                {
+                  "name": "show",
+                  "description": "Run configure office-preview session show",
+                  "path": [
+                    "configure",
+                    "office-preview",
+                    "session",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure office-preview session add",
+                  "path": [
+                    "configure",
+                    "office-preview",
+                    "session",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shared",
+          "description": "Inspect shared conversations",
+          "path": [
+            "configure",
+            "shared"
+          ],
+          "commands": [
+            {
+              "name": "show",
+              "description": "Run configure shared show",
+              "path": [
+                "configure",
+                "shared",
+                "show"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "app",
+          "description": "Manage apps and stations",
+          "path": [
+            "configure",
+            "app"
+          ],
+          "commands": [
+            {
+              "name": "station",
+              "description": "Run configure app station",
+              "path": [
+                "configure",
+                "app",
+                "station"
+              ],
+              "commands": [
+                {
+                  "name": "embed-access-tokens",
+                  "description": "Run configure app station embed-access-tokens",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "embed-access-tokens"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure app station embed-access-tokens add",
+                      "path": [
+                        "configure",
+                        "app",
+                        "station",
+                        "embed-access-tokens",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "web-sessions",
+                  "description": "Run configure app station web-sessions",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "web-sessions"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure app station web-sessions add",
+                      "path": [
+                        "configure",
+                        "app",
+                        "station",
+                        "web-sessions",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure app station show",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure app station set",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "api-keys",
+                  "description": "Run configure app station api-keys",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "api-keys"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure app station api-keys list",
+                      "path": [
+                        "configure",
+                        "app",
+                        "station",
+                        "api-keys",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "api-keys-rotate",
+                  "description": "Run configure app station api-keys-rotate",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "api-keys-rotate"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure app station api-keys-rotate add",
+                      "path": [
+                        "configure",
+                        "app",
+                        "station",
+                        "api-keys-rotate",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "channel-config",
+                  "description": "Run configure app station channel-config",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "channel-config"
+                  ],
+                  "commands": [
+                    {
+                      "name": "set",
+                      "description": "Run configure app station channel-config set",
+                      "path": [
+                        "configure",
+                        "app",
+                        "station",
+                        "channel-config",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure app station remove",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "disable",
+                  "description": "Run configure app station disable",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "disable"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "enable",
+                  "description": "Run configure app station enable",
+                  "path": [
+                    "configure",
+                    "app",
+                    "station",
+                    "enable"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "web-url",
+              "description": "Run configure app web-url",
+              "path": [
+                "configure",
+                "app",
+                "web-url"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure app web-url list",
+                  "path": [
+                    "configure",
+                    "app",
+                    "web-url",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure app web-url add",
+                  "path": [
+                    "configure",
+                    "app",
+                    "web-url",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure app web-url remove",
+                  "path": [
+                    "configure",
+                    "app",
+                    "web-url",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure app web-url set",
+                  "path": [
+                    "configure",
+                    "app",
+                    "web-url",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "my",
+              "description": "Run configure app my",
+              "path": [
+                "configure",
+                "app",
+                "my"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure app my list",
+                  "path": [
+                    "configure",
+                    "app",
+                    "my",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "open",
+                  "description": "Run configure app my open",
+                  "path": [
+                    "configure",
+                    "app",
+                    "my",
+                    "open"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "arcubase",
+          "description": "Manage Arcubase resources",
+          "path": [
+            "configure",
+            "arcubase"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure arcubase list",
+              "path": [
+                "configure",
+                "arcubase",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "apps",
+              "description": "Run configure arcubase apps",
+              "path": [
+                "configure",
+                "arcubase",
+                "apps"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure arcubase apps list",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "apps",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "tables",
+                  "description": "Run configure arcubase apps tables",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "apps",
+                    "tables"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure arcubase apps tables list",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "apps",
+                        "tables",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "rows",
+                      "description": "Run configure arcubase apps tables rows",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "apps",
+                        "tables",
+                        "rows"
+                      ],
+                      "commands": [
+                        {
+                          "name": "query",
+                          "description": "Run configure arcubase apps tables rows query",
+                          "path": [
+                            "configure",
+                            "arcubase",
+                            "apps",
+                            "tables",
+                            "rows",
+                            "query"
+                          ],
+                          "commands": []
+                        },
+                        {
+                          "name": "show",
+                          "description": "Run configure arcubase apps tables rows show",
+                          "path": [
+                            "configure",
+                            "arcubase",
+                            "apps",
+                            "tables",
+                            "rows",
+                            "show"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "departments",
+              "description": "Run configure arcubase departments",
+              "path": [
+                "configure",
+                "arcubase",
+                "departments"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure arcubase departments add",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "departments",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "paths",
+                  "description": "Run configure arcubase departments paths",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "departments",
+                    "paths"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "tree",
+                  "description": "Run configure arcubase departments tree",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "departments",
+                    "tree"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure arcubase departments tree list",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "departments",
+                        "tree",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure arcubase departments remove",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "departments",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "relocate",
+                  "description": "Run configure arcubase departments relocate",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "departments",
+                    "relocate"
+                  ],
+                  "commands": [
+                    {
+                      "name": "set",
+                      "description": "Run configure arcubase departments relocate set",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "departments",
+                        "relocate",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "rename",
+                  "description": "Run configure arcubase departments rename",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "departments",
+                    "rename"
+                  ],
+                  "commands": [
+                    {
+                      "name": "set",
+                      "description": "Run configure arcubase departments rename set",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "departments",
+                        "rename",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "organization",
+              "description": "Run configure arcubase organization",
+              "path": [
+                "configure",
+                "arcubase",
+                "organization"
+              ],
+              "commands": [
+                {
+                  "name": "roles",
+                  "description": "Run configure arcubase organization roles",
+                  "path": [
+                    "configure",
+                    "arcubase",
+                    "organization",
+                    "roles"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure arcubase organization roles list",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "organization",
+                        "roles",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "add",
+                      "description": "Run configure arcubase organization roles add",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "organization",
+                        "roles",
+                        "add"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "remove",
+                      "description": "Run configure arcubase organization roles remove",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "organization",
+                        "roles",
+                        "remove"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "rename",
+                      "description": "Run configure arcubase organization roles rename",
+                      "path": [
+                        "configure",
+                        "arcubase",
+                        "organization",
+                        "roles",
+                        "rename"
+                      ],
+                      "commands": [
+                        {
+                          "name": "set",
+                          "description": "Run configure arcubase organization roles rename set",
+                          "path": [
+                            "configure",
+                            "arcubase",
+                            "organization",
+                            "roles",
+                            "rename",
+                            "set"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "artifact",
+          "description": "Manage artifacts",
+          "path": [
+            "configure",
+            "artifact"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure artifact list",
+              "path": [
+                "configure",
+                "artifact",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "summary",
+              "description": "Run configure artifact summary",
+              "path": [
+                "configure",
+                "artifact",
+                "summary"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure artifact summary list",
+                  "path": [
+                    "configure",
+                    "artifact",
+                    "summary",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "show",
+              "description": "Run configure artifact show",
+              "path": [
+                "configure",
+                "artifact",
+                "show"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "skill",
+          "description": "Manage team skills and skill sets",
+          "path": [
+            "configure",
+            "skill"
+          ],
+          "commands": [
+            {
+              "name": "assemblable",
+              "description": "Run configure skill assemblable",
+              "path": [
+                "configure",
+                "skill",
+                "assemblable"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure skill assemblable list",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "assemblable",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "list",
+              "description": "Run configure skill list",
+              "path": [
+                "configure",
+                "skill",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "count",
+              "description": "Run configure skill count",
+              "path": [
+                "configure",
+                "skill",
+                "count"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure skill count list",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "count",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "package-upload",
+              "description": "Run configure skill package-upload",
+              "path": [
+                "configure",
+                "skill",
+                "package-upload"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure skill package-upload add",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "package-upload",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "scan",
+              "description": "Run configure skill scan",
+              "path": [
+                "configure",
+                "skill",
+                "scan"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure skill scan add",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "scan",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "upload",
+              "description": "Run configure skill upload",
+              "path": [
+                "configure",
+                "skill",
+                "upload"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure skill upload add",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "upload",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "set",
+              "description": "Run configure skill set",
+              "path": [
+                "configure",
+                "skill",
+                "set"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure skill set list",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "set",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure skill set add",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "set",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure skill set remove",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "set",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure skill set set",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "set",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "disable-assembly",
+              "description": "Run configure skill disable-assembly",
+              "path": [
+                "configure",
+                "skill",
+                "disable-assembly"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure skill disable-assembly add",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "disable-assembly",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "enable-assembly",
+              "description": "Run configure skill enable-assembly",
+              "path": [
+                "configure",
+                "skill",
+                "enable-assembly"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure skill enable-assembly add",
+                  "path": [
+                    "configure",
+                    "skill",
+                    "enable-assembly",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "calendar",
+          "description": "Manage calendars",
+          "path": [
+            "configure",
+            "calendar"
+          ],
+          "commands": [
+            {
+              "name": "source",
+              "description": "Run configure calendar source",
+              "path": [
+                "configure",
+                "calendar",
+                "source"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure calendar source list",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure calendar source add",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "builtin",
+                  "description": "Run configure calendar source builtin",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "builtin"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "catalog",
+                  "description": "Run configure calendar source catalog",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "catalog"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure calendar source catalog list",
+                      "path": [
+                        "configure",
+                        "calendar",
+                        "source",
+                        "catalog",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure calendar source remove",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure calendar source set",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "events",
+                  "description": "Run configure calendar source events",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "events"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure calendar source events list",
+                      "path": [
+                        "configure",
+                        "calendar",
+                        "source",
+                        "events",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "sync",
+                  "description": "Run configure calendar source sync",
+                  "path": [
+                    "configure",
+                    "calendar",
+                    "source",
+                    "sync"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "integration",
+          "description": "Manage integrations",
+          "path": [
+            "configure",
+            "integration"
+          ],
+          "commands": [
+            {
+              "name": "collaboration-platform",
+              "description": "Run configure integration collaboration-platform",
+              "path": [
+                "configure",
+                "integration",
+                "collaboration-platform"
+              ],
+              "commands": [
+                {
+                  "name": "feishu",
+                  "description": "Run configure integration collaboration-platform feishu",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "collaboration-platform",
+                    "feishu"
+                  ],
+                  "commands": [
+                    {
+                      "name": "binding-sessions",
+                      "description": "Run configure integration collaboration-platform feishu binding-sessions",
+                      "path": [
+                        "configure",
+                        "integration",
+                        "collaboration-platform",
+                        "feishu",
+                        "binding-sessions"
+                      ],
+                      "commands": [
+                        {
+                          "name": "add",
+                          "description": "Run configure integration collaboration-platform feishu binding-sessions add",
+                          "path": [
+                            "configure",
+                            "integration",
+                            "collaboration-platform",
+                            "feishu",
+                            "binding-sessions",
+                            "add"
+                          ],
+                          "commands": []
+                        },
+                        {
+                          "name": "show",
+                          "description": "Run configure integration collaboration-platform feishu binding-sessions show",
+                          "path": [
+                            "configure",
+                            "integration",
+                            "collaboration-platform",
+                            "feishu",
+                            "binding-sessions",
+                            "show"
+                          ],
+                          "commands": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "email-ingress",
+              "description": "Run configure integration email-ingress",
+              "path": [
+                "configure",
+                "integration",
+                "email-ingress"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure integration email-ingress list",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure integration email-ingress add",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure integration email-ingress show",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure integration email-ingress remove",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure integration email-ingress set",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "disable",
+                  "description": "Run configure integration email-ingress disable",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "disable"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "enable",
+                  "description": "Run configure integration email-ingress enable",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "email-ingress",
+                    "enable"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "feishu-bot-binding-session",
+              "description": "Run configure integration feishu-bot-binding-session",
+              "path": [
+                "configure",
+                "integration",
+                "feishu-bot-binding-session"
+              ],
+              "commands": [
+                {
+                  "name": "show",
+                  "description": "Run configure integration feishu-bot-binding-session show",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "feishu-bot-binding-session",
+                    "show"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "list",
+              "description": "Run configure integration list",
+              "path": [
+                "configure",
+                "integration",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "feishu",
+              "description": "Run configure integration feishu",
+              "path": [
+                "configure",
+                "integration",
+                "feishu"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure integration feishu set",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "feishu",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure integration feishu remove",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "feishu",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "verify",
+                  "description": "Run configure integration feishu verify",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "feishu",
+                    "verify"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "wecom",
+              "description": "Run configure integration wecom",
+              "path": [
+                "configure",
+                "integration",
+                "wecom"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure integration wecom set",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "wecom",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure integration wecom add",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "wecom",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure integration wecom remove",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "wecom",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "contacts",
+                  "description": "Run configure integration wecom contacts",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "wecom",
+                    "contacts"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure integration wecom contacts list",
+                      "path": [
+                        "configure",
+                        "integration",
+                        "wecom",
+                        "contacts",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "sync-contacts",
+                  "description": "Run configure integration wecom sync-contacts",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "wecom",
+                    "sync-contacts"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure integration wecom sync-contacts add",
+                      "path": [
+                        "configure",
+                        "integration",
+                        "wecom",
+                        "sync-contacts",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "verify",
+                  "description": "Run configure integration wecom verify",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "wecom",
+                    "verify"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "webhook",
+              "description": "Run configure integration webhook",
+              "path": [
+                "configure",
+                "integration",
+                "webhook"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure integration webhook list",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure integration webhook add",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure integration webhook show",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure integration webhook remove",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure integration webhook set",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "disable",
+                  "description": "Run configure integration webhook disable",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "disable"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "enable",
+                  "description": "Run configure integration webhook enable",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "enable"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "events",
+                  "description": "Run configure integration webhook events",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "events"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure integration webhook events list",
+                      "path": [
+                        "configure",
+                        "integration",
+                        "webhook",
+                        "events",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "rotate-signature-secret",
+                  "description": "Run configure integration webhook rotate-signature-secret",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "rotate-signature-secret"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "rotate-url-token",
+                  "description": "Run configure integration webhook rotate-url-token",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "rotate-url-token"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "runs",
+                  "description": "Run configure integration webhook runs",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "webhook",
+                    "runs"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure integration webhook runs list",
+                      "path": [
+                        "configure",
+                        "integration",
+                        "webhook",
+                        "runs",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "weixin-clawbot-binding-session",
+              "description": "Run configure integration weixin-clawbot-binding-session",
+              "path": [
+                "configure",
+                "integration",
+                "weixin-clawbot-binding-session"
+              ],
+              "commands": [
+                {
+                  "name": "show",
+                  "description": "Run configure integration weixin-clawbot-binding-session show",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "weixin-clawbot-binding-session",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "verify-code",
+                  "description": "Run configure integration weixin-clawbot-binding-session verify-code",
+                  "path": [
+                    "configure",
+                    "integration",
+                    "weixin-clawbot-binding-session",
+                    "verify-code"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure integration weixin-clawbot-binding-session verify-code add",
+                      "path": [
+                        "configure",
+                        "integration",
+                        "weixin-clawbot-binding-session",
+                        "verify-code",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "schedule",
+          "description": "Manage schedules",
+          "path": [
+            "configure",
+            "schedule"
+          ],
+          "commands": [
+            {
+              "name": "trigger",
+              "description": "Run configure schedule trigger",
+              "path": [
+                "configure",
+                "schedule",
+                "trigger"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure schedule trigger list",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure schedule trigger add",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure schedule trigger show",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure schedule trigger set",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure schedule trigger remove",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "disable",
+                  "description": "Run configure schedule trigger disable",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "disable"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "enable",
+                  "description": "Run configure schedule trigger enable",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "enable"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "run",
+                  "description": "Run configure schedule trigger run",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "run"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "runs",
+                  "description": "Run configure schedule trigger runs",
+                  "path": [
+                    "configure",
+                    "schedule",
+                    "trigger",
+                    "runs"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure schedule trigger runs list",
+                      "path": [
+                        "configure",
+                        "schedule",
+                        "trigger",
+                        "runs",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "device",
+          "description": "Manage devices and pairing",
+          "path": [
+            "configure",
+            "device"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure device list",
+              "path": [
+                "configure",
+                "device",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "register",
+              "description": "Run configure device register",
+              "path": [
+                "configure",
+                "device",
+                "register"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure device register add",
+                  "path": [
+                    "configure",
+                    "device",
+                    "register",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "show",
+              "description": "Run configure device show",
+              "path": [
+                "configure",
+                "device",
+                "show"
+              ],
+              "commands": []
+            },
+            {
+              "name": "visibility",
+              "description": "Run configure device visibility",
+              "path": [
+                "configure",
+                "device",
+                "visibility"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure device visibility set",
+                  "path": [
+                    "configure",
+                    "device",
+                    "visibility",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "employee",
+          "description": "Manage digital employees",
+          "path": [
+            "configure",
+            "employee"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure employee list",
+              "path": [
+                "configure",
+                "employee",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "hire",
+              "description": "Run configure employee hire",
+              "path": [
+                "configure",
+                "employee",
+                "hire"
+              ],
+              "commands": []
+            },
+            {
+              "name": "show",
+              "description": "Run configure employee show",
+              "path": [
+                "configure",
+                "employee",
+                "show"
+              ],
+              "commands": []
+            },
+            {
+              "name": "access-policy",
+              "description": "Run configure employee access-policy",
+              "path": [
+                "configure",
+                "employee",
+                "access-policy"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure employee access-policy set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "access-policy",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "arcubase",
+              "description": "Manage Arcubase resources",
+              "path": [
+                "configure",
+                "employee",
+                "arcubase"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee arcubase list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "arcubase",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "ensure",
+                  "description": "Run configure employee arcubase ensure",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "arcubase",
+                    "ensure"
+                  ],
+                  "commands": [
+                    {
+                      "name": "add",
+                      "description": "Run configure employee arcubase ensure add",
+                      "path": [
+                        "configure",
+                        "employee",
+                        "arcubase",
+                        "ensure",
+                        "add"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "conversation-activity-heatmap",
+              "description": "Run configure employee conversation-activity-heatmap",
+              "path": [
+                "configure",
+                "employee",
+                "conversation-activity-heatmap"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee conversation-activity-heatmap list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "conversation-activity-heatmap",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "feishu-bot-binding-sessions",
+              "description": "Run configure employee feishu-bot-binding-sessions",
+              "path": [
+                "configure",
+                "employee",
+                "feishu-bot-binding-sessions"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure employee feishu-bot-binding-sessions add",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "feishu-bot-binding-sessions",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "fire",
+              "description": "Run configure employee fire",
+              "path": [
+                "configure",
+                "employee",
+                "fire"
+              ],
+              "commands": []
+            },
+            {
+              "name": "group-sessions",
+              "description": "Run configure employee group-sessions",
+              "path": [
+                "configure",
+                "employee",
+                "group-sessions"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure employee group-sessions add",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "group-sessions",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "kb-access",
+              "description": "Run configure employee kb-access",
+              "path": [
+                "configure",
+                "employee",
+                "kb-access"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee kb-access list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "kb-access",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure employee kb-access set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "kb-access",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "profile",
+              "description": "Run configure employee profile",
+              "path": [
+                "configure",
+                "employee",
+                "profile"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure employee profile set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "profile",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "reporting-line",
+              "description": "Run configure employee reporting-line",
+              "path": [
+                "configure",
+                "employee",
+                "reporting-line"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure employee reporting-line set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "reporting-line",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "reporting-neighbors",
+              "description": "Run configure employee reporting-neighbors",
+              "path": [
+                "configure",
+                "employee",
+                "reporting-neighbors"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee reporting-neighbors list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "reporting-neighbors",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "runtime-config",
+              "description": "Run configure employee runtime-config",
+              "path": [
+                "configure",
+                "employee",
+                "runtime-config"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee runtime-config list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "runtime-config",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure employee runtime-config set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "runtime-config",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure employee runtime-config remove",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "runtime-config",
+                    "remove"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "skillsets",
+              "description": "Run configure employee skillsets",
+              "path": [
+                "configure",
+                "employee",
+                "skillsets"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure employee skillsets set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "skillsets",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "stations",
+              "description": "Run configure employee stations",
+              "path": [
+                "configure",
+                "employee",
+                "stations"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee stations list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "stations",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure employee stations add",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "stations",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "team-skills",
+              "description": "Run configure employee team-skills",
+              "path": [
+                "configure",
+                "employee",
+                "team-skills"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee team-skills list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "team-skills",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure employee team-skills set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "team-skills",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "weixin-clawbot-binding-sessions",
+              "description": "Run configure employee weixin-clawbot-binding-sessions",
+              "path": [
+                "configure",
+                "employee",
+                "weixin-clawbot-binding-sessions"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure employee weixin-clawbot-binding-sessions add",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "weixin-clawbot-binding-sessions",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "workspace-access",
+              "description": "Run configure employee workspace-access",
+              "path": [
+                "configure",
+                "employee",
+                "workspace-access"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee workspace-access list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "workspace-access",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure employee workspace-access set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "workspace-access",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "pinned",
+              "description": "Run configure employee pinned",
+              "path": [
+                "configure",
+                "employee",
+                "pinned"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure employee pinned list",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "pinned",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure employee pinned set",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "pinned",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure employee pinned remove",
+                  "path": [
+                    "configure",
+                    "employee",
+                    "pinned",
+                    "remove"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "external-user",
+          "description": "Manage external users",
+          "path": [
+            "configure",
+            "external-user"
+          ],
+          "commands": [
+            {
+              "name": "tag",
+              "description": "Run configure external-user tag",
+              "path": [
+                "configure",
+                "external-user",
+                "tag"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure external-user tag list",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "tag",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "verification-flow",
+              "description": "Run configure external-user verification-flow",
+              "path": [
+                "configure",
+                "external-user",
+                "verification-flow"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure external-user verification-flow list",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "verification-flow",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure external-user verification-flow add",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "verification-flow",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure external-user verification-flow show",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "verification-flow",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "set",
+                  "description": "Run configure external-user verification-flow set",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "verification-flow",
+                    "set"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure external-user verification-flow remove",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "verification-flow",
+                    "remove"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "list",
+              "description": "Run configure external-user list",
+              "path": [
+                "configure",
+                "external-user",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "show",
+              "description": "Run configure external-user show",
+              "path": [
+                "configure",
+                "external-user",
+                "show"
+              ],
+              "commands": []
+            },
+            {
+              "name": "conversations",
+              "description": "Run configure external-user conversations",
+              "path": [
+                "configure",
+                "external-user",
+                "conversations"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure external-user conversations list",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "conversations",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "human-member",
+              "description": "Run configure external-user human-member",
+              "path": [
+                "configure",
+                "external-user",
+                "human-member"
+              ],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Run configure external-user human-member set",
+                  "path": [
+                    "configure",
+                    "external-user",
+                    "human-member",
+                    "set"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "file",
+          "description": "Manage team files",
+          "path": [
+            "configure",
+            "file"
+          ],
+          "commands": [
+            {
+              "name": "preview-session",
+              "description": "Run configure file preview-session",
+              "path": [
+                "configure",
+                "file",
+                "preview-session"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure file preview-session add",
+                  "path": [
+                    "configure",
+                    "file",
+                    "preview-session",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "remove",
+              "description": "Run configure file remove",
+              "path": [
+                "configure",
+                "file",
+                "remove"
+              ],
+              "commands": []
+            },
+            {
+              "name": "entries",
+              "description": "Run configure file entries",
+              "path": [
+                "configure",
+                "file",
+                "entries"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure file entries list",
+                  "path": [
+                    "configure",
+                    "file",
+                    "entries",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "mounts",
+              "description": "Run configure file mounts",
+              "path": [
+                "configure",
+                "file",
+                "mounts"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure file mounts list",
+                  "path": [
+                    "configure",
+                    "file",
+                    "mounts",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "move",
+              "description": "Run configure file move",
+              "path": [
+                "configure",
+                "file",
+                "move"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure file move add",
+                  "path": [
+                    "configure",
+                    "file",
+                    "move",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "kb",
+          "description": "Manage knowledge base sync",
+          "path": [
+            "configure",
+            "kb"
+          ],
+          "commands": [
+            {
+              "name": "directories",
+              "description": "Run configure kb directories",
+              "path": [
+                "configure",
+                "kb",
+                "directories"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure kb directories list",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "directories",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure kb directories add",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "directories",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "sync-bindings",
+              "description": "Run configure kb sync-bindings",
+              "path": [
+                "configure",
+                "kb",
+                "sync-bindings"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure kb sync-bindings list",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "sync-bindings",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure kb sync-bindings add",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "sync-bindings",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "validate-target",
+                  "description": "Run configure kb sync-bindings validate-target",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "sync-bindings",
+                    "validate-target"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure kb sync-bindings remove",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "sync-bindings",
+                    "remove"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "sync-bootstrap-access",
+              "description": "Run configure kb sync-bootstrap-access",
+              "path": [
+                "configure",
+                "kb",
+                "sync-bootstrap-access"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure kb sync-bootstrap-access add",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "sync-bootstrap-access",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "sync-jobs",
+              "description": "Run configure kb sync-jobs",
+              "path": [
+                "configure",
+                "kb",
+                "sync-jobs"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure kb sync-jobs list",
+                  "path": [
+                    "configure",
+                    "kb",
+                    "sync-jobs",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mcp-hub",
+          "description": "Manage MCP hub resources",
+          "path": [
+            "configure",
+            "mcp-hub"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure mcp-hub list",
+              "path": [
+                "configure",
+                "mcp-hub",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "servers",
+              "description": "Run configure mcp-hub servers",
+              "path": [
+                "configure",
+                "mcp-hub",
+                "servers"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure mcp-hub servers list",
+                  "path": [
+                    "configure",
+                    "mcp-hub",
+                    "servers",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure mcp-hub servers show",
+                  "path": [
+                    "configure",
+                    "mcp-hub",
+                    "servers",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "bindings",
+                  "description": "Run configure mcp-hub servers bindings",
+                  "path": [
+                    "configure",
+                    "mcp-hub",
+                    "servers",
+                    "bindings"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure mcp-hub servers bindings list",
+                      "path": [
+                        "configure",
+                        "mcp-hub",
+                        "servers",
+                        "bindings",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "octopus-edge",
+          "description": "Manage octopus-edge brokers and services",
+          "path": [
+            "configure",
+            "octopus-edge"
+          ],
+          "commands": [
+            {
+              "name": "brokers",
+              "description": "Run configure octopus-edge brokers",
+              "path": [
+                "configure",
+                "octopus-edge",
+                "brokers"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure octopus-edge brokers list",
+                  "path": [
+                    "configure",
+                    "octopus-edge",
+                    "brokers",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure octopus-edge brokers add",
+                  "path": [
+                    "configure",
+                    "octopus-edge",
+                    "brokers",
+                    "add"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "revoke",
+                  "description": "Run configure octopus-edge brokers revoke",
+                  "path": [
+                    "configure",
+                    "octopus-edge",
+                    "brokers",
+                    "revoke"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "services",
+              "description": "Run configure octopus-edge services",
+              "path": [
+                "configure",
+                "octopus-edge",
+                "services"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure octopus-edge services list",
+                  "path": [
+                    "configure",
+                    "octopus-edge",
+                    "services",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure octopus-edge services add",
+                  "path": [
+                    "configure",
+                    "octopus-edge",
+                    "services",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ontology",
+          "description": "Manage ontology runtime",
+          "path": [
+            "configure",
+            "ontology"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure ontology list",
+              "path": [
+                "configure",
+                "ontology",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "runtime",
+              "description": "Run configure ontology runtime",
+              "path": [
+                "configure",
+                "ontology",
+                "runtime"
+              ],
+              "commands": [
+                {
+                  "name": "show",
+                  "description": "Run configure ontology runtime show",
+                  "path": [
+                    "configure",
+                    "ontology",
+                    "runtime",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "add",
+                  "description": "Run configure ontology runtime add",
+                  "path": [
+                    "configure",
+                    "ontology",
+                    "runtime",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "billing",
+          "description": "Inspect billing and usage",
+          "path": [
+            "configure",
+            "billing"
+          ],
+          "commands": [
+            {
+              "name": "subscribe",
+              "description": "Run configure billing subscribe",
+              "path": [
+                "configure",
+                "billing",
+                "subscribe"
+              ],
+              "commands": [
+                {
+                  "name": "summary",
+                  "description": "Run configure billing subscribe summary",
+                  "path": [
+                    "configure",
+                    "billing",
+                    "subscribe",
+                    "summary"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure billing subscribe summary list",
+                      "path": [
+                        "configure",
+                        "billing",
+                        "subscribe",
+                        "summary",
+                        "list"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "ticket-integration",
+              "description": "Run configure billing ticket-integration",
+              "path": [
+                "configure",
+                "billing",
+                "ticket-integration"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure billing ticket-integration list",
+                  "path": [
+                    "configure",
+                    "billing",
+                    "ticket-integration",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "ticket-redemptions",
+              "description": "Run configure billing ticket-redemptions",
+              "path": [
+                "configure",
+                "billing",
+                "ticket-redemptions"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure billing ticket-redemptions add",
+                  "path": [
+                    "configure",
+                    "billing",
+                    "ticket-redemptions",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "usage-points-rollups",
+              "description": "Run configure billing usage-points-rollups",
+              "path": [
+                "configure",
+                "billing",
+                "usage-points-rollups"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure billing usage-points-rollups list",
+                  "path": [
+                    "configure",
+                    "billing",
+                    "usage-points-rollups",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "usage-rollups",
+              "description": "Run configure billing usage-rollups",
+              "path": [
+                "configure",
+                "billing",
+                "usage-rollups"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure billing usage-rollups list",
+                  "path": [
+                    "configure",
+                    "billing",
+                    "usage-rollups",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "vibe-coding",
+          "description": "Manage vibe coding projects",
+          "path": [
+            "configure",
+            "vibe-coding"
+          ],
+          "commands": [
+            {
+              "name": "projects",
+              "description": "Run configure vibe-coding projects",
+              "path": [
+                "configure",
+                "vibe-coding",
+                "projects"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure vibe-coding projects list",
+                  "path": [
+                    "configure",
+                    "vibe-coding",
+                    "projects",
+                    "list"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "show",
+                  "description": "Run configure vibe-coding projects show",
+                  "path": [
+                    "configure",
+                    "vibe-coding",
+                    "projects",
+                    "show"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "remove",
+                  "description": "Run configure vibe-coding projects remove",
+                  "path": [
+                    "configure",
+                    "vibe-coding",
+                    "projects",
+                    "remove"
+                  ],
+                  "commands": []
+                },
+                {
+                  "name": "secret-bindings",
+                  "description": "Run configure vibe-coding projects secret-bindings",
+                  "path": [
+                    "configure",
+                    "vibe-coding",
+                    "projects",
+                    "secret-bindings"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure vibe-coding projects secret-bindings list",
+                      "path": [
+                        "configure",
+                        "vibe-coding",
+                        "projects",
+                        "secret-bindings",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "set",
+                      "description": "Run configure vibe-coding projects secret-bindings set",
+                      "path": [
+                        "configure",
+                        "vibe-coding",
+                        "projects",
+                        "secret-bindings",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                },
+                {
+                  "name": "workbench-domain",
+                  "description": "Run configure vibe-coding projects workbench-domain",
+                  "path": [
+                    "configure",
+                    "vibe-coding",
+                    "projects",
+                    "workbench-domain"
+                  ],
+                  "commands": [
+                    {
+                      "name": "list",
+                      "description": "Run configure vibe-coding projects workbench-domain list",
+                      "path": [
+                        "configure",
+                        "vibe-coding",
+                        "projects",
+                        "workbench-domain",
+                        "list"
+                      ],
+                      "commands": []
+                    },
+                    {
+                      "name": "set",
+                      "description": "Run configure vibe-coding projects workbench-domain set",
+                      "path": [
+                        "configure",
+                        "vibe-coding",
+                        "projects",
+                        "workbench-domain",
+                        "set"
+                      ],
+                      "commands": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "workspace",
+          "description": "Manage workspaces",
+          "path": [
+            "configure",
+            "workspace"
+          ],
+          "commands": [
+            {
+              "name": "list",
+              "description": "Run configure workspace list",
+              "path": [
+                "configure",
+                "workspace",
+                "list"
+              ],
+              "commands": []
+            },
+            {
+              "name": "add",
+              "description": "Run configure workspace add",
+              "path": [
+                "configure",
+                "workspace",
+                "add"
+              ],
+              "commands": []
+            },
+            {
+              "name": "show",
+              "description": "Run configure workspace show",
+              "path": [
+                "configure",
+                "workspace",
+                "show"
+              ],
+              "commands": []
+            },
+            {
+              "name": "set",
+              "description": "Run configure workspace set",
+              "path": [
+                "configure",
+                "workspace",
+                "set"
+              ],
+              "commands": []
+            },
+            {
+              "name": "archive",
+              "description": "Run configure workspace archive",
+              "path": [
+                "configure",
+                "workspace",
+                "archive"
+              ],
+              "commands": []
+            },
+            {
+              "name": "remove",
+              "description": "Run configure workspace remove",
+              "path": [
+                "configure",
+                "workspace",
+                "remove"
+              ],
+              "commands": []
+            },
+            {
+              "name": "restore",
+              "description": "Run configure workspace restore",
+              "path": [
+                "configure",
+                "workspace",
+                "restore"
+              ],
+              "commands": []
+            }
+          ]
+        },
+        {
+          "name": "web-session",
+          "description": "Manage web sessions",
+          "path": [
+            "configure",
+            "web-session"
+          ],
+          "commands": [
+            {
+              "name": "close",
+              "description": "Run configure web-session close",
+              "path": [
+                "configure",
+                "web-session",
+                "close"
+              ],
+              "commands": []
+            },
+            {
+              "name": "events",
+              "description": "Run configure web-session events",
+              "path": [
+                "configure",
+                "web-session",
+                "events"
+              ],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Run configure web-session events list",
+                  "path": [
+                    "configure",
+                    "web-session",
+                    "events",
+                    "list"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "messages",
+              "description": "Run configure web-session messages",
+              "path": [
+                "configure",
+                "web-session",
+                "messages"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure web-session messages add",
+                  "path": [
+                    "configure",
+                    "web-session",
+                    "messages",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            },
+            {
+              "name": "tool-results",
+              "description": "Run configure web-session tool-results",
+              "path": [
+                "configure",
+                "web-session",
+                "tool-results"
+              ],
+              "commands": [
+                {
+                  "name": "add",
+                  "description": "Run configure web-session tool-results add",
+                  "path": [
+                    "configure",
+                    "web-session",
+                    "tool-results",
+                    "add"
+                  ],
+                  "commands": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

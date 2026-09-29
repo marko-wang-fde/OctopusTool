@@ -1,0 +1,19 @@
+{
+  "dryrun": true,
+  "command": [
+    "configure",
+    "employee",
+    "skillsets",
+    "set"
+  ],
+  "sdk": "host-user-space",
+  "methodName": "v1TeamsDigiemployeesSkillsetsPartialUpdate",
+  "method": "PATCH",
+  "url": "https://api.autostaff.cn/api/v1/teams/team_c914ac84-6ffb-4cd4-9821-53e10528673f/digiemployees/de_aiworker_fde_probe_1/skillsets",
+  "team": {
+    "id": "team_c914ac84-6ffb-4cd4-9821-53e10528673f"
+  },
+  "body": {
+    "__aiworker_fde_cli_body_probe__": true
+  }
+}

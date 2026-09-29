@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "team-solution-design/README.md",
+            "title": "Team 内数字员工方案设计"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "Team 内数字员工方案设计",
+            "next": {
+                "path": "triggers-and-task-orchestration/README.md",
+                "title": "触发、任务与计划编排"
+            },
+            "prev": {
+                "path": "crido-scenario-analysis/README.md",
+                "title": "CRIDO 场景分析法"
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "resource_batch_1",
+  "resources": [
+    { "id": "R1", "name": "S-43" },
+    { "id": "R2", "name": "S-44" }
+  ]
+}

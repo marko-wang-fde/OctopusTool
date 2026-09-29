@@ -1,0 +1,44 @@
+schema_version: 1
+cases:
+  - id: minimal-lead-collector
+    input_sha256: fc72e3a09bcdc12d08f108b371f11ac24e0cf5433dcd2c70f1d0536f8028ae0e
+    input: Design the smallest offline FDE delivery for one employee that collects sales leads and asks for confirmation before recording.
+    expected_focus:
+      - minimum viable worker and Skill
+      - explicit human confirmation
+      - complete offline package
+  - id: conflicting-materials
+    input_sha256: 4d6d3d1f1b078902c22a823540eeae7572081ba1894c62404af6a7ece23cfc99
+    input: Source materials disagree about whether duplicate leads are rejected or only warned; preserve the conflict and stop for a requirements decision.
+    expected_focus:
+      - evidence conflict
+      - requirements baseline gate
+      - no invented resolution
+  - id: cli-missing
+    input_sha256: a00fbf705d1b95cbe2536c01fb92b9238bc794137c71f2573ce538984a497a50
+    input: Complete an offline package when octopus-cli is unavailable.
+    expected_focus:
+      - no automatic installation or login
+      - manual verification instructions
+      - delivery-ready is not CLI validated
+  - id: target-team-missing
+    input_sha256: ba7c200ff07cf31c1a197fea5444f90835a8d86a2f2ea581c744f55e10e84339
+    input: Prepare assembly artifacts when there is no confirmed target Team.
+    expected_focus:
+      - no inferred Team
+      - no production write
+      - explicit blocker or manual step
+  - id: external-station
+    input_sha256: 4b9d4c435b78eea5bdee736c8bd6093f740c3b94301e950a1afc8be78ab10557
+    input: Design a public-facing lead intake employee through an External Station.
+    expected_focus:
+      - conditional External Station topic
+      - identity and abuse controls
+      - solution baseline confirmation
+  - id: partial-resume
+    input_sha256: 91562a9e95e2ccad033a59a7157b18526916597b99b9aa333b489bd8c5a515ca
+    input: Resume a partially authored FDE project while preserving user edits and validating its manifest before proposing migration.
+    expected_focus:
+      - resume mode
+      - preserve user edits
+      - preview before mutation

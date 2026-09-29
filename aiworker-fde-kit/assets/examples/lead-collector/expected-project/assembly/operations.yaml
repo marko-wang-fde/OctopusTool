@@ -1,0 +1,115 @@
+schema_version: 1
+contract_version: 1.0.0
+catalog_version: 1.0.4
+payload_root: assembly/payloads
+operations:
+  - operation_id: skill-package.upload
+    description: Upload an ordinary employee Skill package.
+    risk: high
+    depends_on: []
+    executor: admin-manual
+    support: manual-required
+    manual_artifacts:
+      - skills/collect-sales-leads/
+    manual_instructions:
+      - Verify the Skill package is self-contained, sanitized, and matches the
+        approved solution baseline.
+      - Use the platform's administrator-approved ordinary Skill upload
+        interface.
+      - Record the returned Skill identifier and package digest in the assembly
+        evidence.
+    verification_condition: The platform displays the uploaded package version and
+      digest, and the identifier resolves from the approved Team without
+      enabling production use.
+    recovery_condition: A tested public ordinary-Skill upload capability is added to
+      a future Kit contract, or an authorized administrator completes the manual
+      route.
+  - operation_id: arcubase-app.create
+    description: Create a dedicated Arcubase application.
+    risk: critical
+    depends_on:
+      - skill-package.upload
+    executor: admin-manual
+    support: manual-required
+    manual_artifacts:
+      - arcubase/decision.yaml
+      - arcubase/schema.yaml
+      - arcubase/access-matrix.md
+    manual_instructions:
+      - Confirm the approved data-foundation mode, ownership, naming, and
+        isolation boundary.
+      - Have an authorized Arcubase administrator create the application in the
+        intended Team.
+      - Record the generated application identifier and administrator
+        verification evidence.
+    verification_condition: The application exists in the intended Team with the
+      approved owner and isolation boundary, and its identifier is recorded
+      without credentials.
+    recovery_condition: A tested public Arcubase app-create capability is added to a
+      future Kit contract, or an authorized administrator completes the manual
+      route.
+  - operation_id: arcubase-table.create
+    description: Create Arcubase tables and fields from the approved schema.
+    risk: critical
+    depends_on:
+      - arcubase-app.create
+    executor: admin-manual
+    support: manual-required
+    manual_artifacts:
+      - arcubase/schema.yaml
+      - arcubase/access-matrix.md
+      - acceptance/test-cases.yaml
+    manual_instructions:
+      - Validate field types, constraints, links, states, derived-field
+        ownership, and migration impact.
+      - Have an authorized Arcubase administrator create the tables and apply
+        hard permissions.
+      - Record table and field identifiers, then run the documented permission
+        and schema checks.
+    verification_condition: All approved tables, fields, links, constraints, and
+      hard permissions exist and pass authorized and unauthorized acceptance
+      checks.
+    recovery_condition: A tested public Arcubase table-create capability is added to
+      a future Kit contract, or an authorized administrator completes the manual
+      route.
+  - operation_id: skill-set.create
+    description: Create the lead collector Skill set.
+    risk: high
+    depends_on:
+      - skill-package.upload
+    executor: admin-manual
+    support: manual-required
+    manual_artifacts:
+      - skills/collect-sales-leads/
+    manual_instructions:
+      - Have an authorized administrator create the approved Skill set through
+        the platform interface.
+      - Bind uploaded ordinary Skills manually when the platform requires
+        returned Skill identifiers.
+      - Record the returned Skill-set identifier, Skill binding identifiers, and
+        verification evidence without credentials.
+    verification_condition: The Skill set metadata and Skill bindings match the
+      approved assembly plan and are recorded in assembly evidence.
+    recovery_condition: A future tested octopus-cli contract proves configure skill
+      set add forwards body options correctly, or an authorized administrator
+      completes the manual route.
+  - operation_id: team-private-digiworker.create
+    description: Create the private lead collector worker.
+    risk: high
+    depends_on: []
+    executor: octopus-cli
+    support: supported
+    operation_kind: write
+    command_path:
+      - configure
+      - team
+      - private-digiworkers
+      - add
+    payload_file: assembly/payloads/team-private-digiworker-create.json
+    payload_schema_uri: schemas/payloads/team-private-digiworker-create.schema.json
+assembly_execution:
+  status: ready
+  script_file: assembly/octopus-cli-assemble.sh
+  evidence_file: null
+  cli_package_version: 0.1.2
+  cli_reported_version: 0.1.2

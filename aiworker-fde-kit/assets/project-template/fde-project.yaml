@@ -1,0 +1,96 @@
+schema_version: 1
+project:
+  name: 待初始化
+  slug: pending-fde-project
+  customer_name: 待初始化
+  primary_scenario: 待初始化
+  entry_mode: new
+  status: draft
+  delivery_approved_at: null
+sources: []
+requirements:
+  facts: []
+  assumptions: []
+  open_questions: []
+scenarios: []
+roles: []
+business_objects: []
+workers: []
+skills: []
+capabilities: []
+data_foundation:
+  schema_version: 1
+  mode: none
+  app: null
+  tables: []
+  access_policies: []
+access_policies: []
+assembly:
+  schema_version: 1
+  contract_version: 1.0.0
+  catalog_version: 1.0.4
+  payload_root: assembly/payloads
+  operations: []
+  assembly_execution:
+    status: not-applicable
+    script_file: null
+    evidence_file: null
+    cli_package_version: null
+    cli_reported_version: null
+acceptance_cases: []
+stage_status:
+  initialize:
+    status: not-started
+    depends_on: []
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  discover:
+    status: not-started
+    depends_on:
+      - initialize
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  team-design:
+    status: not-started
+    depends_on:
+      - discover
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  foundation-design:
+    status: not-started
+    depends_on:
+      - team-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  author:
+    status: not-started
+    depends_on:
+      - foundation-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  assemble:
+    status: not-started
+    depends_on:
+      - author
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  validate:
+    status: not-started
+    depends_on:
+      - assemble
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null

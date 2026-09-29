@@ -1,0 +1,19 @@
+{
+  "dryrun": true,
+  "command": [
+    "configure",
+    "team",
+    "private-digiworkers",
+    "add"
+  ],
+  "sdk": "host-user-space",
+  "methodName": "v1TeamsPrivateDigiworkersCreate",
+  "method": "POST",
+  "url": "https://api.autostaff.cn/api/v1/teams/team_c914ac84-6ffb-4cd4-9821-53e10528673f/private-digiworkers",
+  "team": {
+    "id": "team_c914ac84-6ffb-4cd4-9821-53e10528673f"
+  },
+  "body": {
+    "__aiworker_fde_cli_body_probe__": true
+  }
+}

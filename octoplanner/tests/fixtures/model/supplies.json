@@ -1,0 +1,6 @@
+{
+  "id": "supply_batch_1",
+  "supplies": [
+    { "id": "SUP-1", "itemId": "ITEM-1", "quantity": 10, "availableAt": "2026-03-01T00:00:00.000Z" }
+  ]
+}

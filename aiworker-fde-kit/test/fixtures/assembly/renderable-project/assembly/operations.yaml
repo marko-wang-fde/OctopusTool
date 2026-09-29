@@ -1,0 +1,25 @@
+schema_version: 1
+contract_version: 1.0.0
+catalog_version: 1.0.4
+payload_root: assembly/payloads
+operations:
+  - operation_id: team-private-digiworker.create
+    description: Create the approved private worker.
+    risk: high
+    depends_on: []
+    executor: octopus-cli
+    support: supported
+    operation_kind: write
+    command_path:
+      - configure
+      - team
+      - private-digiworkers
+      - add
+    payload_file: assembly/payloads/example.json
+    payload_schema_uri: https://schemas.syngy.ai/aiworker-fde-kit/v1/payloads/team-private-digiworker-create.schema.json
+assembly_execution:
+  status: not-generated
+  script_file: null
+  evidence_file: null
+  cli_package_version: null
+  cli_reported_version: null

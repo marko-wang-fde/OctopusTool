@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "acceptance-and-maturity/README.md",
+            "title": "验收与质量标准"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "验收与质量标准",
+            "next": {
+                "path": "case-patterns/README.md",
+                "title": "场景案例组织方式"
+            },
+            "prev": {
+                "path": "vibe-coding-and-workbench/README.md",
+                "title": "Vibe Coding 与 Workbench 应用开发"
+            }
+        }
+    }
+}

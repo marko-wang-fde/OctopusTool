@@ -1,0 +1,8 @@
+schema_version: 0
+project:
+  name: 旧版线索数字员工
+  slug: legacy-lead-fde
+  customer: 星河科技
+  scenario: 客户线索收集
+  entry_mode: materials
+sources: []

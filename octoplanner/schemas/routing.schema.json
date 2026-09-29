@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Routing",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["itemId", "operations"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "itemId": { "type": "string", "minLength": 1 },
+    "operations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/routingOperation" }
+    }
+  },
+  "$defs": {
+    "routingOperation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "sequence", "name"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "sequence": { "type": "integer" },
+        "name": { "type": "string", "minLength": 1 },
+        "durationMinutes": { "type": "number", "exclusiveMinimum": 0 },
+        "eligibleResourceIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "resourceGroupId": { "type": "string", "minLength": 1 },
+        "setupGroup": { "type": "string", "minLength": 1 },
+        "materialShape": { "type": "string", "minLength": 1 },
+        "minLagMinutes": { "type": "number", "minimum": 0 },
+        "maxLagMinutes": { "type": "number", "minimum": 0 },
+        "continuity": { "enum": ["required", "preferred", "none"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+schema_version: 1
+project:
+  name: Invalid cross-reference fixture
+  slug: invalid-cross-reference-fde
+  customer_name: Fixture
+  primary_scenario: Cross-reference validation
+  entry_mode: new
+  status: draft
+  delivery_approved_at: null
+sources: []
+requirements:
+  facts: []
+  assumptions: []
+  open_questions: []
+scenarios: []
+roles: []
+business_objects: []
+workers:
+  - id: worker.fixture
+    name: Fixture worker
+    responsibility: Exercise a missing Skill reference
+    audience: Test suite
+    skills:
+      - skill.missing
+    toolkit_keys: []
+    station_reachable: false
+    prompt_spec:
+      role: Fixture
+      objective: Expose an invalid cross-reference
+      boundaries:
+        - Do not perform platform writes
+      identity_guards:
+        - Resolve the current speaker
+      human_gates:
+        - Require confirmation before a high-impact action
+    quick_starts:
+      - Run the fixture
+skills: []
+capabilities: []
+data_foundation:
+  schema_version: 1
+  mode: none
+  app: null
+  tables: []
+  access_policies: []
+access_policies: []
+assembly:
+  schema_version: 1
+  contract_version: 1.0.0
+  catalog_version: 1.0.3
+  payload_root: assembly/payloads
+  operations: []
+  assembly_execution:
+    status: not-applicable
+    script_file: null
+    evidence_file: null
+    cli_package_version: null
+    cli_reported_version: null
+acceptance_cases: []
+stage_status:
+  initialize:
+    status: not-started
+    depends_on: []
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  discover:
+    status: not-started
+    depends_on:
+      - initialize
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  team-design:
+    status: not-started
+    depends_on:
+      - discover
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  foundation-design:
+    status: not-started
+    depends_on:
+      - team-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  author:
+    status: not-started
+    depends_on:
+      - foundation-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  assemble:
+    status: not-started
+    depends_on:
+      - author
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  validate:
+    status: not-started
+    depends_on:
+      - assemble
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null

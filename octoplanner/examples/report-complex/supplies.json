@@ -1,0 +1,8 @@
+{
+  "id": "report_complex_supplies",
+  "supplies": [
+    { "id": "SUP-CF8", "materialId": "CF8", "quantity": 1000, "availableAt": "2026-03-01T00:00:00.000Z", "supplyMode": "buy", "ownerDepartment": "采购" },
+    { "id": "SUP-SS06", "materialId": "SS06", "quantity": 800, "availableAt": "2026-03-01T00:00:00.000Z", "supplyMode": "buy", "ownerDepartment": "采购" },
+    { "id": "SUP-HPB59", "materialId": "HPb59", "quantity": 400, "availableAt": "2026-03-01T00:00:00.000Z", "supplyMode": "buy", "ownerDepartment": "采购" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "report_complex_resources",
+  "resources": [
+    { "id": "S-43", "name": "S-43 车床", "groupId": "turning" },
+    { "id": "S-44", "name": "S-44 车床", "groupId": "turning" },
+    { "id": "S-59", "name": "S-59 镗床", "groupId": "boring" },
+    { "id": "S-60", "name": "S-60 钻攻", "groupId": "drilling" }
+  ]
+}

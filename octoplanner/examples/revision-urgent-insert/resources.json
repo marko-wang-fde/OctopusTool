@@ -1,0 +1,9 @@
+{
+  "id": "BATCH-URGENT-RESOURCE",
+  "resources": [
+    { "id": "RES-SS-03", "name": "SS-03", "capacity": 1 },
+    { "id": "RES-SS-05", "name": "SS-05", "capacity": 1 },
+    { "id": "RES-SS-35", "name": "SS-35", "capacity": 1 },
+    { "id": "RES-SZ-01", "name": "SZ-01", "capacity": 1 }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIWorker FDE Kit"
+  short_description: "设计、接续、校验并装配 AIWorker 数字员工项目"
+  default_prompt: "Use $design-aiworker-solutions to design, validate, or assemble an AIWorker FDE delivery project."

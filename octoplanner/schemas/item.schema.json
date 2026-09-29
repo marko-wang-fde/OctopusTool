@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "materialId": { "type": "string", "minLength": 1 },
+    "materialShape": { "type": "string", "minLength": 1 },
+    "materialGrade": { "type": "string", "minLength": 1 },
+    "processFamily": { "type": "string", "minLength": 1 },
+    "setupGroup": { "type": "string", "minLength": 1 },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "externalRef": { "$ref": "#/$defs/externalRef" }
+  },
+  "$defs": {
+    "externalRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system", "id"],
+      "properties": {
+        "system": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 },
+        "payload": {}
+      }
+    }
+  }
+}

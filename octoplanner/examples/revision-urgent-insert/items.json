@@ -1,0 +1,9 @@
+{
+  "id": "BATCH-URGENT-ITEM",
+  "items": [
+    { "id": "ITEM-30101765", "name": "阀芯体 GCBF36S-10D-10-1 H62" },
+    { "id": "ITEM-30201932", "name": "螺纹接头表面处理前 G1/4i*G1/2a" },
+    { "id": "ITEM-30100050", "name": "阀体 GCDX-02-3/8-03 H62" },
+    { "id": "ITEM-30100013", "name": "阀座 GCAF20-110-06" }
+  ]
+}

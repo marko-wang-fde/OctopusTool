@@ -1,0 +1,77 @@
+{
+  "id": "report_complex_requirements",
+  "requirements": [
+    {
+      "id": "ORD-1001",
+      "itemId": "BODY-DN25",
+      "quantity": 120,
+      "dueAt": "2026-03-09T18:00:00.000Z",
+      "priority": 50,
+      "customer": "南方阀门",
+      "vehicleModel": "A1"
+    },
+    {
+      "id": "ORD-1002",
+      "itemId": "BODY-DN20",
+      "quantity": 180,
+      "dueAt": "2026-03-10T18:00:00.000Z",
+      "priority": 35,
+      "customer": "中车宁波",
+      "vehicleModel": "B2"
+    },
+    {
+      "id": "ORD-1003",
+      "itemId": "JOINT-DG10",
+      "quantity": 260,
+      "dueAt": "2026-03-08T18:00:00.000Z",
+      "priority": 70,
+      "customer": "海工装备",
+      "vehicleModel": "C1"
+    },
+    {
+      "id": "ORD-1004",
+      "itemId": "JOINT-DG10",
+      "quantity": 160,
+      "dueAt": "2026-03-12T18:00:00.000Z",
+      "priority": 20,
+      "customer": "海工装备",
+      "vehicleModel": "C2"
+    },
+    {
+      "id": "ORD-1005",
+      "itemId": "STEM-DN12",
+      "quantity": 90,
+      "dueAt": "2026-03-11T18:00:00.000Z",
+      "priority": 55,
+      "customer": "北方机电",
+      "vehicleModel": "D1"
+    },
+    {
+      "id": "ORD-1006",
+      "itemId": "BODY-DN25",
+      "quantity": 80,
+      "dueAt": "2026-03-13T18:00:00.000Z",
+      "priority": 15,
+      "customer": "南方阀门",
+      "vehicleModel": "A2"
+    },
+    {
+      "id": "ORD-1007",
+      "itemId": "CAP-DN20",
+      "quantity": 140,
+      "dueAt": "2026-03-09T12:00:00.000Z",
+      "priority": 65,
+      "customer": "中车宁波",
+      "vehicleModel": "B1"
+    },
+    {
+      "id": "ORD-1008",
+      "itemId": "STEM-DN12",
+      "quantity": 110,
+      "dueAt": "2026-03-14T18:00:00.000Z",
+      "priority": 10,
+      "customer": "北方机电",
+      "vehicleModel": "D2"
+    }
+  ]
+}

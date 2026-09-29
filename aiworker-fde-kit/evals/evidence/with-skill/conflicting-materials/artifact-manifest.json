@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "track": "with-skill",
+  "case_id": "conflicting-materials",
+  "candidate_commit": "a95a1947cf66c7c55c3f5bbfad2f0961c48cc988",
+  "session_id": "skill-a95a194-session",
+  "run_id": "run-a95a194-forward",
+  "input_sha256": "4d6d3d1f1b078902c22a823540eeae7572081ba1894c62404af6a7ece23cfc99",
+  "files": [
+    {
+      "path": "agent-output.yaml",
+      "sha256": "d347f0175136d96d119a1a728c6c4a7174fc623ad3d287fdfa372dab69eab910"
+    }
+  ]
+}

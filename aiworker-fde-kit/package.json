@@ -1,0 +1,31 @@
+{
+  "name": "@syngy/aiworker-fde-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:runtime": "node ./src/runtime/build-runtime.js",
+    "check:runtime": "./scripts/check-repository",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint:repo": "./scripts/check-repository",
+    "verify": "npm run test:run && npm run lint:repo",
+    "verify:e2e": "vitest run test/integration/end-to-end.test.js",
+    "verify:public": "./scripts/scan-public-repository"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "json-canonicalize": "^1.0.6",
+    "mdast-util-from-markdown": "^2.0.3",
+    "yaml": "^2.8.0",
+    "yazl": "^3.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "vitest": "^3.2.4"
+  }
+}

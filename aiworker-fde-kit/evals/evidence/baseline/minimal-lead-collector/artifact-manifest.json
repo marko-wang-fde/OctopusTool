@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "track": "baseline",
+  "case_id": "minimal-lead-collector",
+  "candidate_commit": "a95a1947cf66c7c55c3f5bbfad2f0961c48cc988",
+  "session_id": "baseline-0efef67eb4794eb67b182876",
+  "run_id": "run-ded7f8de7af4026c933e4757",
+  "input_sha256": "fc72e3a09bcdc12d08f108b371f11ac24e0cf5433dcd2c70f1d0536f8028ae0e",
+  "files": [
+    {
+      "path": "agent-output.yaml",
+      "sha256": "41d72a7ade9031a68740c38bf256c04d63dc9f2aecfe6175f77b16f9af44bf79"
+    }
+  ]
+}

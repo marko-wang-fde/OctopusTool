@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "track": "baseline",
+  "case_id": "conflicting-materials",
+  "candidate_commit": "a95a1947cf66c7c55c3f5bbfad2f0961c48cc988",
+  "session_id": "baseline-0efef67eb4794eb67b182876",
+  "run_id": "run-ded7f8de7af4026c933e4757",
+  "input_sha256": "4d6d3d1f1b078902c22a823540eeae7572081ba1894c62404af6a7ece23cfc99",
+  "files": [
+    {
+      "path": "agent-output.yaml",
+      "sha256": "db1c627a9a29daf945af2c3fc92a61b23de4b22e2b664c4f5aaf741fa21faa64"
+    }
+  ]
+}

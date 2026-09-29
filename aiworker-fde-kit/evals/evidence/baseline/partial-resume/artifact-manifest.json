@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "track": "baseline",
+  "case_id": "partial-resume",
+  "candidate_commit": "a95a1947cf66c7c55c3f5bbfad2f0961c48cc988",
+  "session_id": "baseline-0efef67eb4794eb67b182876",
+  "run_id": "run-ded7f8de7af4026c933e4757",
+  "input_sha256": "91562a9e95e2ccad033a59a7157b18526916597b99b9aa333b489bd8c5a515ca",
+  "files": [
+    {
+      "path": "agent-output.yaml",
+      "sha256": "0331eb609b9801495981653d483c0b4f54a89c5ce813a26b13e471349deafec4"
+    }
+  ]
+}

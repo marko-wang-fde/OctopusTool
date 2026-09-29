@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>octopus Plain HTML Embed Example</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        background: #f4f1ea;
+        color: #1f2937;
+      }
+
+      .shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(360px, 420px);
+        min-height: 100vh;
+      }
+
+      .editor {
+        padding: 32px;
+      }
+
+      .editor textarea {
+        width: 100%;
+        min-height: 70vh;
+        padding: 16px;
+        border: 1px solid #d6d3d1;
+        border-radius: 16px;
+        background: #fffdf8;
+        font: inherit;
+        box-sizing: border-box;
+      }
+
+      .sidebar {
+        border-left: 1px solid #e7e5e4;
+        background: #fffaf0;
+        padding: 16px;
+      }
+
+      #octopus-employee {
+        height: calc(100vh - 32px);
+        border-radius: 20px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="editor">
+        <h1>Document Workspace</h1>
+        <p>This mock host app exposes browser-side document tools to octopus.</p>
+        <textarea id="document-editor">Quarterly planning draft...
+
+- Review current OKRs
+- Align staffing plan
+- Summarize open blockers
+</textarea>
+      </section>
+      <aside class="sidebar">
+        <div id="octopus-employee"></div>
+      </aside>
+    </div>
+
+    <script src="https://embed.autostaff.cn/sdk/digi-employee.js"></script>
+    <script>
+      const documentEditor = document.getElementById('document-editor')
+
+      const worker = new DigiEmployee({
+        stationId: 'YOUR_STATION_ID',
+        externalConversationId: 'doc_plain_html_example',
+        layout: {
+          mode: 'inline',
+          mountTarget: '#octopus-employee',
+        },
+        getEmbedAccessToken: async () => {
+          const response = await fetch('/api/octopus/embed-access-token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              stationId: 'YOUR_STATION_ID',
+              externalConversationId: 'doc_plain_html_example',
+            }),
+          })
+          const data = await response.json()
+          return data.embedAccessToken
+        },
+        extendsUiTools: [
+          {
+            name: 'readCurrentDocument',
+            description: 'Read the current working document in the host app',
+            execute: async () => ({
+              content: documentEditor.value,
+            }),
+          },
+          {
+            name: 'saveCurrentDocument',
+            description: 'Save document content back into the host app',
+            execute: async (payload) => {
+              if (payload && typeof payload === 'object' && 'content' in payload) {
+                documentEditor.value = String(payload.content ?? '')
+              }
+              return { ok: true }
+            },
+          },
+        ],
+      })
+
+      worker.init()
+    </script>
+  </body>
+</html>

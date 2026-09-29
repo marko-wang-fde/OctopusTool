@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/assembly-operation.schema.json",
+  "title": "AIWorker FDE Assembly Operation",
+  "description": "Exactly one supported, manual-required, or blocked assembly operation envelope.",
+  "type": "object",
+  "oneOf": [
+    {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "executor",
+            "support",
+            "operation_kind",
+            "command_path",
+            "payload_file",
+            "payload_schema_uri"
+          ],
+          "properties": {
+            "executor": {
+              "const": "octopus-cli"
+            },
+            "support": {
+              "const": "supported"
+            },
+            "operation_kind": {
+              "enum": [
+                "read",
+                "write"
+              ]
+            },
+            "command_path": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]*$"
+              },
+              "minItems": 1
+            },
+            "payload_file": {
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/payloadPath"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payload_schema_uri": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "uri-reference",
+                  "pattern": "^(?:https://schemas\\.syngy\\.ai/aiworker-fde-kit/v1/payloads/|schemas/payloads/)[a-z0-9-]+\\.schema\\.json$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "output_bindings": {
+              "$ref": "#/$defs/outputBindings"
+            },
+            "positional_bindings": {
+              "$ref": "#/$defs/positionalBindings"
+            },
+            "payload_bindings": {
+              "$ref": "#/$defs/payloadBindings"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "operation_kind": {
+                    "const": "write"
+                  }
+                },
+                "required": [
+                  "operation_kind"
+                ]
+              },
+              "then": {
+                "properties": {}
+              },
+              "else": {
+                "properties": {
+                  "payload_file": {
+                    "type": "null"
+                  },
+                  "payload_schema_uri": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "executor",
+            "support",
+            "manual_artifacts",
+            "manual_instructions",
+            "verification_condition",
+            "recovery_condition"
+          ],
+          "properties": {
+            "executor": {
+              "const": "admin-manual"
+            },
+            "support": {
+              "const": "manual-required"
+            },
+            "manual_artifacts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/relativePath"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "manual_instructions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "minItems": 1
+            },
+            "verification_condition": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "recovery_condition": {
+              "$ref": "#/$defs/nonEmptyString"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        },
+        {
+          "type": "object",
+          "required": [
+            "executor",
+            "support",
+            "blocker_code",
+            "blocker_reason",
+            "recovery_condition"
+          ],
+          "properties": {
+            "executor": {
+              "const": "unavailable"
+            },
+            "support": {
+              "const": "blocked"
+            },
+            "blocker_code": {
+              "type": "string",
+              "pattern": "^B_[A-Z0-9_]+$"
+            },
+            "blocker_reason": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "recovery_condition": {
+              "$ref": "#/$defs/nonEmptyString"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  ],
+  "unevaluatedProperties": false,
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:[\\\\/])(?![A-Za-z][A-Za-z0-9+.-]*:)(?!\\.{1,2}(?:/|$))(?!.*\\/\\.{1,2}(?:\\/|$))(?!.*\\\\)(?!.*\\u0000).+$"
+    },
+    "payloadPath": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/relativePath"
+        },
+        {
+          "type": "string",
+          "pattern": "^assembly/payloads/[a-z0-9][a-z0-9._/-]*\\.json$"
+        }
+      ]
+    },
+    "bindingName": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "jsonKey": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        {
+          "type": "integer",
+          "minimum": 0
+        }
+      ]
+    },
+    "jsonPath": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/jsonKey"
+      },
+      "minItems": 1
+    },
+    "jsonPathList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/jsonPath"
+      },
+      "minItems": 1
+    },
+    "outputBindings": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/bindingName"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/jsonPathList"
+      }
+    },
+    "bindingRef": {
+      "type": "object",
+      "required": [
+        "from_operation",
+        "binding"
+      ],
+      "properties": {
+        "from_operation": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "binding": {
+          "$ref": "#/$defs/bindingName"
+        }
+      },
+      "additionalProperties": false
+    },
+    "positionalBindings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/bindingRef"
+      }
+    },
+    "payloadBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/$defs/bindingRef"
+          },
+          {
+            "type": "object",
+            "required": [
+              "target_path"
+            ],
+            "properties": {
+              "target_path": {
+                "$ref": "#/$defs/jsonPath"
+              }
+            }
+          }
+        ],
+        "unevaluatedProperties": false
+      }
+    },
+    "common": {
+      "type": "object",
+      "required": [
+        "operation_id",
+        "description",
+        "risk",
+        "depends_on"
+      ],
+      "properties": {
+        "operation_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "risk": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

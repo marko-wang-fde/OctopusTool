@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/worker.schema.json",
+  "title": "AIWorker FDE Worker Definition",
+  "description": "Strict, portable worker definition without runtime credentials or escaping paths.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "responsibility",
+    "audience",
+    "skills",
+    "toolkit_keys",
+    "station_reachable",
+    "prompt_spec",
+    "quick_starts"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/workerId"
+    },
+    "name": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "responsibility": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "audience": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/skillId"
+      },
+      "uniqueItems": true
+    },
+    "toolkit_keys": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/toolkitKey"
+      },
+      "uniqueItems": true
+    },
+    "station_reachable": {
+      "type": "boolean"
+    },
+    "prompt_spec": {
+      "$ref": "#/$defs/promptSpec"
+    },
+    "quick_starts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      },
+      "uniqueItems": true
+    },
+    "skill_package_path": {
+      "type": "string",
+      "pattern": "^skills/[a-z0-9]+(?:-[a-z0-9]+)*/SKILL\\.md$"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workerId": {
+      "type": "string",
+      "pattern": "^worker\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "skillId": {
+      "type": "string",
+      "pattern": "^skill\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "toolkitKey": {
+      "type": "string",
+      "pattern": "^feat\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "promptSpec": {
+      "type": "object",
+      "required": [
+        "role",
+        "objective",
+        "boundaries",
+        "identity_guards",
+        "human_gates"
+      ],
+      "properties": {
+        "role": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "objective": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "boundaries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "identity_guards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "human_gates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

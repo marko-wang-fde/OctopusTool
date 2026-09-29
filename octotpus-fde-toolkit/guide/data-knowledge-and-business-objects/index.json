@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "data-knowledge-and-business-objects/README.md",
+            "title": "数据、知识与业务对象"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "数据、知识与业务对象",
+            "next": {
+                "path": "vibe-coding-and-workbench/README.md",
+                "title": "Vibe Coding 与 Workbench 应用开发"
+            },
+            "prev": {
+                "path": "enterprise-access-and-execution/README.md",
+                "title": "企业环境访问与执行能力"
+            }
+        }
+    }
+}

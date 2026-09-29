@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Supply",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "itemId": { "type": "string", "minLength": 1 },
+    "materialId": { "type": "string", "minLength": 1 },
+    "quantity": { "type": "number" },
+    "availableAt": { "type": "string", "format": "date-time" },
+    "shortageQty": { "type": "number" },
+    "supplyMode": { "enum": ["buy", "make", "outsource", "unknown"] },
+    "ownerDepartment": { "type": "string", "minLength": 1 },
+    "ownerPerson": { "type": "string", "minLength": 1 },
+    "externalRef": { "$ref": "#/$defs/externalRef" }
+  },
+  "$defs": {
+    "externalRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system", "id"],
+      "properties": {
+        "system": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 },
+        "payload": {}
+      }
+    }
+  }
+}

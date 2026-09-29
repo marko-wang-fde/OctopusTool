@@ -1,0 +1,9 @@
+{
+  "id": "BATCH-URGENT-REQ",
+  "requirements": [
+    { "id": "REQ-601277676", "itemId": "ITEM-30101765", "quantity": 1500, "priority": 10 },
+    { "id": "REQ-601275458", "itemId": "ITEM-30201932", "quantity": 2000, "priority": 10 },
+    { "id": "REQ-601274853", "itemId": "ITEM-30100050", "quantity": 100, "priority": 10 },
+    { "id": "REQ-601277344", "itemId": "ITEM-30100013", "quantity": 1000, "priority": 10 }
+  ]
+}

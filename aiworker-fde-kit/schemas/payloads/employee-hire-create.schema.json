@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/payloads/employee-hire-create.schema.json",
+  "title": "octopus-cli API: configure employee hire Payload",
+  "description": "API-native payload for POST /api/v1/teams/{teamId}/digiemployees/hire. Use only when hiring an existing worker by a real platform digiWorkerId.",
+  "$comment": "contract_status: api-native; source: octopus-cli 0.1.2 VoHireDigiEmployeeRequest. Do not use after team-private-digiworker.create, which already creates a Team employee.",
+  "type": "object",
+  "required": [
+    "digiWorkerId"
+  ],
+  "properties": {
+    "digiWorkerId": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!worker\\.).+$"
+    }
+  },
+  "additionalProperties": false
+}

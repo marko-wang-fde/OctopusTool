@@ -1,0 +1,22 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "reference/README.md",
+            "title": "Reference：能力速查"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "Reference：能力速查",
+            "next": null,
+            "prev": {
+                "path": "case-patterns/README.md",
+                "title": "场景案例组织方式"
+            }
+        }
+    }
+}

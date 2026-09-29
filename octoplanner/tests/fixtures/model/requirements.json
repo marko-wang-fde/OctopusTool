@@ -1,0 +1,7 @@
+{
+  "id": "req_batch_1",
+  "requirements": [
+    { "id": "REQ-1", "itemId": "ITEM-1", "quantity": 10, "dueAt": "2026-03-12T00:00:00.000Z", "priority": 10 },
+    { "id": "REQ-2", "itemId": "ITEM-2", "quantity": 5, "dueAt": "2026-03-13T00:00:00.000Z", "priority": 1 }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@syngy/api-types-user",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./api.ts",
+  "types": "./api.ts",
+  "exports": {
+    ".": {
+      "types": "./api.ts",
+      "import": "./api.ts"
+    }
+  }
+}

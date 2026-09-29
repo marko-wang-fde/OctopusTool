@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/payloads/team-private-digiworker-create.schema.json",
+  "title": "octopus-cli API: configure team private-digiworkers add Payload",
+  "description": "API-native payload for POST /api/v1/teams/{teamId}/private-digiworkers. The endpoint creates both the private worker and its Team employee.",
+  "$comment": "contract_status: api-native; source: octopus-cli 0.1.2 and aiworker host vo.CreateTeamPrivateDigiWorkerRequest. Do not send skillsets: the current endpoint rejects non-empty skillsets. promptSpec must satisfy models.PromptSpec.Validate().",
+  "type": "object",
+  "required": [
+    "name",
+    "promptSpec"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bio": {
+      "type": "string"
+    },
+    "bioPicture": {
+      "type": "string"
+    },
+    "promptSpec": {
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "text"
+          ],
+          "properties": {
+            "type": {
+              "const": "static"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "script"
+          ],
+          "properties": {
+            "type": {
+              "const": "script"
+            },
+            "script": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "quickStartPrompts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "homeMode": {
+      "type": "string"
+    },
+    "llmModelId": {
+      "type": "string"
+    },
+    "thinkingConfig": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "enabled",
+            "disabled"
+          ]
+        },
+        "effort": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "toolkitKeys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^feat\\.[a-z0-9_]+$"
+      },
+      "uniqueItems": true
+    },
+    "teamSkillIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(?!skill\\.).+$"
+      },
+      "uniqueItems": true
+    },
+    "avatarPreviewToken": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

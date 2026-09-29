@@ -1,0 +1,644 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/arcubase.schema.json",
+  "title": "AIWorker FDE Arcubase Decision and Data Foundation",
+  "description": "Single structured source for Arcubase mode, app, tables, fields, and access policies.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "mode",
+    "app",
+    "tables",
+    "access_policies"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "mode": {
+      "enum": [
+        "none",
+        "new",
+        "existing",
+        "extend"
+      ]
+    },
+    "app": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/app"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tables": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/table"
+      },
+      "uniqueItems": true
+    },
+    "access_policies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/accessPolicy"
+      },
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "none"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "app": {
+            "type": "null"
+          },
+          "tables": {
+            "type": "array",
+            "maxItems": 0
+          },
+          "access_policies": {
+            "type": "array",
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "app": {
+            "$ref": "#/$defs/app"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "enum": [
+              "new",
+              "extend"
+            ]
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "tables": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "app": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "ownership",
+        "isolation_boundary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^app\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "ownership": {
+          "enum": [
+            "customer",
+            "shared",
+            "external"
+          ]
+        },
+        "isolation_boundary": {
+          "enum": [
+            "dedicated",
+            "shared-approved",
+            "external-controlled"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "table": {
+      "type": "object",
+      "required": [
+        "id",
+        "key",
+        "name",
+        "fields"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^table\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "field": {
+      "type": "object",
+      "required": [
+        "id",
+        "key",
+        "name",
+        "type",
+        "required",
+        "select_options",
+        "link",
+        "states",
+        "derived"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^field\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "type": {
+          "enum": [
+            "text",
+            "textarea",
+            "number",
+            "integer",
+            "boolean",
+            "select",
+            "multi-select",
+            "date",
+            "datetime",
+            "user",
+            "link",
+            "state",
+            "formula"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "select_options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/option"
+          },
+          "uniqueItems": true
+        },
+        "link": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/link"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/state"
+          },
+          "uniqueItems": true
+        },
+        "derived": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/derived"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "select",
+                  "multi-select"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "select_options": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "select_options": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "link"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "link": {
+                "$ref": "#/$defs/link"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "link": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "state"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "states": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "states": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "formula"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "derived": {
+                "$ref": "#/$defs/derived"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "derived": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "option": {
+      "type": "object",
+      "required": [
+        "key",
+        "name"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "link": {
+      "type": "object",
+      "required": [
+        "target_table",
+        "cardinality"
+      ],
+      "properties": {
+        "target_table": {
+          "type": "string",
+          "pattern": "^table\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "cardinality": {
+          "enum": [
+            "one-to-one",
+            "many-to-one",
+            "one-to-many",
+            "many-to-many"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "state": {
+      "type": "object",
+      "required": [
+        "key",
+        "name",
+        "terminal"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "terminal": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "derived": {
+      "type": "object",
+      "required": [
+        "owner_worker",
+        "rule"
+      ],
+      "properties": {
+        "owner_worker": {
+          "type": "string",
+          "pattern": "^worker\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "rule": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "resource": {
+      "type": "object",
+      "required": [
+        "table_id"
+      ],
+      "properties": {
+        "table_id": {
+          "type": "string",
+          "pattern": "^table\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "field_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^field\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "literalScalar": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "literalValue": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/literalScalar"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/literalScalar"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "valueSource": {
+      "oneOf": [
+        {
+          "enum": [
+            "current-speaker.id",
+            "current-speaker.roles",
+            "current-time"
+          ]
+        },
+        {
+          "type": "object",
+          "required": [
+            "literal"
+          ],
+          "properties": {
+            "literal": {
+              "$ref": "#/$defs/literalValue"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "filter": {
+      "type": "object",
+      "required": [
+        "field_id",
+        "operator",
+        "value_source"
+      ],
+      "properties": {
+        "field_id": {
+          "type": "string",
+          "pattern": "^field\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "operator": {
+          "enum": [
+            "equals",
+            "not-equals",
+            "in",
+            "not-in",
+            "contains",
+            "starts-with",
+            "greater-than",
+            "greater-than-or-equal",
+            "less-than",
+            "less-than-or-equal",
+            "is-null",
+            "is-not-null"
+          ]
+        },
+        "value_source": {
+          "$ref": "#/$defs/valueSource"
+        }
+      },
+      "additionalProperties": false
+    },
+    "accessPolicy": {
+      "type": "object",
+      "required": [
+        "id",
+        "role_ref",
+        "resource",
+        "actions",
+        "scope",
+        "filters"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^policy\\.[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+        },
+        "role_ref": {
+          "type": "string",
+          "pattern": "^role\\.[a-z0-9]+(?:_[a-z0-9]+)*$"
+        },
+        "resource": {
+          "$ref": "#/$defs/resource"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "read",
+              "create",
+              "update",
+              "delete",
+              "schema-admin"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "scope": {
+          "enum": [
+            "own",
+            "all",
+            "filtered"
+          ]
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/filter"
+          },
+          "uniqueItems": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "filtered"
+              }
+            },
+            "required": [
+              "scope"
+            ]
+          },
+          "then": {
+            "properties": {
+              "filters": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "filters": {
+                "type": "array",
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

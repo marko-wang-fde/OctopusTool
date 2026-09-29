@@ -1,0 +1,36 @@
+{
+  "name": "octopus-cli",
+  "commands": [
+    {
+      "name": "configure",
+      "commands": [
+        {
+          "name": "skill",
+          "commands": [
+            {
+              "name": "set",
+              "commands": [
+                {
+                  "name": "add"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "team",
+          "commands": [
+            {
+              "name": "private-digiworkers",
+              "commands": [
+                {
+                  "name": "add"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

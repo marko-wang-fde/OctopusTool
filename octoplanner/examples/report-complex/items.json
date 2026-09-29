@@ -1,0 +1,45 @@
+{
+  "id": "report_complex_items",
+  "items": [
+    {
+      "id": "BODY-DN25",
+      "name": "DN25 截断塞门阀体",
+      "materialId": "CF8",
+      "materialGrade": "ZG08Cr18Ni9",
+      "processFamily": "valve-body",
+      "setupGroup": "body"
+    },
+    {
+      "id": "BODY-DN20",
+      "name": "DN20 截断塞门阀体",
+      "materialId": "CF8",
+      "materialGrade": "ZG08Cr18Ni9",
+      "processFamily": "valve-body",
+      "setupGroup": "body"
+    },
+    {
+      "id": "JOINT-DG10",
+      "name": "球接头 Dg10",
+      "materialId": "SS06",
+      "materialGrade": "06Cr19Ni10",
+      "processFamily": "joint",
+      "setupGroup": "joint"
+    },
+    {
+      "id": "STEM-DN12",
+      "name": "端直通接头体 DN12",
+      "materialId": "SS06",
+      "materialGrade": "06Cr19Ni10",
+      "processFamily": "stem",
+      "setupGroup": "stem"
+    },
+    {
+      "id": "CAP-DN20",
+      "name": "DN20 阀盖",
+      "materialId": "HPb59",
+      "materialGrade": "HPb59-1",
+      "processFamily": "cap",
+      "setupGroup": "cap"
+    }
+  ]
+}

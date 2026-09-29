@@ -1,0 +1,33 @@
+{
+  "id": "BATCH-URGENT-ROUTING",
+  "routings": [
+    {
+      "itemId": "ITEM-30101765",
+      "operations": [
+        { "id": "OP-930002-段友-4", "sequence": 10, "name": "段友 930002", "durationMinutes": 7200, "eligibleResourceIds": ["RES-SS-03"] },
+        { "id": "OP-930003-段友-5", "sequence": 20, "name": "段友 930003", "durationMinutes": 7200, "eligibleResourceIds": ["RES-SS-05"] }
+      ]
+    },
+    {
+      "itemId": "ITEM-30201932",
+      "operations": [
+        { "id": "OP-930002-段友-6", "sequence": 10, "name": "段友 930002", "durationMinutes": 11520, "eligibleResourceIds": ["RES-SS-05"] },
+        { "id": "OP-930003-马伟-4", "sequence": 20, "name": "马伟 930003", "durationMinutes": 8640, "eligibleResourceIds": ["RES-SS-35"] }
+      ]
+    },
+    {
+      "itemId": "ITEM-30100050",
+      "operations": [
+        { "id": "OP-930002-段友-8", "sequence": 10, "name": "段友 930002", "durationMinutes": 2880, "eligibleResourceIds": ["RES-SS-05"] },
+        { "id": "OP-930003-马伟-3", "sequence": 20, "name": "马伟 930003", "durationMinutes": 1440, "eligibleResourceIds": ["RES-SS-35"] },
+        { "id": "OP-930004-刘森林-3", "sequence": 30, "name": "刘森林 930004", "durationMinutes": 2880, "eligibleResourceIds": ["RES-SZ-01"] }
+      ]
+    },
+    {
+      "itemId": "ITEM-30100013",
+      "operations": [
+        { "id": "OP-930001-段友-7", "sequence": 10, "name": "段友 930001 急件插单", "durationMinutes": 8640, "eligibleResourceIds": ["RES-SS-05"] }
+      ]
+    }
+  ]
+}

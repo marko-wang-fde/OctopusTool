@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ROUTE-JOINT-10",
+    "itemId": "ITEM-JOINT-10",
+    "operations": [
+      {
+        "id": "OP-J10-TURN",
+        "sequence": 10,
+        "name": "Turning",
+        "durationMinutes": 80,
+        "eligibleResourceIds": ["MC-01"]
+      },
+      {
+        "id": "OP-J10-THREAD",
+        "sequence": 20,
+        "name": "Threading",
+        "durationMinutes": 70,
+        "eligibleResourceIds": ["MC-02"]
+      }
+    ]
+  },
+  {
+    "id": "ROUTE-JOINT-20",
+    "itemId": "ITEM-JOINT-20",
+    "operations": [
+      {
+        "id": "OP-J20-TURN",
+        "sequence": 10,
+        "name": "Turning",
+        "durationMinutes": 90,
+        "eligibleResourceIds": ["MC-01"]
+      },
+      {
+        "id": "OP-J20-THREAD",
+        "sequence": 20,
+        "name": "Threading",
+        "durationMinutes": 100,
+        "eligibleResourceIds": ["MC-02"]
+      }
+    ]
+  }
+]

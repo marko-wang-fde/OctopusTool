@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "triggers-and-task-orchestration/README.md",
+            "title": "触发、任务与计划编排"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "触发、任务与计划编排",
+            "next": {
+                "path": "enterprise-access-and-execution/README.md",
+                "title": "企业环境访问与执行能力"
+            },
+            "prev": {
+                "path": "team-solution-design/README.md",
+                "title": "Team 内数字员工方案设计"
+            }
+        }
+    }
+}

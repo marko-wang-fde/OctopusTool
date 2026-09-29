@@ -1,0 +1,33 @@
+schema_version: 1
+fixed:
+  - .gitignore
+  - fde-project.yaml
+  - inputs/input-inventory.md
+  - discovery/facts-and-assumptions.md
+  - discovery/open-questions.md
+  - discovery/scenario-model.md
+  - design/team-design.md
+  - design/collaboration-and-dataflow.md
+  - design/platform-capability-selection.md
+  - design/data-foundation.md
+  - design/identity-and-access.md
+  - arcubase/decision.yaml
+  - assembly/assembly-plan.md
+  - assembly/operations.yaml
+  - acceptance/acceptance-plan.md
+  - acceptance/test-cases.yaml
+  - reports/validation-report.md
+  - delivery-summary.md
+conditional:
+  external-station:
+    trigger: workers[].station_reachable == true
+    source: design/external-station.md
+    target: design/external-station.md
+  taskboard:
+    trigger: capabilities[] contains feat.taskboard
+    source: design/taskboard.md
+    target: design/taskboard.md
+  browser-webskill:
+    trigger: capabilities[] contains browser-or-webskill
+    source: design/browser-webskill.md
+    target: design/browser-webskill.md

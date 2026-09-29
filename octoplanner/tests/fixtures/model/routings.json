@@ -1,0 +1,12 @@
+{
+  "id": "routing_batch_1",
+  "routings": [
+    {
+      "itemId": "ITEM-1",
+      "operations": [
+        { "id": "op10", "sequence": 10, "name": "Turning", "durationMinutes": 60, "eligibleResourceIds": ["R1"] },
+        { "id": "op20", "sequence": 20, "name": "Drilling", "durationMinutes": 30, "eligibleResourceIds": ["R1"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "lib",
+  "dependencies": {
+    "@syngy/octopus-cli": {
+      "version": "0.1.2",
+      "overridden": false
+    }
+  }
+}

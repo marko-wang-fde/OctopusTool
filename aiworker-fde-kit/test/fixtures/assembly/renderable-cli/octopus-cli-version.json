@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_by": "aiworker-fde-kit/inspect-octopus-cli",
+  "npm_package": {
+    "name": "@syngy/octopus-cli",
+    "version": "0.1.2"
+  },
+  "cli_self_reported": {
+    "version": "0.1.2"
+  },
+  "versions_match": true
+}

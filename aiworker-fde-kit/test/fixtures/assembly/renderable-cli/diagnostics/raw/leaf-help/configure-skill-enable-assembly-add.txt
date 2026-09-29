@@ -1,0 +1,10 @@
+Usage: octopus-cli configure skill enable-assembly add [options] <id>
+
+Run configure skill enable-assembly add
+
+Options:
+  --query-json <json>  Query parameters as JSON
+  --body-json <json>   Request body as JSON
+  --body-file <file>   Read request body from JSON file
+  --json               Print JSON output
+  -h, --help           display help for command

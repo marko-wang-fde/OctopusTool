@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ITEM-JOINT-10",
+    "name": "Dg10 joint",
+    "materialId": "MAT-SS304",
+    "materialGrade": "06Cr19Ni10",
+    "processFamily": "machining",
+    "setupGroup": "JOINT-10"
+  },
+  {
+    "id": "ITEM-JOINT-20",
+    "name": "DN20 joint",
+    "materialId": "MAT-CF8",
+    "materialGrade": "CF8",
+    "processFamily": "machining",
+    "setupGroup": "JOINT-20"
+  }
+]

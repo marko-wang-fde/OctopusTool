@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.syngy.ai/aiworker-fde-kit/v1/payloads/employee-skillsets-set.schema.json",
+  "title": "octopus-cli API: configure employee skillsets set Payload",
+  "description": "API-native payload for PATCH /api/v1/teams/{teamId}/digiemployees/{digiEmployeeId}/skillsets.",
+  "$comment": "contract_status: api-native; source: octopus-cli 0.1.2 VoPatchDigiEmployeeSkillsetsRequest.",
+  "type": "object",
+  "required": [
+    "skillsets"
+  ],
+  "properties": {
+    "skillsets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!skillset\\.).+$"
+          }
+        },
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,552 @@
+schema_version: 1
+project:
+  name: 星河科技客户线索收集数字员工
+  slug: xinghe-lead-collector-fde
+  customer_name: 星河科技
+  primary_scenario: 内部客户线索登记与查询
+  entry_mode: new
+  status: draft
+  delivery_approved_at: null
+sources:
+  - id: source.requirements_conversation
+    title: 需求确认对话
+    kind: conversation
+    status: recorded
+    portable: true
+    evidence_text: 内部对话入口；新建专属 Arcubase 应用；仅销售与销售经理两个组织角色。
+    recorded_at: 2026-07-24T01:00:00Z
+requirements:
+  facts:
+    - id: fact.internal_conversation
+      statement: 仅通过 AIWorker 平台内部对话收集客户线索。
+      source_refs:
+        - source.requirements_conversation
+    - id: fact.confirm_before_write
+      statement: 只有用户明确确认后才可登记。
+      source_refs:
+        - source.requirements_conversation
+    - id: fact.role_visibility
+      statement: 销售只查本人提交记录，销售经理可查全部。
+      source_refs:
+        - source.requirements_conversation
+  assumptions:
+    - id: assumption.fixture_time
+      statement: 验收时钟固定为 2026-07-24T01:00:00Z。
+      source_refs:
+        - source.requirements_conversation
+  open_questions: []
+scenarios:
+  - id: scenario.lead_collection
+    name: 内部客户线索收集
+    description: 收集、补齐、查重、确认并登记销售线索，也支持按身份查询。
+    role_refs:
+      - role.sales
+      - role.sales_manager
+    business_object_refs:
+      - object.sales_lead
+    human_gates:
+      - 新增线索前必须由当前销售明确确认。
+      - 疑似重复时必须再次确认才可新增。
+roles:
+  - id: role.sales
+    name: 销售
+    description: 通过数字员工登记并查询本人提交的线索，不直接访问全表。
+  - id: role.sales_manager
+    name: 销售经理（管理员）
+    description: 通过数字员工只读查询全部销售线索。
+business_objects:
+  - id: object.sales_lead
+    name: 客户线索
+    description: 包含公司、联系人、联系方式、需求、来源、提交人、状态和创建时间。
+workers:
+  - id: worker.lead_collector
+    name: 小采 · 线索收集专员
+    responsibility: 收集、补齐、确认并登记客户线索。
+    audience: 销售及管理人员
+    skills:
+      - skill.collect_sales_leads
+    toolkit_keys:
+      - feat.arcubase_user
+      - feat.organization_view
+    station_reachable: false
+    prompt_spec:
+      role: 内部客户线索收集专员
+      objective: 在身份与权限边界内可靠地登记和查询销售线索。
+      boundaries:
+        - 不接飞书、企微或微信，不自动分配，不对外发送消息。
+        - 不删除线索，无效线索仅更新为状态 4。
+      identity_guards:
+        - 每次操作从 Current Speaker 读取用户 ID 与组织角色。
+        - 普通销售的查询必须过滤 submitter_arcubase_user_id。
+      human_gates:
+        - 信息完整且用户明确确认后才能创建记录。
+        - 疑似重复时再次确认后才能创建记录。
+    quick_starts:
+      - 登记一条客户线索
+      - 查看我提交的线索
+    skill_package_path: skills/collect-sales-leads/SKILL.md
+skills:
+  - id: skill.collect_sales_leads
+    name: collect-sales-leads
+    owner_worker: worker.lead_collector
+    reads:
+      - table.sales_leads
+    writes:
+      - table.sales_leads
+    toolkit_keys:
+      - feat.arcubase_user
+      - feat.organization_view
+capabilities:
+  - feat.arcubase_user
+  - feat.organization_view
+data_foundation:
+  schema_version: 1
+  mode: new
+  app:
+    id: app.lead_collection
+    name: 星河科技线索收集
+    ownership: customer
+    isolation_boundary: dedicated
+  tables:
+    - id: table.sales_leads
+      key: sales_leads
+      name: 销售线索
+      fields:
+        - id: field.company_name
+          key: company_name
+          name: 公司名称（字段 ID 1001）
+          type: text
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+        - id: field.contact_name
+          key: contact_name
+          name: 联系人（字段 ID 1002）
+          type: text
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+        - id: field.contact_method
+          key: contact_method
+          name: 联系方式（字段 ID 1003）
+          type: text
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+        - id: field.requirement_summary
+          key: requirement_summary
+          name: 需求摘要（字段 ID 1004）
+          type: textarea
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+        - id: field.source
+          key: source
+          name: 来源（字段 ID 1005）
+          type: select
+          required: true
+          select_options:
+            - key: "1"
+              name: 转介绍
+            - key: "2"
+              name: 官网
+            - key: "3"
+              name: 展会
+            - key: "4"
+              name: 其他
+          link: null
+          states: []
+          derived: null
+        - id: field.submitter_arcubase_user_id
+          key: submitter_arcubase_user_id
+          name: 提交人 Arcubase User ID（字段 ID 1006）
+          type: text
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+        - id: field.submitter_name
+          key: submitter_name
+          name: 提交人姓名快照（字段 ID 1007）
+          type: text
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+        - id: field.status
+          key: status
+          name: 状态（字段 ID 1008）
+          type: select
+          required: true
+          select_options:
+            - key: "1"
+              name: 新线索
+            - key: "2"
+              name: 跟进中
+            - key: "3"
+              name: 已转化
+            - key: "4"
+              name: 已作废
+          link: null
+          states: []
+          derived: null
+        - id: field.created_at
+          key: created_at
+          name: 创建时间（字段 ID 1009）
+          type: datetime
+          required: true
+          select_options: []
+          link: null
+          states: []
+          derived: null
+  access_policies:
+    - id: policy.aiworker_service
+      role_ref: role.aiworker_admin
+      resource:
+        table_id: table.sales_leads
+      actions:
+        - read
+        - create
+        - update
+      scope: all
+      filters: []
+    - id: policy.sales_own
+      role_ref: role.sales
+      resource:
+        table_id: table.sales_leads
+      actions:
+        - read
+      scope: filtered
+      filters:
+        - field_id: field.submitter_arcubase_user_id
+          operator: equals
+          value_source: current-speaker.id
+    - id: policy.sales_manager_read
+      role_ref: role.sales_manager
+      resource:
+        table_id: table.sales_leads
+      actions:
+        - read
+      scope: all
+      filters: []
+access_policies:
+  - id: policy.aiworker_service
+    role_ref: role.aiworker_admin
+    resource:
+      table_id: table.sales_leads
+    actions:
+      - read
+      - create
+      - update
+    scope: all
+    filters: []
+  - id: policy.sales_own
+    role_ref: role.sales
+    resource:
+      table_id: table.sales_leads
+    actions:
+      - read
+    scope: filtered
+    filters:
+      - field_id: field.submitter_arcubase_user_id
+        operator: equals
+        value_source: current-speaker.id
+  - id: policy.sales_manager_read
+    role_ref: role.sales_manager
+    resource:
+      table_id: table.sales_leads
+    actions:
+      - read
+    scope: all
+    filters: []
+assembly:
+  schema_version: 1
+  contract_version: 1.0.0
+  catalog_version: 1.0.4
+  payload_root: assembly/payloads
+  operations:
+    - operation_id: skill-package.upload
+      description: Upload an ordinary employee Skill package.
+      risk: high
+      depends_on: []
+      executor: admin-manual
+      support: manual-required
+      manual_artifacts:
+        - skills/collect-sales-leads/
+      manual_instructions:
+        - Verify the Skill package is self-contained, sanitized, and matches the
+          approved solution baseline.
+        - Use the platform's administrator-approved ordinary Skill upload
+          interface.
+        - Record the returned Skill identifier and package digest in the
+          assembly evidence.
+      verification_condition: The platform displays the uploaded package version and
+        digest, and the identifier resolves from the approved Team without
+        enabling production use.
+      recovery_condition: A tested public ordinary-Skill upload capability is added to
+        a future Kit contract, or an authorized administrator completes the
+        manual route.
+    - operation_id: arcubase-app.create
+      description: Create a dedicated Arcubase application.
+      risk: critical
+      depends_on:
+        - skill-package.upload
+      executor: admin-manual
+      support: manual-required
+      manual_artifacts:
+        - arcubase/decision.yaml
+        - arcubase/schema.yaml
+        - arcubase/access-matrix.md
+      manual_instructions:
+        - Confirm the approved data-foundation mode, ownership, naming, and
+          isolation boundary.
+        - Have an authorized Arcubase administrator create the application in
+          the intended Team.
+        - Record the generated application identifier and administrator
+          verification evidence.
+      verification_condition: The application exists in the intended Team with the
+        approved owner and isolation boundary, and its identifier is recorded
+        without credentials.
+      recovery_condition: A tested public Arcubase app-create capability is added to a
+        future Kit contract, or an authorized administrator completes the manual
+        route.
+    - operation_id: arcubase-table.create
+      description: Create Arcubase tables and fields from the approved schema.
+      risk: critical
+      depends_on:
+        - arcubase-app.create
+      executor: admin-manual
+      support: manual-required
+      manual_artifacts:
+        - arcubase/schema.yaml
+        - arcubase/access-matrix.md
+        - acceptance/test-cases.yaml
+      manual_instructions:
+        - Validate field types, constraints, links, states, derived-field
+          ownership, and migration impact.
+        - Have an authorized Arcubase administrator create the tables and apply
+          hard permissions.
+        - Record table and field identifiers, then run the documented permission
+          and schema checks.
+      verification_condition: All approved tables, fields, links, constraints, and
+        hard permissions exist and pass authorized and unauthorized acceptance
+        checks.
+      recovery_condition: A tested public Arcubase table-create capability is added to
+        a future Kit contract, or an authorized administrator completes the
+        manual route.
+    - operation_id: skill-set.create
+      description: Create the lead collector Skill set.
+      risk: high
+      depends_on:
+        - skill-package.upload
+      executor: admin-manual
+      support: manual-required
+      manual_artifacts:
+        - skills/collect-sales-leads/
+      manual_instructions:
+        - Have an authorized administrator create the approved Skill set through
+          the platform interface.
+        - Bind uploaded ordinary Skills manually when the platform requires
+          returned Skill identifiers.
+        - Record the returned Skill-set identifier, Skill binding identifiers,
+          and verification evidence without credentials.
+      verification_condition: The Skill set metadata and Skill bindings match the
+        approved assembly plan and are recorded in assembly evidence.
+      recovery_condition: A future tested octopus-cli contract proves configure skill
+        set add forwards body options correctly, or an authorized administrator
+        completes the manual route.
+    - operation_id: team-private-digiworker.create
+      description: Create the private lead collector worker.
+      risk: high
+      depends_on: []
+      executor: octopus-cli
+      support: supported
+      operation_kind: write
+      command_path:
+        - configure
+        - team
+        - private-digiworkers
+        - add
+      payload_file: assembly/payloads/team-private-digiworker-create.json
+      payload_schema_uri: schemas/payloads/team-private-digiworker-create.schema.json
+  assembly_execution:
+    status: ready
+    script_file: assembly/octopus-cli-assemble.sh
+    evidence_file: null
+    cli_package_version: 0.1.2
+    cli_reported_version: 0.1.2
+acceptance_cases:
+  - id: acceptance.complete_registration
+    title: 完整登记
+    category: normal
+    preconditions:
+      - Current Speaker 是 user.fixture.sales.zhang_nan（销售张楠）。
+      - Fixture 时钟是 2026-07-24T01:00:00Z。
+    steps:
+      - 销售张楠输入：登记苏州星禾包装有限公司，王芳，13900000002，希望了解经销商线索管理，来源展会
+      - 销售张楠输入：确认登记
+    expected_results:
+      - 首次固定输出：待确认：公司=苏州星禾包装有限公司，联系人=王芳，联系方式=13900000002，需求=希望了解经销商线索管理，来源=展会。回复“确认登记”或“取消”。
+      - 确认后固定输出：登记成功，记录ID=rec.fixture.sz-xinghe-001。
+      - scenario.lead_collection 与 skill.collect_sales_leads 返回上述固定输出。
+      - 恰好创建一行，九字段值为
+        company_name=苏州星禾包装有限公司、contact_name=王芳、contact_method=13900000002、requirement_summary=希望了解经销商线索管理、source=3、submitter_arcubase_user_id=user.fixture.sales.zhang_nan、submitter_name=销售张楠、status=1、created_at=1784854800。
+      - team-private-digiworker.create 自动装配设计与 skill-set.create 人工步骤一致。
+  - id: acceptance.missing_contact
+    title: 缺少联系方式
+    category: exception
+    preconditions:
+      - Current Speaker 是 user.fixture.sales.zhang_nan（销售张楠）。
+    steps:
+      - 销售张楠输入：登记苏州启明包装，联系人赵蕾，需要报价，来源转介绍
+    expected_results:
+      - 固定输出：请补充赵蕾的联系方式（手机号或邮箱）。
+      - Arcubase 创建调用次数为 0。
+  - id: acceptance.duplicate_cancel
+    title: 疑似重复
+    category: human-gate
+    preconditions:
+      - 预置杭州清禾食品有限公司、李明、138 0000 0001、status=1 的记录。
+    steps:
+      - 销售张楠输入：登记 杭州清禾食品有限公司，李明，138-0000-0001，需要样品，展会
+      - 销售张楠输入：取消
+    expected_results:
+      - 首次固定输出：发现疑似重复线索：杭州清禾食品有限公司，李明，138 0000 0001。回复“仍要新增”或“取消”。
+      - 取消后固定输出：已取消，本次未登记线索。
+      - scenario.lead_collection 与 skill.collect_sales_leads 返回上述固定输出。
+      - Arcubase 创建调用次数为 0。
+      - team-private-digiworker.create 只在明确人工门后装配，skill-set.create 保持人工证据步骤。
+  - id: acceptance.summary_cancel
+    title: 摘要取消
+    category: refusal
+    preconditions:
+      - 线索完整且不重复
+    steps:
+      - 销售张楠输入：登记苏州星禾包装有限公司，王芳，13900000002，希望了解经销商线索管理，来源展会
+      - 销售张楠输入：取消
+    expected_results:
+      - 首次固定输出：待确认：公司=苏州星禾包装有限公司，联系人=王芳，联系方式=13900000002，需求=希望了解经销商线索管理，来源=展会。回复“确认登记”或“取消”。
+      - 取消后固定输出：已取消，本次未登记线索。
+      - scenario.lead_collection 与 skill.collect_sales_leads 返回上述固定输出。
+      - Arcubase 创建调用次数为 0。
+      - team-private-digiworker.create 不得在取消后执行，skill-set.create 不得自动执行。
+  - id: acceptance.unauthorized_all
+    title: 未授权全量查询
+    category: permission
+    preconditions:
+      - Current Speaker 是 user.fixture.intern 且仅有 role.intern。
+    steps:
+      - 实习生输入：列出所有销售线索
+    expected_results:
+      - 固定输出：权限不足：你无权查看全部销售线索。
+      - scenario.lead_collection 与 skill.collect_sales_leads 返回上述固定输出。
+      - Arcubase 业务表查询调用次数为 0。
+      - team-private-digiworker.create 不授予未授权身份，skill-set.create 由管理员人工记录证据。
+  - id: acceptance.sales_own
+    title: 销售本人查询
+    category: permission
+    preconditions:
+      - Current Speaker 是 user.fixture.sales.zhang_nan
+    steps:
+      - 销售张楠输入：查看我提交的线索
+    expected_results:
+      - 固定输出：已按提交人“销售张楠”筛选，仅返回你提交的线索。
+      - 查询条件固定为 field.submitter_arcubase_user_id =
+        user.fixture.sales.zhang_nan，不返回他人记录。
+  - id: acceptance.manager_all
+    title: 经理查询
+    category: normal
+    preconditions:
+      - Current Speaker 是 user.fixture.manager.chen_chen
+    steps:
+      - 销售经理陈晨输入：查看全部线索
+    expected_results:
+      - 固定输出：已返回全部销售线索（只读）。
+      - role.sales_manager 校验通过，Arcubase 写调用次数为 0。
+  - id: acceptance.static_consistency
+    title: 静态一致性
+    category: normal
+    preconditions:
+      - 项目文件完整
+    steps:
+      - 运行 validate-project 静态校验
+    expected_results:
+      - 固定命令结果：exitCode=0，status=ok，BLOCKER=0。
+      - skill.collect_sales_leads 字段、员工 Skill、toolkitKeys、权限和状态值全部匹配。
+  - id: acceptance.assembly_live
+    title: 直接装配
+    category: human-gate
+    preconditions:
+      - Profile 和 Team 明确
+    steps:
+      - 用户确认 Profile、Team 和交付包 hash
+      - 运行 assembly/octopus-cli-assemble.sh 直接装配
+    expected_results:
+      - 固定命令结果：exitCode=0，team-private-digiworker.create 返回平台对象标识。
+      - 唯一自动调用不包含 --dryrun，Skill 上传、技能集创建和绑定、Arcubase 建表保持 manual-required。
+stage_status:
+  initialize:
+    status: not-started
+    depends_on: []
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  discover:
+    status: not-started
+    depends_on:
+      - initialize
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  team-design:
+    status: not-started
+    depends_on:
+      - discover
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  foundation-design:
+    status: not-started
+    depends_on:
+      - team-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  author:
+    status: not-started
+    depends_on:
+      - foundation-design
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  assemble:
+    status: not-started
+    depends_on:
+      - author
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null
+  validate:
+    status: not-started
+    depends_on:
+      - assemble
+    baseline_revision: 0
+    input_hashes: {}
+    output_hashes: {}
+    approved_at: null

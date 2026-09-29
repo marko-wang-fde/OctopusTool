@@ -1,0 +1,7 @@
+Usage: octopus-cli configure employee hire [options]
+
+Options:
+  --body-file <path>
+  --json
+  --dryrun
+  --help

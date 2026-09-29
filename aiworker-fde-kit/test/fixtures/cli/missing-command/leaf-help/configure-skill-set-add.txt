@@ -1,0 +1,7 @@
+Usage: octopus-cli configure skill set add [options]
+
+Options:
+  --body-file <path>
+  --json
+  --dryrun
+  --help

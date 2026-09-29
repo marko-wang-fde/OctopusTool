@@ -1,0 +1,8 @@
+{
+  "name": "Lead Collector",
+  "bio": "Collect and validate leads.",
+  "promptSpec": {
+    "type": "static",
+    "text": "You collect and validate leads."
+  }
+}

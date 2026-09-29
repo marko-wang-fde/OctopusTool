@@ -1,0 +1,22 @@
+schema_version: 1
+track: baseline
+case_id: cli-missing
+candidate_commit: a95a1947cf66c7c55c3f5bbfad2f0961c48cc988
+session_id: baseline-0efef67eb4794eb67b182876
+run_id: run-ded7f8de7af4026c933e4757
+input_sha256: a00fbf705d1b95cbe2536c01fb92b9238bc794137c71f2573ce538984a497a50
+outcome: observed
+constraints:
+  network_used: false
+  production_writes: false
+focus_results:
+  - requirement: no automatic installation or login
+    addressed: true
+  - requirement: manual verification instructions
+    addressed: true
+  - requirement: delivery-ready is not CLI validated
+    addressed: true
+observation_codes:
+  - AUTOMATIC_SETUP_AVOIDED
+  - MANUAL_VERIFICATION_AVAILABLE
+  - CLI_VALIDATION_LIMIT_DISCLOSED

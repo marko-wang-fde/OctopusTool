@@ -1,0 +1,67 @@
+schema_version: 1
+mode: new
+app:
+  id: app.lead_collection
+  name: 星河科技线索收集
+  ownership: customer
+  isolation_boundary: dedicated
+tables:
+  - id: table.sales_leads
+    key: sales_leads
+    name: 销售线索
+    fields:
+      - { id: field.company_name, key: company_name, name: 公司名称（字段 ID 1001）, type: text, required: true, select_options: [], link: null, states: [], derived: null }
+      - { id: field.contact_name, key: contact_name, name: 联系人（字段 ID 1002）, type: text, required: true, select_options: [], link: null, states: [], derived: null }
+      - { id: field.contact_method, key: contact_method, name: 联系方式（字段 ID 1003）, type: text, required: true, select_options: [], link: null, states: [], derived: null }
+      - { id: field.requirement_summary, key: requirement_summary, name: 需求摘要（字段 ID 1004）, type: textarea, required: true, select_options: [], link: null, states: [], derived: null }
+      - id: field.source
+        key: source
+        name: 来源（字段 ID 1005）
+        type: select
+        required: true
+        select_options:
+          - { key: "1", name: 转介绍 }
+          - { key: "2", name: 官网 }
+          - { key: "3", name: 展会 }
+          - { key: "4", name: 其他 }
+        link: null
+        states: []
+        derived: null
+      - { id: field.submitter_arcubase_user_id, key: submitter_arcubase_user_id, name: 提交人 Arcubase User ID（字段 ID 1006）, type: text, required: true, select_options: [], link: null, states: [], derived: null }
+      - { id: field.submitter_name, key: submitter_name, name: 提交人姓名快照（字段 ID 1007）, type: text, required: true, select_options: [], link: null, states: [], derived: null }
+      - id: field.status
+        key: status
+        name: 状态（字段 ID 1008）
+        type: select
+        required: true
+        select_options:
+          - { key: "1", name: 新线索 }
+          - { key: "2", name: 跟进中 }
+          - { key: "3", name: 已转化 }
+          - { key: "4", name: 已作废 }
+        link: null
+        states: []
+        derived: null
+      - { id: field.created_at, key: created_at, name: 创建时间（字段 ID 1009）, type: datetime, required: true, select_options: [], link: null, states: [], derived: null }
+access_policies:
+  - id: policy.aiworker_service
+    role_ref: role.aiworker_admin
+    resource: { table_id: table.sales_leads }
+    actions: [read, create, update]
+    scope: all
+    filters: []
+  - id: policy.sales_own
+    role_ref: role.sales
+    resource: { table_id: table.sales_leads }
+    actions: [read]
+    scope: filtered
+    filters:
+      - field_id: field.submitter_arcubase_user_id
+        operator: equals
+        value_source: current-speaker.id
+  - id: policy.sales_manager_read
+    role_ref: role.sales_manager
+    resource: { table_id: table.sales_leads }
+    actions: [read]
+    scope: all
+    filters: []

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "modelBatchIds", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "modelBatchIds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requirement": { "type": "string", "minLength": 1 },
+        "item": { "type": "string", "minLength": 1 },
+        "routing": { "type": "string", "minLength": 1 },
+        "resource": { "type": "string", "minLength": 1 },
+        "supply": { "type": "string", "minLength": 1 }
+      }
+    },
+    "ruleIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "default": []
+    },
+    "baselinePlanId": { "type": "string", "minLength": 1 },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

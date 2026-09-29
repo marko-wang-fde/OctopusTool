@@ -1,0 +1,29 @@
+{
+  "id": "REV-601277344-URGENT",
+  "instruction": "我需要将601277344这个订单进行紧急插单排产，帮我生成新的机台计划。其余订单尽量保持先后顺序不变。",
+  "fromPlanId": "urgent-baseline",
+  "policy": {
+    "mode": "repair",
+    "preserveResourceOrder": "best-effort",
+    "preserveLockedOperations": true,
+    "moveScope": "impacted-only"
+  },
+  "rules": [
+    {
+      "id": "RULE-URGENT-REQ-601277344",
+      "type": "priority-boost",
+      "target": { "kind": "requirement", "id": "REQ-601277344" },
+      "priority": 10000,
+      "enabled": true,
+      "reason": "User requested urgent insertion for order 601277344"
+    },
+    {
+      "id": "RULE-NST-REQ-601277344",
+      "type": "not-start-until",
+      "target": { "kind": "requirement", "id": "REQ-601277344" },
+      "until": "2026-06-07T00:00:00.000Z",
+      "enabled": true,
+      "reason": "Earliest available insertion window from current workshop plan"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "embed-examples",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "examples/react",
+    "examples/vue"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present"
+  }
+}

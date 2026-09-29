@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Octoplanner Plan Diff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "fromPlanId", "toPlanId", "createdAt", "summary"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "fromPlanId": { "type": "string", "minLength": 1 },
+    "toPlanId": { "type": "string", "minLength": 1 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["added", "removed", "moved", "unchanged", "unplanned"],
+      "properties": {
+        "added": { "type": "integer", "minimum": 0 },
+        "removed": { "type": "integer", "minimum": 0 },
+        "moved": { "type": "integer", "minimum": 0 },
+        "unchanged": { "type": "integer", "minimum": 0 },
+        "unplanned": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "movedOperations": { "type": "array", "items": { "$ref": "#/$defs/change" }, "default": [] },
+    "addedOperations": { "type": "array", "items": { "$ref": "#/$defs/change" }, "default": [] },
+    "removedOperations": { "type": "array", "items": { "$ref": "#/$defs/change" }, "default": [] },
+    "unchangedOperations": { "type": "array", "items": { "$ref": "#/$defs/change" }, "default": [] },
+    "unplannedOperations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["operationId", "requirementId", "reason"],
+        "properties": {
+          "operationId": { "type": "string", "minLength": 1 },
+          "requirementId": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string", "minLength": 1 }
+        }
+      },
+      "default": []
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "object" },
+      "default": []
+    }
+  },
+  "$defs": {
+    "externalRef": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["system", "id"],
+      "properties": {
+        "system": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 },
+        "payload": {}
+      }
+    },
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operationId", "requirementId"],
+      "properties": {
+        "operationId": { "type": "string", "minLength": 1 },
+        "requirementId": { "type": "string", "minLength": 1 },
+        "resourceIdBefore": { "type": "string", "minLength": 1 },
+        "resourceIdAfter": { "type": "string", "minLength": 1 },
+        "startBefore": { "type": "string", "format": "date-time" },
+        "endBefore": { "type": "string", "format": "date-time" },
+        "startAfter": { "type": "string", "format": "date-time" },
+        "endAfter": { "type": "string", "format": "date-time" },
+        "lockedBefore": { "type": "boolean" },
+        "lockedAfter": { "type": "boolean" },
+        "reasonRuleIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "default": []
+        },
+        "externalRef": { "$ref": "#/$defs/externalRef" }
+      }
+    }
+  }
+}
