@@ -1,8 +1,0 @@
-node_modules/
-/dist/
-/package/
-.octoplanner/
-*.db
-*.db-shm
-*.db-wal
-.DS_Store
