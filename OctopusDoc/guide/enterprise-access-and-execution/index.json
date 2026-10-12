@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "enterprise-access-and-execution/README.md",
+            "title": "企业环境访问与执行能力"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "企业环境访问与执行能力",
+            "next": {
+                "path": "data-knowledge-and-business-objects/README.md",
+                "title": "数据、知识与业务对象"
+            },
+            "prev": {
+                "path": "triggers-and-task-orchestration/README.md",
+                "title": "触发、任务与计划编排"
+            }
+        }
+    }
+}

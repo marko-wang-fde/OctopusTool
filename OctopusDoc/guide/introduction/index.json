@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "introduction/README.md",
+            "title": "导读：如何使用本指南"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "导读：如何使用本指南",
+            "next": {
+                "path": "crido-scenario-analysis/README.md",
+                "title": "CRIDO 场景分析法"
+            },
+            "prev": {
+                "path": "README.md",
+                "title": "Octopus FDE 场景开发指南"
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Workbench Vibe Coding Flow"
+  short_description: "Create, develop, and verify Workbench React apps"
+  default_prompt: "Use $workbench-vibe-coding-flow to create and validate a Workbench React app from local dev through hosted Workbench."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,18 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "Octopus FDE 场景开发指南",
+            "next": {
+                "path": "introduction/README.md",
+                "title": "导读：如何使用本指南"
+            },
+            "prev": null
+        }
+    }
+}

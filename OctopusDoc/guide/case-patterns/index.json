@@ -1,0 +1,25 @@
+{
+    "nav": [
+        {
+            "path": "README.md",
+            "title": "Octopus FDE 场景开发指南"
+        },
+        {
+            "path": "case-patterns/README.md",
+            "title": "场景案例组织方式"
+        }
+    ],
+    "child": {
+        "README.md": {
+            "title": "场景案例组织方式",
+            "next": {
+                "path": "reference/README.md",
+                "title": "Reference：能力速查"
+            },
+            "prev": {
+                "path": "acceptance-and-maturity/README.md",
+                "title": "验收与质量标准"
+            }
+        }
+    }
+}
