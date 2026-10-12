@@ -1,7 +1,0 @@
-interface:
-  display_name: "Authoring WebSkills"
-  short_description: "Create, test, and publish WebSkills"
-  default_prompt: "Use $authoring-webskills to create, validate, and publish a reusable browser WebSkill package."
-
-policy:
-  allow_implicit_invocation: true
