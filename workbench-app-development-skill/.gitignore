@@ -1,6 +1,0 @@
-.DS_Store
-*.log
-tmp/
-docs/superpowers/
-__pycache__/
-*.pyc
