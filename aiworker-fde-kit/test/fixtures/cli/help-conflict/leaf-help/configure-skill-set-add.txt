@@ -1,6 +1,0 @@
-Usage: octopus-cli configure skill set add [options]
-
-Options:
-  --body <json>
-  --json
-  --help

@@ -1,6 +1,0 @@
-inputs/source-files/
-reports/backups/
-.tmp/
-.env*
-generated/
-delivery/*.zip
